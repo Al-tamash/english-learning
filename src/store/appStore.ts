@@ -206,7 +206,7 @@ export const useAppStore = create<AppState>()(
                 ...day,
                 status: 'done',
                 stagesCompleted,
-                speakingSeconds: day.speakingSeconds + summary.speakingSeconds,
+                speakingSeconds: Math.max(day.speakingSeconds, summary.speakingSeconds),
                 selfRating: summary.selfRating,
                 missionDone: summary.missionDone ?? false,
                 completedAt: now.toISOString(),

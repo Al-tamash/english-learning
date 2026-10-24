@@ -4,6 +4,10 @@ import { useAppStore } from '../store/appStore';
 import { StageHeader } from '../components/StageHeader';
 import { WarmupStage } from './stages/WarmupStage';
 import { PatternStage } from './stages/PatternStage';
+import { WordsStage } from './stages/WordsStage';
+import { ShadowStage } from './stages/ShadowStage';
+import { ScenarioStage } from './stages/ScenarioStage';
+import { WrapStage } from './stages/WrapStage';
 
 export function SessionScreen() {
   const session = useAppStore((state) => state.activeSession);
@@ -21,12 +25,10 @@ export function SessionScreen() {
       <StageHeader day={day} session={session} />
       {session.stage === 'warmup' && <WarmupStage day={day} previousDay={previousDay} />}
       {session.stage === 'pattern' && <PatternStage day={day} />}
-      {session.stage !== 'warmup' && session.stage !== 'pattern' && (
-        <div className="space-y-3">
-          <h3 className="text-xl font-semibold">Next stage</h3>
-          <p className="text-muted">Ye stage next update me aayega.</p>
-        </div>
-      )}
+      {session.stage === 'words' && <WordsStage day={day} />}
+      {session.stage === 'shadow' && <ShadowStage day={day} />}
+      {session.stage === 'scenario' && <ScenarioStage day={day} />}
+      {session.stage === 'wrap' && <WrapStage day={day} />}
     </section>
   );
 }
