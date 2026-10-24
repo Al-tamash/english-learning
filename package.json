@@ -10,6 +10,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "test": "vitest",
+    "validate:content": "tsx scripts/validate-content.ts",
     "preview": "vite preview"
   },
   "keywords": [],

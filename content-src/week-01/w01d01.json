@@ -1,0 +1,177 @@
+{
+  "id": "w01d01",
+  "week": 1,
+  "day": 1,
+  "type": "learning",
+  "theme": "Introduce yourself and your work",
+  "title": "What do you do?",
+  "goal_hi": "Apna kaam aur company simple English me batana.",
+  "pattern": {
+    "id": "p_work_at",
+    "frame": "I work at ___ as a ___.",
+    "forms": {
+      "positive": "I work at Edone Solutions as a web developer.",
+      "negative": "I don't work at a big company.",
+      "question": "Where do you work?"
+    },
+    "note_hi": "Company ke pehle 'at', role ke pehle 'as'.",
+    "examples": [
+      {
+        "en": "I work at a startup as a designer.",
+        "hi": "Main ek startup me designer hoon."
+      },
+      {
+        "en": "I work at an agency as a developer.",
+        "hi": "Main ek agency me developer hoon."
+      },
+      {
+        "en": "She works at a bank as a manager.",
+        "hi": "Woh ek bank me manager hai."
+      },
+      {
+        "en": "I work at Edone Solutions as a web developer.",
+        "hi": "Main Edone Solutions me web developer hoon."
+      },
+      {
+        "en": "He works at a school as a teacher.",
+        "hi": "Woh ek school me teacher hai."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w_developer",
+      "term": "developer",
+      "hi": "software banane wala",
+      "collocation": "web developer",
+      "example_en": "I am a web developer.",
+      "example_hi": "Main web developer hoon.",
+      "tags": ["work", "role"]
+    },
+    {
+      "id": "w_client",
+      "term": "client",
+      "hi": "customer ya kaam dene wala",
+      "collocation": "a new client",
+      "example_en": "I have a client call today.",
+      "example_hi": "Aaj client call hai.",
+      "tags": ["work", "calls"]
+    },
+    {
+      "id": "w_website",
+      "term": "website",
+      "hi": "internet par business ka page",
+      "collocation": "build a website",
+      "example_en": "I build websites for clients.",
+      "example_hi": "Main clients ke liye websites banata hoon.",
+      "tags": ["work", "tech"]
+    },
+    {
+      "id": "w_project",
+      "term": "project",
+      "hi": "kaam ka plan",
+      "collocation": "a new project",
+      "example_en": "The project starts next week.",
+      "example_hi": "Project agle hafte shuru hoga.",
+      "tags": ["work"]
+    },
+    {
+      "id": "w_meeting",
+      "term": "meeting",
+      "hi": "logon ke saath baat-cheet",
+      "collocation": "a client meeting",
+      "example_en": "I have a meeting at 4.",
+      "example_hi": "Meri 4 baje meeting hai.",
+      "tags": ["work", "calls"]
+    }
+  ],
+  "dialogue": {
+    "title": "New colleague",
+    "context_hi": "Office me naye colleague se pehli baar baat.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Hi, I'm Rahul. What do you do?",
+        "hi": "Hi, main Rahul. Aap kya karte ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "Hi Rahul, I'm Azim. I'm a web developer.",
+        "hi": "Hi Rahul, main Azim. Main web developer hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "Nice. Where do you work?",
+        "hi": "Badhiya. Aap kahan kaam karte ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "I work at Edone Solutions. We build websites for clients.",
+        "hi": "Main Edone Solutions me kaam karta hoon. Hum clients ke liye websites banate hain."
+      },
+      {
+        "speaker": "A",
+        "en": "How long have you been there?",
+        "hi": "Aap wahan kitne samay se ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "About two years. I handle frontend projects and client meetings.",
+        "hi": "Lagbhag do saal. Main frontend projects aur client meetings handle karta hoon."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "'v' bolte waqt upper teeth lower lip ko chhue.",
+      "pairs": ["vest / west", "vine / wine"]
+    }
+  },
+  "scenario": {
+    "id": "s_client_what_do_you_do",
+    "title_hi": "Client poochta hai aap kya karte ho",
+    "setting_hi": "Video call pe naya client.",
+    "turns": [
+      {
+        "prompt_en": "So, what do you do at Edone?",
+        "hint_hi": "Batao ki aap websites banate ho.",
+        "keywords": ["web developer", "websites", "build"],
+        "model_en": "I'm a web developer. I build websites for clients."
+      },
+      {
+        "prompt_en": "How long have you been working there?",
+        "hint_hi": "Do saal se wahan kaam kar rahe ho.",
+        "keywords": ["two years", "working", "experience"],
+        "model_en": "I've been working there for about two years."
+      },
+      {
+        "prompt_en": "What kind of projects do you handle?",
+        "hint_hi": "Frontend aur client websites ka zikr karo.",
+        "keywords": ["frontend", "projects", "client"],
+        "model_en": "I handle frontend projects and client websites."
+      },
+      {
+        "prompt_en": "Do you work with clients directly?",
+        "hint_hi": "Haan, meetings me client se baat karte ho.",
+        "keywords": ["yes", "clients", "meetings"],
+        "model_en": "Yes, I speak with clients directly in meetings."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I work ___ Edone Solutions.",
+      "answer": "at"
+    },
+    {
+      "type": "fill",
+      "prompt": "I work at Edone Solutions ___ a web developer.",
+      "answer": "as"
+    },
+    {
+      "type": "fill",
+      "prompt": "I am a web ___.",
+      "answer": "developer"
+    }
+  ],
+  "mission": null
+}
