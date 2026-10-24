@@ -1,0 +1,174 @@
+{
+  "id": "w01d05",
+  "week": 1,
+  "day": 5,
+  "type": "learning",
+  "theme": "Talk about skills and learning",
+  "title": "What are you good at?",
+  "goal_hi": "Apni skills aur jo cheez abhi seekh rahe ho, uske baare me batana.",
+  "pattern": {
+    "id": "p_good_at",
+    "frame": "I'm good at ___ / I'm learning ___.",
+    "forms": {
+      "positive": "I'm good at frontend development.",
+      "negative": "I'm not good at backend yet.",
+      "question": "What are you good at?"
+    },
+    "note_hi": "Good at ke baad skill; learning ke baad bhi skill/verb+ing.",
+    "examples": [
+      {
+        "en": "I'm good at frontend development.",
+        "hi": "Main frontend development me achha hoon."
+      },
+      {
+        "en": "I'm learning backend development.",
+        "hi": "Main backend development seekh raha hoon."
+      },
+      {
+        "en": "I'm good at fixing responsive design issues.",
+        "hi": "Main responsive design issues fix karne me achha hoon."
+      },
+      {
+        "en": "I'm learning SEO and testing.",
+        "hi": "Main SEO aur testing seekh raha hoon."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w_frontend",
+      "term": "frontend",
+      "hi": "website ka dikhne wala hissa",
+      "collocation": "frontend development",
+      "example_en": "I work on frontend development.",
+      "example_hi": "Main frontend development par kaam karta hoon.",
+      "tags": ["tech"]
+    },
+    {
+      "id": "w_backend",
+      "term": "backend",
+      "hi": "website ka pichhla hissa",
+      "collocation": "backend development",
+      "example_en": "I'm learning backend development.",
+      "example_hi": "Main backend development seekh raha hoon.",
+      "tags": ["tech"]
+    },
+    {
+      "id": "w_seo",
+      "term": "SEO",
+      "hi": "Google par website dikhne ki taiyari",
+      "collocation": "basic SEO",
+      "example_en": "I know basic SEO.",
+      "example_hi": "Mujhe basic SEO aata hai.",
+      "tags": ["tech", "marketing"]
+    },
+    {
+      "id": "w_maintenance",
+      "term": "maintenance",
+      "hi": "purani cheez ko theek rakhna",
+      "collocation": "website maintenance",
+      "example_en": "I handle website maintenance.",
+      "example_hi": "Main website maintenance handle karta hoon.",
+      "tags": ["tech", "work"]
+    },
+    {
+      "id": "w_testing",
+      "term": "testing",
+      "hi": "check karna ki sab sahi chal raha hai",
+      "collocation": "software testing",
+      "example_en": "I'm learning software testing.",
+      "example_hi": "Main software testing seekh raha hoon.",
+      "tags": ["tech", "quality"]
+    }
+  ],
+  "dialogue": {
+    "title": "Small talk with a colleague",
+    "context_hi": "Office me colleague ke saath skills par halki baat.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "What are you working on these days?",
+        "hi": "Aajkal aap kis cheez par kaam kar rahe ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "I'm working on a frontend project, mostly responsive layouts.",
+        "hi": "Main ek frontend project par kaam kar raha hoon, zyadatar responsive layouts."
+      },
+      {
+        "speaker": "A",
+        "en": "Are you good at backend too?",
+        "hi": "Aap backend me bhi achhe ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "Not yet. I'm learning backend development now.",
+        "hi": "Abhi nahi. Main ab backend development seekh raha hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "Nice. What else are you learning?",
+        "hi": "Badhiya. Aur kya seekh rahe ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "I'm learning SEO and testing. I also handle website maintenance.",
+        "hi": "Main SEO aur testing seekh raha hoon. Main website maintenance bhi handle karta hoon."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "'-ng' me sound naak se aati hai; 'sin' aur 'sing' alag hain.",
+      "pairs": ["sing / sin", "thing / thin"]
+    }
+  },
+  "scenario": {
+    "id": "s_colleague_smalltalk",
+    "title_hi": "Colleague ke saath skills par small talk",
+    "setting_hi": "Lunch break me colleague se baat.",
+    "turns": [
+      {
+        "prompt_en": "What are you good at?",
+        "hint_hi": "Frontend development batao.",
+        "keywords": ["good at", "frontend", "development"],
+        "model_en": "I'm good at frontend development."
+      },
+      {
+        "prompt_en": "Are you learning anything new?",
+        "hint_hi": "Backend aur testing seekh rahe ho.",
+        "keywords": ["learning", "backend", "testing"],
+        "model_en": "I'm learning backend development and software testing."
+      },
+      {
+        "prompt_en": "Who handles SEO at your company?",
+        "hint_hi": "Aap basic SEO jaante ho.",
+        "keywords": ["SEO", "basic", "team"],
+        "model_en": "I know basic SEO, and my team helps with the rest."
+      },
+      {
+        "prompt_en": "Do you also do maintenance?",
+        "hint_hi": "Haan, website maintenance.",
+        "keywords": ["yes", "maintenance", "website"],
+        "model_en": "Yes, I handle website maintenance for clients."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I'm good ___ frontend.",
+      "answer": "at"
+    },
+    {
+      "type": "choice",
+      "prompt": "I'm learning ___.",
+      "options": ["testing", "test", "tested"],
+      "answer": "testing"
+    },
+    {
+      "type": "fill",
+      "prompt": "I don't do much ___ work.",
+      "answer": "backend"
+    }
+  ],
+  "mission": null
+}

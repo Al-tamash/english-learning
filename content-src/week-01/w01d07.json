@@ -1,0 +1,40 @@
+{
+  "id": "w01d07",
+  "week": 1,
+  "day": 7,
+  "type": "review",
+  "theme": "Week 1 review",
+  "title": "Review + benchmark",
+  "goal_hi": "Week 1 ke patterns aur words ko yaad karke apna intro confidently dena.",
+  "pattern": null,
+  "words": [],
+  "dialogue": null,
+  "scenario": null,
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I work ___ Edone Solutions.",
+      "answer": "at"
+    },
+    {
+      "type": "fill",
+      "prompt": "I'm ___ Nagpur.",
+      "answer": "from"
+    },
+    {
+      "type": "fill",
+      "prompt": "I have three years of ___.",
+      "answer": "experience"
+    }
+  ],
+  "mission": {
+    "id": "m_week1_voice_note",
+    "title_hi": "Send a 60-second English voice note to a friend introducing yourself and your work.",
+    "steps_hi": [
+      "Apna naam aur city batao.",
+      "Apna role aur company batao.",
+      "Ek project ya skill mention karo.",
+      "Voice note friend ko bhejo."
+    ]
+  }
+}

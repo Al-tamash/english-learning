@@ -1,0 +1,174 @@
+{
+  "id": "w01d03",
+  "week": 1,
+  "day": 3,
+  "type": "learning",
+  "theme": "Talk about your experience",
+  "title": "How much experience do you have?",
+  "goal_hi": "Apne experience, design/development work aur team handling ke baare me batana.",
+  "pattern": {
+    "id": "p_experience",
+    "frame": "I have ___ years of experience.",
+    "forms": {
+      "positive": "I have three years of experience in web development.",
+      "negative": "I don't have much experience with backend.",
+      "question": "How many years of experience do you have?"
+    },
+    "note_hi": "Years ke pehle number, experience ke pehle 'of'.",
+    "examples": [
+      {
+        "en": "I have three years of experience in web development.",
+        "hi": "Mere paas web development me teen saal ka experience hai."
+      },
+      {
+        "en": "I have experience with responsive design.",
+        "hi": "Mere paas responsive design ka experience hai."
+      },
+      {
+        "en": "I manage a small development team.",
+        "hi": "Main ek chhoti development team manage karta hoon."
+      },
+      {
+        "en": "I handle client calls and project updates.",
+        "hi": "Main client calls aur project updates handle karta hoon."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w_experience",
+      "term": "experience",
+      "hi": "kaam ka tajurba",
+      "collocation": "years of experience",
+      "example_en": "I have three years of experience.",
+      "example_hi": "Mere paas teen saal ka experience hai.",
+      "tags": ["work", "career"]
+    },
+    {
+      "id": "w_design",
+      "term": "design",
+      "hi": "dikhne aur feel ka plan",
+      "collocation": "responsive design",
+      "example_en": "I work on responsive design.",
+      "example_hi": "Main responsive design par kaam karta hoon.",
+      "tags": ["work", "tech"]
+    },
+    {
+      "id": "w_development",
+      "term": "development",
+      "hi": "software banane ka kaam",
+      "collocation": "web development",
+      "example_en": "I have experience in web development.",
+      "example_hi": "Mere paas web development ka experience hai.",
+      "tags": ["work", "tech"]
+    },
+    {
+      "id": "w_manage",
+      "term": "manage",
+      "hi": "sambhalna",
+      "collocation": "manage a team",
+      "example_en": "I manage a small team.",
+      "example_hi": "Main ek chhoti team manage karta hoon.",
+      "tags": ["work", "people"]
+    },
+    {
+      "id": "w_handle",
+      "term": "handle",
+      "hi": "kaam ko sambhalna",
+      "collocation": "handle client calls",
+      "example_en": "I handle client calls every week.",
+      "example_hi": "Main har hafte client calls handle karta hoon.",
+      "tags": ["work", "calls"]
+    }
+  ],
+  "dialogue": {
+    "title": "Client asks about experience",
+    "context_hi": "Client aapke experience ke baare me poochta hai.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "How many years of experience do you have?",
+        "hi": "Aapke kitne saal ka experience hai?"
+      },
+      {
+        "speaker": "B",
+        "en": "I have three years of experience in web development.",
+        "hi": "Mere paas web development me teen saal ka experience hai."
+      },
+      {
+        "speaker": "A",
+        "en": "What kind of work do you handle?",
+        "hi": "Aap kis tarah ka kaam handle karte ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "I handle responsive design, development, and client calls.",
+        "hi": "Main responsive design, development aur client calls handle karta hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "Do you manage a team?",
+        "hi": "Aap team manage karte ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "Yes, I manage two junior developers.",
+        "hi": "Haan, main do junior developers manage karta hoon."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "'experience' me stress 'pe' par hai: ex-PE-ri-ence.",
+      "pairs": ["experience / experiment", "design / decide"]
+    }
+  },
+  "scenario": {
+    "id": "s_client_experience",
+    "title_hi": "Client aapke experience ke baare me poochta hai",
+    "setting_hi": "Naya client project start karne se pehle sawaal poochta hai.",
+    "turns": [
+      {
+        "prompt_en": "How many years of experience do you have?",
+        "hint_hi": "Teen saal ka experience batao.",
+        "keywords": ["three years", "experience", "web"],
+        "model_en": "I have three years of experience in web development."
+      },
+      {
+        "prompt_en": "What do you handle in a project?",
+        "hint_hi": "Design, development aur client calls.",
+        "keywords": ["design", "development", "client"],
+        "model_en": "I handle design, development, and client calls."
+      },
+      {
+        "prompt_en": "Have you managed a team before?",
+        "hint_hi": "Haan, do junior developers.",
+        "keywords": ["yes", "manage", "team"],
+        "model_en": "Yes, I manage a team of two junior developers."
+      },
+      {
+        "prompt_en": "Can you share one project example?",
+        "hint_hi": "Ek client website ka example do.",
+        "keywords": ["project", "website", "client"],
+        "model_en": "I built a responsive website for a client last year."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I have three years of ___.",
+      "answer": "experience"
+    },
+    {
+      "type": "choice",
+      "prompt": "I ___ a small team.",
+      "options": ["manage", "manages", "managing"],
+      "answer": "manage"
+    },
+    {
+      "type": "fill",
+      "prompt": "I can ___ client calls.",
+      "answer": "handle"
+    }
+  ],
+  "mission": null
+}

@@ -1,0 +1,179 @@
+{
+  "id": "w01d06",
+  "week": 1,
+  "day": 6,
+  "type": "learning",
+  "theme": "Ask and answer work questions",
+  "title": "Do you work here?",
+  "goal_hi": "Naye logon se work ke baare me sawaal poochna aur apna intro dena.",
+  "pattern": {
+    "id": "p_work_question",
+    "frame": "Do you work ___? / What do you do?",
+    "forms": {
+      "positive": "I work in-house as a frontend developer.",
+      "negative": "I don't work for an agency.",
+      "question": "Do you work here?"
+    },
+    "note_hi": "Sawaal me 'Do you' se shuru karo; 'What do you do?' ka matlab kaam kya karte ho.",
+    "examples": [
+      {
+        "en": "Do you work here?",
+        "hi": "Aap yahan kaam karte ho?"
+      },
+      {
+        "en": "What do you do at this company?",
+        "hi": "Aap is company me kya karte ho?"
+      },
+      {
+        "en": "I'm a freelancer, so I work with different clients.",
+        "hi": "Main freelancer hoon, isliye alag clients ke saath kaam karta hoon."
+      },
+      {
+        "en": "She's the founder of a small agency.",
+        "hi": "Woh ek chhoti agency ki founder hai."
+      },
+      {
+        "en": "I work in-house, not for an agency.",
+        "hi": "Main in-house kaam karta hoon, agency ke liye nahi."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w_role",
+      "term": "role",
+      "hi": "kaam / position",
+      "collocation": "my role",
+      "example_en": "My role is frontend developer.",
+      "example_hi": "Mera role frontend developer hai.",
+      "tags": ["work"]
+    },
+    {
+      "id": "w_founder",
+      "term": "founder",
+      "hi": "company shuru karne wala",
+      "collocation": "the founder",
+      "example_en": "She's the founder of the company.",
+      "example_hi": "Woh company ki founder hai.",
+      "tags": ["work", "business"]
+    },
+    {
+      "id": "w_freelancer",
+      "term": "freelancer",
+      "hi": "apne liye kaam karne wala",
+      "collocation": "a freelance developer",
+      "example_en": "I'm a freelancer.",
+      "example_hi": "Main freelancer hoon.",
+      "tags": ["work"]
+    },
+    {
+      "id": "w_agency",
+      "term": "agency",
+      "hi": "clients ke liye kaam karne wali company",
+      "collocation": "a design agency",
+      "example_en": "I work at a design agency.",
+      "example_hi": "Main ek design agency me kaam karta hoon.",
+      "tags": ["work", "business"]
+    },
+    {
+      "id": "w_inhouse",
+      "term": "in-house",
+      "hi": "company ke andar ka team",
+      "collocation": "an in-house team",
+      "example_en": "I work in-house with the product team.",
+      "example_hi": "Main product team ke saath in-house kaam karta hoon.",
+      "tags": ["work"]
+    }
+  ],
+  "dialogue": {
+    "title": "Meeting someone new",
+    "context_hi": "Work event me naye insaan se milna.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Hi, I'm Priya. Do you work here?",
+        "hi": "Hi, main Priya. Aap yahan kaam karte ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "Hi Priya, I'm Azim. Yes, I work in-house as a frontend developer.",
+        "hi": "Hi Priya, main Azim. Haan, main in-house frontend developer hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "Nice. What's your role exactly?",
+        "hi": "Badhiya. Aapka role exactly kya hai?"
+      },
+      {
+        "speaker": "B",
+        "en": "I build responsive websites and handle client meetings.",
+        "hi": "Main responsive websites banata hoon aur client meetings handle karta hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "Are you a freelancer or part of an agency?",
+        "hi": "Aap freelancer ho ya agency ka part?"
+      },
+      {
+        "speaker": "B",
+        "en": "I'm in-house, but I also freelance on weekends.",
+        "hi": "Main in-house hoon, lekin weekends par freelance bhi karta hoon."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "Sawaal ke end me awaaz upar karo: 'Do you WORK here?'",
+      "pairs": ["work / walk", "role / roll"]
+    }
+  },
+  "scenario": {
+    "id": "s_work_event",
+    "title_hi": "Work event me naye insaan se milna",
+    "setting_hi": "Ek small work event me stranger se baat.",
+    "turns": [
+      {
+        "prompt_en": "Hi, do you work here?",
+        "hint_hi": "Haan, in-house frontend developer.",
+        "keywords": ["yes", "in-house", "frontend"],
+        "model_en": "Yes, I work in-house as a frontend developer."
+      },
+      {
+        "prompt_en": "What's your role?",
+        "hint_hi": "Responsive websites aur client meetings.",
+        "keywords": ["role", "websites", "client"],
+        "model_en": "My role is frontend developer. I build websites and handle client meetings."
+      },
+      {
+        "prompt_en": "Are you a freelancer?",
+        "hint_hi": "Nahi, in-house; weekend freelance.",
+        "keywords": ["no", "in-house", "freelance"],
+        "model_en": "No, I'm in-house, but I freelance on weekends."
+      },
+      {
+        "prompt_en": "Who's the founder of your company?",
+        "hint_hi": "Founder ka naam batao.",
+        "keywords": ["founder", "company", "name"],
+        "model_en": "The founder of my company is Mr. Shah."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "choice",
+      "prompt": "___ you work in-house?",
+      "options": ["Do", "Does", "Are"],
+      "answer": "Do"
+    },
+    {
+      "type": "fill",
+      "prompt": "I'm a ___, so I work for myself.",
+      "answer": "freelancer"
+    },
+    {
+      "type": "choice",
+      "prompt": "I work ___ an agency.",
+      "options": ["at", "on", "of"],
+      "answer": "at"
+    }
+  ],
+  "mission": null
+}

@@ -1,0 +1,174 @@
+{
+  "id": "w01d04",
+  "week": 1,
+  "day": 4,
+  "type": "learning",
+  "theme": "Explain what your company does",
+  "title": "What does Edone Solutions do?",
+  "goal_hi": "Apni company ke products aur clients ke liye kaam karna simple English me samjhana.",
+  "pattern": {
+    "id": "p_build_for",
+    "frame": "I build ___ for ___.",
+    "forms": {
+      "positive": "I build responsive websites for small businesses.",
+      "negative": "I don't build mobile apps.",
+      "question": "What do you build?"
+    },
+    "note_hi": "Build ke baad kya banate ho, for ke baad kiske liye.",
+    "examples": [
+      {
+        "en": "I build responsive websites for small businesses.",
+        "hi": "Main chhote businesses ke liye responsive websites banata hoon."
+      },
+      {
+        "en": "We build e-commerce apps for local shops.",
+        "hi": "Hum local dukaano ke liye e-commerce apps banate hain."
+      },
+      {
+        "en": "Our team builds custom solutions for clients.",
+        "hi": "Hamari team clients ke liye custom solutions banati hai."
+      },
+      {
+        "en": "I build landing pages for new products.",
+        "hi": "Main naye products ke liye landing pages banata hoon."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w_ecommerce",
+      "term": "e-commerce",
+      "hi": "internet par khareed-farokht",
+      "collocation": "an e-commerce website",
+      "example_en": "We build e-commerce websites.",
+      "example_hi": "Hum e-commerce websites banate hain.",
+      "tags": ["business", "tech"]
+    },
+    {
+      "id": "w_app",
+      "term": "app",
+      "hi": "mobile ya web application",
+      "collocation": "a mobile app",
+      "example_en": "We build apps for small businesses.",
+      "example_hi": "Hum chhote businesses ke liye apps banate hain.",
+      "tags": ["tech"]
+    },
+    {
+      "id": "w_business",
+      "term": "business",
+      "hi": "vyapar / dhandha",
+      "collocation": "a small business",
+      "example_en": "Our clients run small businesses.",
+      "example_hi": "Hamare clients chhote businesses chalate hain.",
+      "tags": ["business"]
+    },
+    {
+      "id": "w_solution",
+      "term": "solution",
+      "hi": "problem ka hal",
+      "collocation": "a custom solution",
+      "example_en": "We build custom solutions for clients.",
+      "example_hi": "Hum clients ke liye custom solutions banate hain.",
+      "tags": ["business", "work"]
+    },
+    {
+      "id": "w_responsive",
+      "term": "responsive",
+      "hi": "har screen par sahi dikhne wala",
+      "collocation": "responsive design",
+      "example_en": "The website is responsive on mobile.",
+      "example_hi": "Website mobile par responsive hai.",
+      "tags": ["tech", "design"]
+    }
+  ],
+  "dialogue": {
+    "title": "Explaining the company",
+    "context_hi": "Client poochta hai ki aapki company kya karti hai.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "What does Edone Solutions do?",
+        "hi": "Edone Solutions kya karti hai?"
+      },
+      {
+        "speaker": "B",
+        "en": "We build websites and apps for small businesses.",
+        "hi": "Hum chhote businesses ke liye websites aur apps banate hain."
+      },
+      {
+        "speaker": "A",
+        "en": "What kind of websites?",
+        "hi": "Kis tarah ki websites?"
+      },
+      {
+        "speaker": "B",
+        "en": "Mostly e-commerce and responsive business websites.",
+        "hi": "Zyadatar e-commerce aur responsive business websites."
+      },
+      {
+        "speaker": "A",
+        "en": "Do you build custom solutions too?",
+        "hi": "Aap custom solutions bhi banate ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "Yes, we build custom solutions for each client.",
+        "hi": "Haan, hum har client ke liye custom solutions banate hain."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "'s' aur 'sh' alag hain: 'sea' me s, 'she' me sh.",
+      "pairs": ["sea / she", "sip / ship"]
+    }
+  },
+  "scenario": {
+    "id": "s_explain_edone",
+    "title_hi": "Client ko company ka kaam samjhana",
+    "setting_hi": "Client poochta hai ki Edone Solutions kya karti hai.",
+    "turns": [
+      {
+        "prompt_en": "What does Edone Solutions do?",
+        "hint_hi": "Websites aur apps banate hain.",
+        "keywords": ["websites", "apps", "build"],
+        "model_en": "We build websites and apps for small businesses."
+      },
+      {
+        "prompt_en": "What kind of websites do you build?",
+        "hint_hi": "E-commerce aur responsive websites.",
+        "keywords": ["e-commerce", "responsive", "websites"],
+        "model_en": "We build e-commerce and responsive business websites."
+      },
+      {
+        "prompt_en": "Do you work with small businesses?",
+        "hint_hi": "Haan, local businesses ke saath.",
+        "keywords": ["yes", "small business", "clients"],
+        "model_en": "Yes, we work with small businesses and local clients."
+      },
+      {
+        "prompt_en": "Can you build a custom solution for us?",
+        "hint_hi": "Haan, har client ke liye custom.",
+        "keywords": ["yes", "custom", "solution"],
+        "model_en": "Yes, we can build a custom solution for your team."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "We build websites ___ small businesses.",
+      "answer": "for"
+    },
+    {
+      "type": "choice",
+      "prompt": "I build ___ apps.",
+      "options": ["responsive", "responsively", "response"],
+      "answer": "responsive"
+    },
+    {
+      "type": "fill",
+      "prompt": "We build an online store for an ___ business.",
+      "answer": "e-commerce"
+    }
+  ],
+  "mission": null
+}

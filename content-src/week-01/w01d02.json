@@ -1,0 +1,178 @@
+{
+  "id": "w01d02",
+  "week": 1,
+  "day": 2,
+  "type": "learning",
+  "theme": "Introduce yourself and your background",
+  "title": "Where are you from?",
+  "goal_hi": "Apne shehar, current city aur company ke baare me simple English me batana.",
+  "pattern": {
+    "id": "p_from_live",
+    "frame": "I'm from ___ / I live in ___.",
+    "forms": {
+      "positive": "I'm from Nagpur, but I live in Pune.",
+      "negative": "I'm not from Delhi.",
+      "question": "Where are you from?"
+    },
+    "note_hi": "From ke baad apna original sheher, live in ke baad current city.",
+    "examples": [
+      {
+        "en": "I'm from Nagpur, but I live in Pune.",
+        "hi": "Main Nagpur se hoon, lekin Pune me rehta hoon."
+      },
+      {
+        "en": "My hometown is small and quiet.",
+        "hi": "Mera hometown chhota aur shaant hai."
+      },
+      {
+        "en": "I'm based in Pune and work remotely.",
+        "hi": "Main Pune me based hoon aur remotely kaam karta hoon."
+      },
+      {
+        "en": "My team is spread across three cities.",
+        "hi": "Meri team teen shehron me phaili hui hai."
+      },
+      {
+        "en": "I work at a small company.",
+        "hi": "Main ek chhoti company me kaam karta hoon."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w_hometown",
+      "term": "hometown",
+      "hi": "wahi sheher jahan se aap ho",
+      "collocation": "my hometown",
+      "example_en": "My hometown is Nagpur.",
+      "example_hi": "Mera hometown Nagpur hai.",
+      "tags": ["background"]
+    },
+    {
+      "id": "w_based",
+      "term": "based",
+      "hi": "kahan se kaam karte ho",
+      "collocation": "based in Pune",
+      "example_en": "I'm based in Pune.",
+      "example_hi": "Main Pune me based hoon.",
+      "tags": ["background", "work"]
+    },
+    {
+      "id": "w_currently",
+      "term": "currently",
+      "hi": "abhi",
+      "collocation": "currently working",
+      "example_en": "I'm currently working on a client project.",
+      "example_hi": "Main abhi ek client project par kaam kar raha hoon.",
+      "tags": ["time", "work"]
+    },
+    {
+      "id": "w_team",
+      "term": "team",
+      "hi": "kaam karne wale log",
+      "collocation": "my team",
+      "example_en": "My team has five people.",
+      "example_hi": "Meri team me paanch log hain.",
+      "tags": ["work"]
+    },
+    {
+      "id": "w_company",
+      "term": "company",
+      "hi": "jahan aap kaam karte ho",
+      "collocation": "a small company",
+      "example_en": "I work at a small company.",
+      "example_hi": "Main ek chhoti company me kaam karta hoon.",
+      "tags": ["work"]
+    }
+  ],
+  "dialogue": {
+    "title": "Starting a call",
+    "context_hi": "Client call ki shuruaat me apna intro.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Hi, I'm Neha from Bright Labs. Are you Rahul?",
+        "hi": "Hi, main Bright Labs se Neha. Aap Rahul hain?"
+      },
+      {
+        "speaker": "B",
+        "en": "Yes, I'm Rahul. I'm based in Pune.",
+        "hi": "Haan, main Rahul. Main Pune me based hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "Great. Where are you from originally?",
+        "hi": "Badhiya. Aap originally kahan se ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "I'm from Nagpur, but I live in Pune now.",
+        "hi": "Main Nagpur se hoon, lekin ab Pune me rehta hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "Nice. How's the weather there?",
+        "hi": "Achha. Wahan mausam kaisa hai?"
+      },
+      {
+        "speaker": "B",
+        "en": "It's warm today. Shall we start the call?",
+        "hi": "Aaj garmi hai. Call shuru karein?"
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "'th' ke liye tongue ko upper aur lower teeth ke beech rakho.",
+      "pairs": ["think / sink", "three / tree"]
+    }
+  },
+  "scenario": {
+    "id": "s_intro_call",
+    "title_hi": "Call ki shuruaat me apna intro",
+    "setting_hi": "Client call shuru ho rahi hai.",
+    "turns": [
+      {
+        "prompt_en": "Hi, this is Neha. Is this Rahul?",
+        "hint_hi": "Haan bolo aur apna naam confirm karo.",
+        "keywords": ["yes", "rahul", "speaking"],
+        "model_en": "Yes, this is Rahul speaking."
+      },
+      {
+        "prompt_en": "Where are you based?",
+        "hint_hi": "Apni current city batao.",
+        "keywords": ["based", "pune", "currently"],
+        "model_en": "I'm based in Pune."
+      },
+      {
+        "prompt_en": "And where are you from originally?",
+        "hint_hi": "Apna hometown batao.",
+        "keywords": ["from", "nagpur", "hometown"],
+        "model_en": "I'm from Nagpur originally, but I live in Pune now."
+      },
+      {
+        "prompt_en": "How long have you been with your company?",
+        "hint_hi": "Do saal se company me ho.",
+        "keywords": ["two years", "company", "working"],
+        "model_en": "I've been with my company for about two years."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I'm ___ Nagpur.",
+      "answer": "from"
+    },
+    {
+      "type": "choice",
+      "prompt": "I live ___ Pune.",
+      "options": ["at", "in", "on"],
+      "answer": "in"
+    },
+    {
+      "type": "fill",
+      "prompt": "I'm ___ in Pune.",
+      "answer": "based"
+    }
+  ],
+  "mission": null
+}
