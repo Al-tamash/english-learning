@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist, type StateStorage } from 'zustand/middleware';
+import { getDay } from '../content';
 import type { Stage } from '../content/types';
 import { advance, createSession, type SessionMode, type SessionState } from '../session/engine';
 import { createCard, schedule, type SrsCard, type SrsRating } from '../srs/srs';
@@ -197,6 +198,12 @@ export const useAppStore = create<AppState>()(
           const stagesCompleted = Array.from(
             new Set([...day.stagesCompleted, ...(state.activeSession?.stagesCompleted ?? [])]),
           );
+          const srs = { ...state.srs };
+          for (const word of getDay(dayId).words) {
+            if (!srs[word.id]) {
+              srs[word.id] = createCard(word.id, now);
+            }
+          }
 
           return {
             activeSession: state.activeSession?.dayId === dayId ? null : state.activeSession,
@@ -213,6 +220,7 @@ export const useAppStore = create<AppState>()(
                 updatedAt: now.toISOString(),
               },
             },
+            srs,
             streak: nextStreak(state.streak, now),
           };
         });

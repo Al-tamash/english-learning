@@ -17,7 +17,7 @@ function normalize(value: string): string {
 export function WrapStage({ day }: WrapStageProps) {
   const navigate = useNavigate();
   const finishSession = useAppStore((state) => state.finishSession);
-  const activeSession = useAppStore((state) => state.activeSession);
+  const completeStage = useAppStore((state) => state.completeStage);
   const [quizIndex, setQuizIndex] = useState(0);
   const [quizDone, setQuizDone] = useState(day.quiz.length === 0);
   const [input, setInput] = useState('');
@@ -102,8 +102,10 @@ export function WrapStage({ day }: WrapStageProps) {
       return;
     }
     benchmarkRecording?.handle.cancel();
+    completeStage('wrap');
+    const active = useAppStore.getState().activeSession;
     finishSession(day.id, {
-      speakingSeconds: activeSession?.speakingSeconds ?? 0,
+      speakingSeconds: active?.speakingSeconds ?? 0,
       selfRating: rating,
       missionDone: isReview ? missionDone : false,
     });

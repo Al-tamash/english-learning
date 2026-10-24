@@ -24,7 +24,10 @@ it('completes a learning day after the quiz and rating', async () => {
   await user.click(screen.getByRole('button', { name: '4' }));
   await user.click(screen.getByRole('button', { name: 'Session khatam' }));
 
-  expect(useAppStore.getState().days.w01d01.status).toBe('done');
+  const progress = useAppStore.getState().days.w01d01;
+  expect(progress.status).toBe('done');
+  expect(progress.stagesCompleted).toContain('wrap');
+  expect(progress.speakingSeconds).toBeGreaterThanOrEqual(60);
   expect(useAppStore.getState().activeSession).toBeNull();
 });
 

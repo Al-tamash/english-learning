@@ -1,4 +1,5 @@
 import { beforeEach, expect, it, vi } from 'vitest';
+import { getDay } from '../content';
 import { createInitialState, useAppStore } from './appStore';
 import { nextStreak, type StreakState } from './streak';
 
@@ -42,6 +43,16 @@ it('persists the active stage for reload', () => {
 it('schedules a word when rated', () => {
   useAppStore.getState().rateWord('w_developer', 'good', now);
   expect(useAppStore.getState().srs.w_developer.intervalDays).toBe(1);
+});
+
+it('queues unrated words from a short session for the next review', () => {
+  const store = useAppStore.getState();
+  store.startSession('w01d01', 'short', now);
+  store.finishSession('w01d01', { speakingSeconds: 600, selfRating: 3 }, now);
+
+  const state = useAppStore.getState();
+  expect(Object.keys(state.srs)).toHaveLength(getDay('w01d01').words.length);
+  expect(state.srs.w_developer?.intervalDays).toBe(0);
 });
 
 it('survives corrupt persisted storage', async () => {
