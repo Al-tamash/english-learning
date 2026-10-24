@@ -1,17 +1,10 @@
-import type { ReactNode } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './app/Layout';
 import { SessionScreen } from './screens/SessionScreen';
 import { TodayScreen } from './screens/TodayScreen';
-
-function Page({ title, children }: { title: string; children?: ReactNode }) {
-  return (
-    <section className="rounded-3xl border border-line bg-surface p-6 shadow-sm">
-      <h2 className="text-xl font-semibold">{title}</h2>
-      {children}
-    </section>
-  );
-}
+import { ProgressScreen } from './screens/ProgressScreen';
+import { LibraryScreen } from './screens/LibraryScreen';
+import { SettingsScreen } from './screens/SettingsScreen';
 
 export default function App() {
   return (
@@ -19,9 +12,9 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<TodayScreen />} />
         <Route path="session" element={<SessionScreen />} />
-        <Route path="progress" element={<Page title="Progress" />} />
-        <Route path="library" element={<Page title="Library" />} />
-        <Route path="settings" element={<Page title="Settings" />} />
+        <Route path="progress" element={<ProgressScreen />} />
+        <Route path="library" element={<LibraryScreen />} />
+        <Route path="settings" element={<SettingsScreen />} />
       </Route>
     </Routes>
   );
