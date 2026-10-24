@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './app/Layout';
+import { SessionScreen } from './screens/SessionScreen';
 
 function Page({ title, children }: { title: string; children?: ReactNode }) {
   return (
@@ -16,7 +17,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Page title="Aaj" />} />
-        <Route path="session" element={<Page title="Session" />} />
+        <Route path="session" element={<SessionScreen />} />
         <Route path="progress" element={<Page title="Progress" />} />
         <Route path="library" element={<Page title="Library" />} />
         <Route path="settings" element={<Page title="Settings" />} />
