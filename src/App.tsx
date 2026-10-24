@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './app/Layout';
 import { SessionScreen } from './screens/SessionScreen';
+import { TodayScreen } from './screens/TodayScreen';
 
 function Page({ title, children }: { title: string; children?: ReactNode }) {
   return (
@@ -16,7 +17,7 @@ export default function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route index element={<Page title="Aaj" />} />
+        <Route index element={<TodayScreen />} />
         <Route path="session" element={<SessionScreen />} />
         <Route path="progress" element={<Page title="Progress" />} />
         <Route path="library" element={<Page title="Library" />} />
