@@ -76,17 +76,28 @@ export function SettingsScreen() {
             />
           </label>
 
-          <label className="flex items-center gap-2 text-sm font-semibold">
-            <input
-              type="checkbox"
-              checked={settings.speechCheckEnabled}
-              onChange={(event) =>
-                updateSettings({ speechCheckEnabled: event.target.checked })
-              }
-              className="h-4 w-4 accent-current"
-            />
-            Voice check
-          </label>
+          <div>
+            <label className="flex items-center gap-2 text-sm font-semibold">
+              <input
+                type="checkbox"
+                checked={settings.speechCheckEnabled && settings.speechConsent === 'granted'}
+                onChange={(event) =>
+                  updateSettings(
+                    event.target.checked
+                      ? { speechCheckEnabled: true, speechConsent: 'granted' }
+                      : { speechCheckEnabled: false },
+                  )
+                }
+                className="h-4 w-4 accent-current"
+              />
+              Voice check
+            </label>
+            <p className="mt-1 text-xs text-muted">
+              {settings.speechConsent === 'granted'
+                ? 'Browser mic audio process kar sakta hai. Recording local rehti hai.'
+                : 'Off hai. On karne par browser mic processing ki permission milti hai.'}
+            </p>
+          </div>
         </div>
       </section>
 

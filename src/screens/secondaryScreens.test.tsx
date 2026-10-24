@@ -30,3 +30,21 @@ it('changes the TTS rate in Settings', () => {
   fireEvent.change(slider, { target: { value: '1' } });
   expect(useAppStore.getState().settings.ttsRate).toBe(1);
 });
+
+it('re-enables voice check after consent was declined', () => {
+  const state = createInitialState();
+  state.settings = {
+    ...state.settings,
+    speechConsent: 'denied',
+    speechCheckEnabled: true,
+  };
+  useAppStore.setState(state);
+
+  render(<MemoryRouter initialEntries={['/settings']}><App /></MemoryRouter>);
+  const checkbox = screen.getByRole('checkbox', { name: 'Voice check' });
+  expect(checkbox).not.toBeChecked();
+
+  fireEvent.click(checkbox);
+  expect(useAppStore.getState().settings.speechConsent).toBe('granted');
+  expect(useAppStore.getState().settings.speechCheckEnabled).toBe(true);
+});

@@ -1,3 +1,5 @@
+import { useAppStore } from '../store/appStore';
+
 function getSynthesis(): SpeechSynthesis | undefined {
   return typeof window !== 'undefined' ? window.speechSynthesis : undefined;
 }
@@ -65,11 +67,13 @@ export function speak(
 
   synthesis.cancel();
   const utterance = new Utterance(text);
-  utterance.rate = opts.rate ?? 0.85;
+  const settings = useAppStore.getState().settings;
+  utterance.rate = opts.rate ?? settings.ttsRate;
 
   const voices = synthesis.getVoices();
-  const chosen = opts.voiceUri
-    ? voices.find((voice) => voice.voiceURI === opts.voiceUri) ?? pickVoice(voices)
+  const voiceUri = opts.voiceUri === undefined ? settings.ttsVoiceUri : opts.voiceUri;
+  const chosen = voiceUri
+    ? voices.find((voice) => voice.voiceURI === voiceUri) ?? pickVoice(voices)
     : pickVoice(voices);
   if (chosen) {
     utterance.voice = chosen;
