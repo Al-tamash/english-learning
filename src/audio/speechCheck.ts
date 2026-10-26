@@ -36,15 +36,130 @@ export function isSpeechCheckSupported(): boolean {
   );
 }
 
-export function checkKeywords(
-  keywords: string[],
-  timeoutMs = 8000,
-): Promise<{ transcript: string; matched: string[]; total: number }> {
+export interface SpeechCaptureResult {
+  transcript: string;
+  error: string | null;
+}
+
+export interface SpeechCapture {
+  stop(): Promise<SpeechCaptureResult>;
+  cancel(): void;
+}
+
+export function startSpeechCapture(lang = 'en-IN'): SpeechCapture | null {
   const Recognition =
     typeof window !== 'undefined'
       ? window.SpeechRecognition ?? window.webkitSpeechRecognition
       : undefined;
-  const empty = { transcript: '', matched: [], total: keywords.length };
+
+  if (!Recognition) {
+    return null;
+  }
+
+  let recognition: SpeechRecognition;
+  try {
+    recognition = new Recognition();
+  } catch {
+    return null;
+  }
+  let finalTranscript = '';
+  let interimTranscript = '';
+  let error: string | null = null;
+  let ended = false;
+  let stopResolve: ((result: SpeechCaptureResult) => void) | null = null;
+  let stopTimer: ReturnType<typeof setTimeout> | undefined;
+  let stopPromise: Promise<SpeechCaptureResult> | null = null;
+
+  const currentTranscript = () =>
+    `${finalTranscript} ${interimTranscript}`.replace(/\s+/g, ' ').trim();
+
+  const finishStop = () => {
+    if (!stopResolve) {
+      return;
+    }
+    const resolve = stopResolve;
+    stopResolve = null;
+    if (stopTimer) {
+      clearTimeout(stopTimer);
+    }
+    resolve({ transcript: currentTranscript(), error });
+  };
+
+  recognition.lang = lang;
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  recognition.onresult = (event) => {
+    for (let index = event.resultIndex; index < event.results.length; index += 1) {
+      const result = event.results[index];
+      const text = result[0]?.transcript ?? '';
+      if (result.isFinal) {
+        finalTranscript = `${finalTranscript} ${text}`.trim();
+        interimTranscript = '';
+      } else {
+        interimTranscript = text;
+      }
+    }
+  };
+  recognition.onerror = (event) => {
+    error = event.error || 'speech-error';
+  };
+  recognition.onend = () => {
+    ended = true;
+    finishStop();
+  };
+
+  try {
+    recognition.start();
+  } catch {
+    return null;
+  }
+
+  return {
+    stop: () => {
+      if (stopPromise) {
+        return stopPromise;
+      }
+      stopPromise = new Promise<SpeechCaptureResult>((resolve) => {
+        if (ended) {
+          resolve({ transcript: currentTranscript(), error });
+          return;
+        }
+        stopResolve = resolve;
+        try {
+          recognition.stop();
+        } catch {
+          finishStop();
+        }
+        stopTimer = setTimeout(finishStop, 2000);
+      });
+      return stopPromise;
+    },
+
+    cancel: () => {
+      if (stopTimer) {
+        clearTimeout(stopTimer);
+      }
+      const resolve = stopResolve;
+      stopResolve = null;
+      try {
+        recognition.abort();
+      } catch {
+        // Recognition may already be stopped.
+      }
+      resolve?.({ transcript: '', error: 'cancelled' });
+    },
+  };
+}
+
+export function checkKeywords(
+  keywords: string[],
+  timeoutMs = 8000,
+): Promise<{ transcript: string; matched: string[]; total: number; error: string | null }> {
+  const Recognition =
+    typeof window !== 'undefined'
+      ? window.SpeechRecognition ?? window.webkitSpeechRecognition
+      : undefined;
+  const empty = { transcript: '', matched: [], total: keywords.length, error: null };
 
   if (!Recognition) {
     return Promise.resolve(empty);
@@ -52,6 +167,7 @@ export function checkKeywords(
 
   return new Promise((resolve) => {
     let settled = false;
+    let error: string | null = null;
     let timer: ReturnType<typeof setTimeout> | undefined;
     const recognition = new Recognition();
 
@@ -72,6 +188,7 @@ export function checkKeywords(
         transcript,
         matched: matchKeywords(transcript, keywords),
         total: keywords.length,
+        error,
       });
     };
 
@@ -81,7 +198,10 @@ export function checkKeywords(
     recognition.onresult = (event) => {
       finish(event.results[0]?.[0]?.transcript ?? '');
     };
-    recognition.onerror = () => finish('');
+    recognition.onerror = (event) => {
+      error = event.error || 'speech-error';
+      finish('');
+    };
     recognition.onend = () => finish('');
 
     timer = setTimeout(() => finish(''), timeoutMs);

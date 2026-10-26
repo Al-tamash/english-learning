@@ -2,7 +2,13 @@ import { useState } from 'react';
 import type { DayContent } from '../../content/types';
 import { startRecording, type RecordingHandle } from '../../audio/recorder';
 import { putRecording } from '../../audio/recordingStore';
-import { checkKeywords, isSpeechCheckSupported } from '../../audio/speechCheck';
+import {
+  checkKeywords,
+  isSpeechCheckSupported,
+  matchKeywords,
+  startSpeechCapture,
+  type SpeechCapture,
+} from '../../audio/speechCheck';
 import { useAppStore } from '../../store/appStore';
 import { ConsentDialog } from '../../components/ConsentDialog';
 
@@ -20,11 +26,14 @@ export function ScenarioStage({ day }: ScenarioStageProps) {
   const speechCheckEnabled = useAppStore((state) => state.settings.speechCheckEnabled);
   const [turnIndex, setTurnIndex] = useState(0);
   const [recording, setRecording] = useState<RecordingHandle | null>(null);
+  const [speechCapture, setSpeechCapture] = useState<SpeechCapture | null>(null);
   const [attempted, setAttempted] = useState(false);
   const [recorded, setRecorded] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const [checking, setChecking] = useState(false);
+  const [transcript, setTranscript] = useState('');
   const [result, setResult] = useState<{ matched: number; total: number } | null>(null);
+  const [checkError, setCheckError] = useState('');
   const [error, setError] = useState('');
 
   if (!scenario) {
@@ -52,25 +61,61 @@ export function ScenarioStage({ day }: ScenarioStageProps) {
       return;
     }
     setError('');
+    setCheckError('');
+    setTranscript('');
     setResult(null);
+    let handle: RecordingHandle;
     try {
-      const handle = await startRecording({ dayId: day.id, stage: 'scenario', kind: 'practice' });
-      setRecording(handle);
+      handle = await startRecording({ dayId: day.id, stage: 'scenario', kind: 'practice' });
     } catch {
       setError(MIC_ERROR);
+      return;
     }
+
+    // Speech recognition starts with the recording, so the check uses what the
+    // learner actually said instead of asking them to speak a second time.
+    let capture: SpeechCapture | null = null;
+    if (canCheck) {
+      try {
+        capture = startSpeechCapture();
+      } catch {
+        capture = null;
+      }
+    }
+    setSpeechCapture(capture);
+    setRecording(handle);
   };
 
   const stop = async () => {
     if (!recording) {
       return;
     }
+    const capture = speechCapture;
+    setSpeechCapture(null);
     try {
       const saved = await recording.stop();
       await putRecording(saved);
       setAttempted(true);
       setRecorded(true);
+
+      if (capture) {
+        const captured = await capture.stop();
+        setTranscript(captured.transcript);
+        if (captured.error) {
+          setCheckError('Speech check nahi chala. Dobara record karke try karo.');
+        } else if (!captured.transcript) {
+          setCheckError('Kuch sunai nahi diya. Dobara record karke zyada clear bolo.');
+        } else {
+          setResult({
+            matched: matchKeywords(captured.transcript, turn.keywords).length,
+            total: turn.keywords.length,
+          });
+        }
+      } else if (canCheck) {
+        setCheckError('Speech check start nahi hua. Dobara record karke try karo.');
+      }
     } catch {
+      capture?.cancel();
       setError(MIC_ERROR);
     } finally {
       setRecording(null);
@@ -79,10 +124,14 @@ export function ScenarioStage({ day }: ScenarioStageProps) {
 
   const skip = () => {
     recording?.cancel();
+    speechCapture?.cancel();
     setRecording(null);
+    setSpeechCapture(null);
     setAttempted(true);
     setRecorded(false);
+    setTranscript('');
     setResult(null);
+    setCheckError('');
     setError('');
   };
 
@@ -91,13 +140,40 @@ export function ScenarioStage({ day }: ScenarioStageProps) {
       return;
     }
     setChecking(true);
-    const response = await checkKeywords(turn.keywords);
-    setResult({ matched: response.matched.length, total: response.total });
-    setChecking(false);
+    setCheckError('');
+    if (transcript) {
+      setResult({
+        matched: matchKeywords(transcript, turn.keywords).length,
+        total: turn.keywords.length,
+      });
+      setChecking(false);
+      return;
+    }
+
+    // Fallback for browsers that cannot run recognition together with the
+    // recorder: listen once more, with clear on-screen instructions.
+    try {
+      const response = await checkKeywords(turn.keywords);
+      setTranscript(response.transcript);
+      if (response.error) {
+        setCheckError('Speech check nahi chala. Dobara record karke try karo.');
+      } else if (!response.transcript) {
+        setCheckError('Kuch sunai nahi diya. Dobara record karke try karo.');
+      } else {
+        setResult({ matched: response.matched.length, total: response.total });
+      }
+    } catch {
+      setCheckError('Speech check nahi chala. Dobara record karke try karo.');
+    } finally {
+      setChecking(false);
+    }
   };
 
   const next = () => {
     recording?.cancel();
+    speechCapture?.cancel();
+    setRecording(null);
+    setSpeechCapture(null);
     if (turnIndex >= scenario.turns.length - 1) {
       completeStage('scenario');
       return;
@@ -106,7 +182,9 @@ export function ScenarioStage({ day }: ScenarioStageProps) {
     setAttempted(false);
     setRecorded(false);
     setRevealed(false);
+    setTranscript('');
     setResult(null);
+    setCheckError('');
     setError('');
   };
 
@@ -171,7 +249,7 @@ export function ScenarioStage({ day }: ScenarioStageProps) {
             disabled={checking}
             className="rounded-xl border border-accent px-4 py-2 text-sm font-semibold text-accent disabled:opacity-60"
           >
-            Check karo
+            {checking ? 'Sun raha hoon...' : 'Check karo'}
           </button>
         )}
         <button
@@ -184,9 +262,24 @@ export function ScenarioStage({ day }: ScenarioStageProps) {
         </button>
       </div>
 
+      {checking && (
+        <p role="status" className="rounded-xl bg-background p-3 text-sm font-medium">
+          Sun raha hoon... ab apna jawab bolo.
+        </p>
+      )}
+
       {result && (
-        <p className="rounded-xl bg-background p-3 text-sm font-medium">
-          {result.matched}/{result.total} key words
+        <div className="rounded-xl bg-background p-3 text-sm">
+          <p className="font-medium">
+            {result.matched}/{result.total} key words
+          </p>
+          {transcript && <p className="mt-1 text-xs text-muted">Sunā: “{transcript}”</p>}
+        </div>
+      )}
+
+      {checkError && (
+        <p role="status" className="rounded-xl bg-amber-50 p-3 text-sm text-amber-800">
+          {checkError}
         </p>
       )}
 
