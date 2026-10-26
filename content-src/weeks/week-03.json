@@ -1,0 +1,210 @@
+{
+  "number": 3,
+  "slug": "asking-and-clarifying",
+  "title": "Asking and clarifying",
+  "lead": "Is lesson ke baad tum client ke fast English, unclear requirement ya bad phone audio me bhi ruk kar politely repeat, meaning aur permission maang paoge.",
+  "description": "Week 3 English lesson: ask for repetition, check meaning, request explanations, and ask permission politely.",
+  "patterns": [
+    {
+      "frame": "Can you repeat that, please?",
+      "note": "Please add karo; tone polite rehta hai.",
+      "say": "Can you repeat that, please?",
+      "positive": "Can you repeat that, please?",
+      "negative": "Sorry, I can't hear you clearly.",
+      "question": "Can you repeat that, please?",
+      "examples": [
+        ["Can you repeat the last part, please?", "Kya aap last part dobara bata sakte hain?"],
+        ["Could you speak a little more slowly?", "Kya aap thoda dheere bol sakte hain?"]
+      ],
+      "grammar": "Can/Could + subject + base verb. Could zyada polite. Please sentence ke end me — tone soft rehta hai.",
+      "mistake": "“Can you repeat?” → “Can you repeat that, please?” That se clear hota hai kya repeat karna hai."
+    },
+    {
+      "frame": "What do you mean by ___?",
+      "note": "Word ya phrase ka meaning puchhne ke liye.",
+      "say": "What do you mean by scope?",
+      "positive": "What do you mean by scope?",
+      "negative": "I don't know what you mean.",
+      "question": "What do you mean by scope?",
+      "examples": [
+        ["What do you mean by 'by Friday'?", "‘Friday tak’ se aapka matlab kya hai?"],
+        ["Do you mean this week or next week?", "Aapka matlab is hafte ya agle hafte?"]
+      ],
+      "grammar": "mean by + noun/phrase. Confirm karne ke liye: Do you mean this week or next week?",
+      "mistake": "“What you mean?” → “What do you mean?” Question me do chahiye."
+    },
+    {
+      "frame": "Could you explain ___?",
+      "note": "Explain ke baad kya explain karna hai, woh bolo.",
+      "say": "Could you explain the payment process?",
+      "positive": "Could you explain the payment process?",
+      "negative": "I don't understand the payment process.",
+      "question": "Could you explain the payment process?",
+      "examples": [
+        ["Could you explain the timeline?", "Kya aap timeline samjha sakte hain?"],
+        ["Could you explain it in simple words?", "Kya aap ise simple shabdon me samjha sakte hain?"]
+      ],
+      "grammar": "explain + thing. Person ke liye to: Could you explain it to me? ‘Explain me’ galat hai.",
+      "mistake": "“Could you explain me?” → “Could you explain it to me?” Explain + thing + to + person."
+    },
+    {
+      "frame": "Is it okay if I ___?",
+      "note": "Permission maangne ka polite pattern.",
+      "say": "Is it okay if I call you after lunch?",
+      "positive": "Is it okay if I call you after lunch?",
+      "negative": "Is it okay if I don't join the call?",
+      "question": "Is it okay if I call you after lunch?",
+      "examples": [
+        ["Is it okay if I send it tomorrow?", "Kya main ise kal bhej sakta hoon?"],
+        ["Is it okay if we meet at four?", "Kya hum chaar baje mil sakte hain?"]
+      ],
+      "grammar": "Is it okay if + subject + present simple. Future ke liye will nahi lagta.",
+      "mistake": "“Is it okay if I will call?” → “Is it okay if I call?” If clause me present simple."
+    },
+    {
+      "frame": "Sorry, I didn't catch that.",
+      "note": "Samajh nahi aaya ya sunai nahi diya — dono ke liye.",
+      "say": "Sorry, I didn't catch that.",
+      "positive": "Sorry, I didn't catch that.",
+      "negative": "I didn't catch the last word.",
+      "question": "Sorry, could you say that again?",
+      "examples": [
+        ["Sorry, I didn't catch your name.", "Sorry, aapka naam nahi suna."],
+        ["I didn't catch the last sentence.", "Aakhri sentence samajh nahi aaya."]
+      ],
+      "grammar": "didn't + base verb. catch = sunna/samajhna. Past negative me didn't catch.",
+      "mistake": "“I didn't caught that.” → “I didn't catch that.” didn't ke baad base verb."
+    },
+    {
+      "frame": "How do you say ___ in English?",
+      "note": "Hindi word ka English puchhne ke liye.",
+      "say": "How do you say jaldi in English?",
+      "positive": "How do you say jaldi in English?",
+      "negative": "I don't know the English word for this.",
+      "question": "How do you say this in English?",
+      "examples": [
+        ["How do you say this word in English?", "Is word ko English me kya kehte hain?"],
+        ["How do you spell the domain name?", "Domain name ki spelling kaise likhte hain?"]
+      ],
+      "grammar": "How do you say + word + in English? Spelling ke liye: How do you spell it?",
+      "mistake": "“How to say this in English?” → “How do you say this in English?” Question me do you."
+    }
+  ],
+  "grammarRules": [
+    ["Can/Could + subject + base verb", "Can you repeat that? Could you explain it?"],
+    ["Could you explain + thing (+ to me)", "Could you explain the process to me?"],
+    ["Is it okay if + subject + present simple", "Is it okay if I call you later?"],
+    ["didn't + base verb for past", "I didn't catch that."],
+    ["mean by + noun/phrase", "What do you mean by scope?"],
+    ["How do you say/spell ___?", "How do you say this in English?"]
+  ],
+  "mistakes": [
+    ["What you mean?", "What do you mean?", "Question me do chahiye."],
+    ["Could you explain me?", "Could you explain it to me?", "explain + thing + to + person."],
+    ["I didn't caught that.", "I didn't catch that.", "didn't ke baad base verb."],
+    ["Is it okay if I will call?", "Is it okay if I call?", "If clause me present simple."],
+    ["How to say this in English?", "How do you say this in English?", "Question me do you."],
+    ["Can you repeat?", "Can you repeat that, please?", "That + please se request clear aur polite hoti hai."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "Can you ___ that, please?", "answers": ["repeat"], "explain": "repeat = dobara bolna.", "model": "Can you repeat that, please?" },
+      { "prompt": "What do you ___ by scope?", "answers": ["mean"], "explain": "mean by = matlab kya hai.", "model": "What do you mean by scope?" },
+      { "prompt": "Could you ___ the process?", "answers": ["explain"], "explain": "explain = samjhana.", "model": "Could you explain the process?" },
+      { "prompt": "Is it ___ if I call later?", "answers": ["okay", "ok", "fine"], "explain": "Is it okay if... = permission.", "model": "Is it okay if I call later?" },
+      { "prompt": "Sorry, I didn't ___ that.", "answers": ["catch"], "explain": "catch = sunna/samajhna.", "model": "Sorry, I didn't catch that." },
+      { "prompt": "How do you ___ this in English?", "answers": ["say"], "explain": "How do you say... in English?", "model": "How do you say this in English?" }
+    ],
+    "grammar": [
+      { "prompt": "___ you repeat that, please?", "answers": ["Can", "Could"], "explain": "Can/Could + base verb.", "model": "Can you repeat that, please?" },
+      { "prompt": "Could you explain it ___ me?", "answers": ["to"], "explain": "explain something to someone.", "model": "Could you explain it to me?" },
+      { "prompt": "I didn't ___ the last word.", "answers": ["catch"], "explain": "didn't + base verb.", "model": "I didn't catch the last word." },
+      { "prompt": "Is it okay if I ___ early?", "answers": ["leave"], "explain": "If clause me present simple.", "model": "Is it okay if I leave early?" }
+    ],
+    "build": [
+      { "jumbled": "repeat / you / can / please / that", "answers": ["Can you repeat that please?", "Can you repeat that, please?"], "explain": "Can + subject + base verb + please.", "model": "Can you repeat that, please?" },
+      { "jumbled": "mean / what / do / you / by / scope", "answers": ["What do you mean by scope?"], "explain": "What + do + subject + mean by + noun.", "model": "What do you mean by scope?" },
+      { "jumbled": "explain / could / the / you / timeline", "answers": ["Could you explain the timeline?"], "explain": "Could + subject + base verb.", "model": "Could you explain the timeline?" }
+    ],
+    "translate": [
+      { "hinglish": "Kya aap dobara bata sakte hain?", "answers": ["Can you repeat that?", "Could you repeat that?", "Can you say that again?", "Could you say that again?", "Can you repeat that, please?", "Could you repeat that, please?"], "explain": "Can/Could + repeat + that.", "model": "Could you repeat that, please?" },
+      { "hinglish": "Iska matlab kya hai?", "answers": ["What do you mean?", "What does it mean?", "What do you mean by that?"], "explain": "mean = matlab hona.", "model": "What do you mean by that?" },
+      { "hinglish": "Kya main baad me call kar sakta hoon?", "answers": ["Is it okay if I call later?", "Is it okay if I call you later?", "Can I call you later?", "Could I call you later?"], "explain": "Permission: Is it okay if I...?", "model": "Is it okay if I call later?" }
+    ]
+  },
+  "repeat": [
+    "Can you repeat that, please?",
+    "What do you mean by scope?",
+    "Could you explain the timeline?",
+    "Sorry, I didn't catch the last word."
+  ],
+  "dialogue": {
+    "context": "Client call, audio thoda unclear. Riya = client. Har line me ek clarifying question hai.",
+    "lines": [
+      { "speaker": "Riya", "text": "So we need the new page by Friday." },
+      { "speaker": "You", "text": "Sorry, I didn't catch that. Can you repeat the date, please?", "target": true },
+      { "speaker": "Riya", "text": "Friday, the 30th." },
+      { "speaker": "You", "text": "Thank you. And what do you mean by new page — the design or the content?", "target": true },
+      { "speaker": "Riya", "text": "The design first." },
+      { "speaker": "You", "text": "Got it. Could you share the reference site?", "target": true }
+    ],
+    "closing": "Clarify karna stupid nahi lagta. Galat kaam karna lagta hai."
+  },
+  "speakPrompts": [
+    { "title": "1. Ask for repetition", "prompt": "Client fast bol raha hai. Do lines bolo.", "starter": "Sorry, I didn't catch that. Can you repeat that, please?" },
+    { "title": "2. Check meaning", "prompt": "Ek word ka meaning confirm karo.", "starter": "What do you mean by ___ ? Do you mean ___ or ___ ?" },
+    { "title": "3. Ask permission", "prompt": "Do polite requests bolo.", "starter": "Is it okay if I ___ ? Could you explain ___ ?" },
+    { "title": "4. Phone-call rescue", "prompt": "Char lines ka rescue script record karo.", "starter": "Sorry, the audio is not clear. Can you repeat that? ... Thank you. Could you explain ___ ?" }
+  ],
+  "vocab": [
+    { "word": "repeat", "collocation": "repeat the question", "example": "Could you repeat the question?", "meaning": "dobara bolna" },
+    { "word": "mean", "collocation": "mean by scope", "example": "What do you mean by scope?", "meaning": "matlab hona" },
+    { "word": "explain", "collocation": "explain the process", "example": "Could you explain the process?", "meaning": "samjhana" },
+    { "word": "clarify", "collocation": "clarify one point", "example": "I'd like to clarify one point.", "meaning": "spasht karna" },
+    { "word": "example", "collocation": "give an example", "example": "Could you give an example?", "meaning": "udaharan" },
+    { "word": "detail", "collocation": "in detail", "example": "Could you explain it in detail?", "meaning": "vistar" },
+    { "word": "understand", "collocation": "understand the requirement", "example": "I understand the requirement now.", "meaning": "samajhna" },
+    { "word": "slowly", "collocation": "speak slowly", "example": "Could you speak slowly, please?", "meaning": "dheere" },
+    { "word": "spelling", "collocation": "check the spelling", "example": "Can you check the spelling of the domain?", "meaning": "spelling" },
+    { "word": "confirm", "collocation": "confirm the deadline", "example": "I want to confirm the deadline.", "meaning": "pakka karna" }
+  ],
+  "selfCheck": [
+    "Repetition maangne ke liye Can/Could + please use kiya.",
+    "Ek word ka meaning “What do you mean by ___?” se poochha.",
+    "“Could you explain ___?” me explain ke baad thing boli.",
+    "Permission ke liye “Is it okay if I ___?” use kiya.",
+    "“I didn't catch that” bina jhijhak boli.",
+    "Polite tone raha, demand jaisa nahi laga."
+  ],
+  "pronunciation": [
+    { "title": "Yes/No question intonation", "body": "Can you REpeat that? — end me voice upar. Request ko soft banata hai." },
+    { "title": "Wh- question intonation", "body": "WHAT do you MEAN by SCOPE? — end me voice neeche. Stress meaning par." },
+    { "title": "didn't catch", "body": "didn't = /ˈdɪdənt/, catch = /kætʃ/. Linking: “didn't catch” ek saath bolo, dono ko alag alag mat toda karo." },
+    { "title": "explain", "body": "Stress second syllable: ex-PLAIN. “EXplain” nahi." }
+  ],
+  "followUps": [
+    "Client call me repeat maangna rude lagta hai kya?",
+    "“What do you mean by scope?” ka aur natural version kya hai?",
+    "Meri “Could you explain” line me tone polite thi?",
+    "Phone par audio clear karne ke liye aur kaunse phrases use karun?",
+    "“I didn't catch that” ke baad kya bolna chahiye?"
+  ],
+  "mission": "Ek asli client ya colleague se English me ek clarifying question poochho — repeat, meaning, ya permission.",
+  "source": {
+    "label": "British Council · English grammar reference",
+    "url": "https://learnenglish.britishcouncil.org/grammar/english-grammar-reference",
+    "note": "Requests aur questions wale pages padho. Rule yaad nahi — ek example chuno aur loud bolo."
+  },
+  "phrases": [
+    ["Can you repeat that, please?", "Kya aap dobara bata sakte hain?"],
+    ["Sorry, I didn't catch that.", "Sorry, woh samajh nahi aaya."],
+    ["What do you mean by scope?", "Scope se aapka matlab kya hai?"],
+    ["Could you explain the timeline?", "Kya aap timeline samjha sakte hain?"],
+    ["Is it okay if I call later?", "Kya main baad me call kar sakta hoon?"],
+    ["Could you speak slowly, please?", "Kya aap dheere bol sakte hain?"],
+    ["How do you say this in English?", "Ise English me kya kehte hain?"],
+    ["How do you spell it?", "Iski spelling kaise hai?"],
+    ["Do you mean this week or next week?", "Aapka matlab is hafte ya agle hafte?"],
+    ["I want to confirm the deadline.", "Main deadline confirm karna chahta hoon."]
+  ]
+}

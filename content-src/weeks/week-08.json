@@ -1,0 +1,212 @@
+{
+  "number": 8,
+  "slug": "in-person-meetings",
+  "title": "In-person meetings",
+  "lead": "Is lesson ke baad tum client ko office me welcome kar sakte ho, demo dikha sakte ho, price aur offer bata sakte ho, aur politely goodbye bol sakte ho.",
+  "description": "Week 8 English lesson: welcome a client, give an office tour, show a demo, make an offer, and end a meeting politely.",
+  "patterns": [
+    {
+      "frame": "Nice to meet you.",
+      "note": "Pehli mulaqat par fixed phrase. End me: Nice meeting you.",
+      "say": "Nice to meet you, Riya.",
+      "positive": "Nice to meet you, Riya.",
+      "negative": "It's not our first meeting — we spoke on Zoom.",
+      "question": "Is this your first visit to our office?",
+      "examples": [
+        ["Nice to meet you. Thank you for coming.", "Aapse mil kar achha laga. Aane ke liye thanks."],
+        ["It's nice to meet you too.", "Aap se milkar bhi achha laga."]
+      ],
+      "grammar": "Nice to meet you = pehli mulaqat. Meeting ke end me Nice meeting you. Response: Nice to meet you too.",
+      "mistake": "“Nice to meet to you” → “Nice to meet you.” meet ke baad to nahi."
+    },
+    {
+      "frame": "Let me show you ___.",
+      "note": "Office, demo ya product dikhane ka offer.",
+      "say": "Let me show you our office.",
+      "positive": "Let me show you our office.",
+      "negative": "I can't show you the server room.",
+      "question": "Can you show me the design?",
+      "examples": [
+        ["Let me show you the demo.", "Main aapko demo dikhata hoon."],
+        ["Let me show you our new office.", "Main aapko hamara naya office dikhata hoon."]
+      ],
+      "grammar": "Let me + base verb + object. show someone something.",
+      "mistake": "“Let me to show you” → “Let me show you.” let me ke baad base verb."
+    },
+    {
+      "frame": "Would you like ___?",
+      "note": "Polite offer — chai, paani, seat ya demo.",
+      "say": "Would you like some tea?",
+      "positive": "Would you like some tea?",
+      "negative": "No, thank you. I don't want anything right now.",
+      "question": "Would you like to see the demo?",
+      "examples": [
+        ["Would you like some water?", "Kya aap paani lena chahenge?"],
+        ["Would you like to sit down?", "Kya aap baithna chahenge?"]
+      ],
+      "grammar": "Would you like + noun / to + verb. Polite offer. Answer: Yes, please. / No, thank you.",
+      "mistake": "“Do you like some water?” (offer) → “Would you like some water?” Offer ke liye would."
+    },
+    {
+      "frame": "We can offer ___.",
+      "note": "Price, discount ya package batane ke liye.",
+      "say": "We can offer a ten percent discount.",
+      "positive": "We can offer a ten percent discount.",
+      "negative": "We can't offer free hosting.",
+      "question": "What can you offer?",
+      "examples": [
+        ["We can offer a monthly plan.", "Hum monthly plan de sakte hain."],
+        ["We can offer two designs.", "Hum do designs de sakte hain."]
+      ],
+      "grammar": "can offer + noun. Negotiation me range batao, promise zyada mat karo.",
+      "mistake": "“We can offer to you a discount” → “We can offer you a discount.” offer + person + thing."
+    },
+    {
+      "frame": "Here is ___.",
+      "note": "Kuch dete time — card, list, sample.",
+      "say": "Here is our price list.",
+      "positive": "Here is our price list.",
+      "negative": "This isn't the final quote.",
+      "question": "Is this the final price?",
+      "examples": [
+        ["Here is my card.", "Ye mera card hai."],
+        ["Here are the samples.", "Ye samples hain."]
+      ],
+      "grammar": "Here is + singular; Here are + plural. Handing something over.",
+      "mistake": "“Here is our samples” → “Here are our samples.” Plural ke liye here are."
+    },
+    {
+      "frame": "What do you think?",
+      "note": "Client ki opinion poochho — meeting ko interactive banao.",
+      "say": "What do you think about the design?",
+      "positive": "What do you think about the design?",
+      "negative": "I'm not sure what you think.",
+      "question": "What do you think?",
+      "examples": [
+        ["What do you think of the new homepage?", "Naye homepage ke baare me kya sochte hain?"],
+        ["What do you think? Should we change the colour?", "Aap kya sochte hain? Colour badlein?"]
+      ],
+      "grammar": "What do you think of/about + noun? Think ke baad opinion. Alone bhi chalega.",
+      "mistake": "“What do you think about?” → “What do you think?” ya “What do you think about it?”"
+    }
+  ],
+  "grammarRules": [
+    ["Nice to meet you / Nice meeting you", "Nice to meet you. Nice meeting you."],
+    ["Let me + base verb", "Let me show you the office."],
+    ["Would you like + noun / to + verb", "Would you like some tea?"],
+    ["can offer + person + thing", "We can offer you a discount."],
+    ["Here is/are + noun", "Here is the list. Here are the samples."],
+    ["What do you think of/about ___?", "What do you think about the design?"]
+  ],
+  "mistakes": [
+    ["Nice to meet to you.", "Nice to meet you.", "meet ke baad to nahi."],
+    ["Let me to show you the office.", "Let me show you the office.", "let me + base verb."],
+    ["Do you like some water?", "Would you like some water?", "Offer ke liye would you like."],
+    ["We can offer to you a discount.", "We can offer you a discount.", "offer + person + thing."],
+    ["Here is our samples.", "Here are our samples.", "Plural ke liye here are."],
+    ["What do you think about?", "What do you think about it?", "about ke baad object chahiye."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "Nice to ___ you.", "answers": ["meet"], "explain": "Nice to meet you.", "model": "Nice to meet you." },
+      { "prompt": "Let me ___ you our office.", "answers": ["show"], "explain": "show someone something.", "model": "Let me show you our office." },
+      { "prompt": "___ you like some water?", "answers": ["Would"], "explain": "Polite offer: Would you like...?", "model": "Would you like some water?" },
+      { "prompt": "We can ___ a ten percent discount.", "answers": ["offer", "give"], "explain": "offer = dena/pesh karna.", "model": "We can offer a ten percent discount." },
+      { "prompt": "Here ___ our price list.", "answers": ["is"], "explain": "Singular list → here is.", "model": "Here is our price list." },
+      { "prompt": "What do you ___ about the design?", "answers": ["think"], "explain": "What do you think about...?", "model": "What do you think about the design?" }
+    ],
+    "grammar": [
+      { "prompt": "Here ___ our samples.", "answers": ["are"], "explain": "Plural samples → here are.", "model": "Here are our samples." },
+      { "prompt": "Would you like ___ sit down?", "answers": ["to"], "explain": "would like to + verb.", "model": "Would you like to sit down?" },
+      { "prompt": "Let me ___ you the demo.", "answers": ["show"], "explain": "let me + base verb.", "model": "Let me show you the demo." },
+      { "prompt": "We can offer ___ a discount.", "answers": ["you"], "explain": "offer + person + thing.", "model": "We can offer you a discount." }
+    ],
+    "build": [
+      { "jumbled": "meet / nice / you / to", "answers": ["Nice to meet you.", "Nice to meet you"], "explain": "Fixed phrase.", "model": "Nice to meet you." },
+      { "jumbled": "show / let / you / me / office / our", "answers": ["Let me show you our office."], "explain": "Let me + show + person + thing.", "model": "Let me show you our office." },
+      { "jumbled": "like / would / some / you / tea", "answers": ["Would you like some tea?"], "explain": "Would you like + noun.", "model": "Would you like some tea?" }
+    ],
+    "translate": [
+      { "hinglish": "Aapse mil kar achha laga.", "answers": ["Nice to meet you.", "It's nice to meet you.", "It was nice to meet you."], "explain": "Fixed phrase.", "model": "Nice to meet you." },
+      { "hinglish": "Main aapko hamara office dikhata hoon.", "answers": ["Let me show you our office.", "I'll show you our office."], "explain": "Let me + show.", "model": "Let me show you our office." },
+      { "hinglish": "Kya aap chai lena chahenge?", "answers": ["Would you like some tea?", "Would you like tea?"], "explain": "Would you like + noun.", "model": "Would you like some tea?" }
+    ]
+  },
+  "repeat": [
+    "Nice to meet you. Thank you for coming.",
+    "Let me show you our office.",
+    "Would you like some tea?",
+    "We can offer you a ten percent discount."
+  ],
+  "dialogue": {
+    "context": "Client office visit. Riya = client. Welcome, tour, demo, offer aur goodbye — sab cover karo.",
+    "lines": [
+      { "speaker": "Riya", "text": "Hello! We have a meeting at eleven." },
+      { "speaker": "You", "text": "Welcome. Nice to meet you. Let me show you our office first.", "target": true },
+      { "speaker": "Riya", "text": "Thank you. The office looks nice." },
+      { "speaker": "You", "text": "Would you like some tea before the demo?", "target": true },
+      { "speaker": "Riya", "text": "Yes, please. And what is the price?" },
+      { "speaker": "You", "text": "Here is our price list. We can offer you a ten percent discount for the first year.", "target": true },
+      { "speaker": "Riya", "text": "That sounds good. What do you think about the timeline?" },
+      { "speaker": "You", "text": "I think two weeks is realistic. I'll send you the final quote by Monday.", "target": true }
+    ],
+    "closing": "In-person meeting me chai, demo, price aur next step — chaar moments. Har moment ke liye ek line yaad rakho."
+  },
+  "speakPrompts": [
+    { "title": "1. Welcome", "prompt": "Client ko office me welcome karo.", "starter": "Welcome. Nice to meet you. Let me show you ___ ." },
+    { "title": "2. Offer something", "prompt": "Chai/paani/seat offer karo.", "starter": "Would you like ___ ? Yes, please. / No, thank you." },
+    { "title": "3. Show and ask", "prompt": "Demo dikhao aur opinion poochho.", "starter": "Let me show you ___ . What do you think about ___ ?" },
+    { "title": "4. Price and goodbye", "prompt": "Price batao aur meeting close karo.", "starter": "Here is ___ . We can offer ___ . I'll send you ___ by ___ ." }
+  ],
+  "vocab": [
+    { "word": "office", "collocation": "visit our office", "example": "Thank you for visiting our office.", "meaning": "kaam ki jagah" },
+    { "word": "cabin", "collocation": "the manager's cabin", "example": "The manager's cabin is on the first floor.", "meaning": "alag kamra" },
+    { "word": "sample", "collocation": "a product sample", "example": "Here is a sample of the design.", "meaning": "namuna" },
+    { "word": "demo", "collocation": "give a demo", "example": "Let me give you a quick demo.", "meaning": "dikha kar samjhana" },
+    { "word": "price", "collocation": "the final price", "example": "Here is our final price.", "meaning": "daam" },
+    { "word": "offer", "collocation": "a special offer", "example": "We can offer a special price.", "meaning": "peshkash" },
+    { "word": "discount", "collocation": "a ten percent discount", "example": "We can give a ten percent discount.", "meaning": "chhoot" },
+    { "word": "visit", "collocation": "a client visit", "example": "Thank you for your visit.", "meaning": "aana / mulaqat" },
+    { "word": "tour", "collocation": "an office tour", "example": "Let me give you a quick tour.", "meaning": "ghoom kar dikhana" },
+    { "word": "comfortable", "collocation": "feel comfortable", "example": "Please feel comfortable and ask questions.", "meaning": "aaram se" }
+  ],
+  "selfCheck": [
+    "Client ko “Nice to meet you” se welcome kiya.",
+    "Office ya demo “Let me show you ___” se dikhaya.",
+    "Kuch offer kiya — “Would you like ___?”",
+    "Price ya package “We can offer ___” se bataya.",
+    "Ek opinion poochhi — “What do you think?”",
+    "Next step aur goodbye clear tha."
+  ],
+  "pronunciation": [
+    { "title": "Polite intonation", "body": "Would you LIKE some TEA? — voice end me soft up. Demand nahi, offer lagta hai." },
+    { "title": "Prices", "body": "ten percent = /ten pəˈsent/. Fifteen vs fifty: fifTEEN (stress end), FIFty (stress start)." },
+    { "title": "Linking", "body": "meet you → /miːtʃuː/; would you → /wʊdʒə/. In-person me bhi natural linking chahiye." },
+    { "title": "Numbers", "body": "1,500 = fifteen hundred; 15,000 = fifteen thousand. Lakh/crore ko client ke saath clear karo." }
+  ],
+  "followUps": [
+    "Client ko office tour karate time kya kya bataun?",
+    "Price batate time nervousness kaise kam karun?",
+    "Discount dene se pehle kya poochna chahiye?",
+    "“Nice to meet you” ka reply aur natural kaise bole?",
+    "Meeting ke end me goodbye ka best line kya hai?"
+  ],
+  "mission": "Visit a shop and ask three questions in English, or role-play the client office visit with a friend.",
+  "source": {
+    "label": "BBC Learning English · English at Work",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work",
+    "note": "Meeting aur negotiation wala episode chuno. Target: ek offer line aur ek opinion question note karna."
+  },
+  "phrases": [
+    ["Nice to meet you.", "Aapse mil kar achha laga."],
+    ["Thank you for coming.", "Aane ke liye thanks."],
+    ["Let me show you our office.", "Main aapko hamara office dikhata hoon."],
+    ["Would you like some tea?", "Kya aap chai lena chahenge?"],
+    ["Here is our price list.", "Ye hamari price list hai."],
+    ["We can offer you a discount.", "Hum aapko discount de sakte hain."],
+    ["What do you think about the design?", "Design ke baare me kya sochte hain?"],
+    ["Please feel comfortable.", "Aaram se baithiye."],
+    ["I'll send you the final quote.", "Main final quote bhej doonga."],
+    ["Thank you for your time.", "Aapke time ke liye thanks."]
+  ]
+}

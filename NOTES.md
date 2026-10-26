@@ -21,6 +21,8 @@
 
 - App design: `docs/superpowers/specs/2026-10-24-english-learning-system-design.md`
 - Curriculum plan: `docs/curriculum-plan.md`
-- App: to be built in this folder.
-- Weekly lessons: `lessons/` (after design approval).
-- Reference sheets: `reference/` (after design approval).
+- App: React PWA in `src/`; build output in `dist/`.
+- Weekly lessons: `lessons/` — Weeks 1–12 authored; start at `lessons/index.html`.
+- Reference sheets: `reference/` — 12 printable pattern sheets.
+- Daily app sessions: Week 1 only. Weeks 2–12 lessons are ready, but their app sessions still need authoring.
+- Regenerate weekly lessons from `content-src/weeks/` with `npm run generate:lessons`. Week 1 is hand-authored and must not be regenerated.

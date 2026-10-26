@@ -1,0 +1,210 @@
+{
+  "number": 2,
+  "slug": "daily-routine-and-small-talk",
+  "title": "Daily routine and small talk",
+  "lead": "Is lesson ke baad tum Monday morning chat, lunch break aur weekend plans par 2–3 minute English small talk kar paoge — bina Hindi switch kiye.",
+  "description": "Week 2 English lesson: daily routine, weekend small talk, present simple, past simple, and follow-up questions.",
+  "patterns": [
+    {
+      "frame": "I usually ___ at ___.",
+      "note": "Usually + verb; time ke pehle at.",
+      "say": "I usually check my email at nine.",
+      "positive": "I usually check my email at nine.",
+      "negative": "I don't usually check email at night.",
+      "question": "What do you usually do in the morning?",
+      "examples": [
+        ["I usually start work at ten.", "Main aam taur par das baje kaam shuru karta hoon."],
+        ["She usually takes the metro to the office.", "Woh aam taur par office metro se jaati hai."]
+      ],
+      "grammar": "Present simple + frequency adverb. usually/always/often/sometimes/never verb se pehle aate hain: I usually work. am/is/are ke baad: I'm usually busy.",
+      "mistake": "“I am usually go to office at 10” → “I usually go to office at 10.” Usually ke saath base verb."
+    },
+    {
+      "frame": "I don't ___ very often.",
+      "note": "Negative habit; very often = bahut zyada baar nahi.",
+      "say": "I don't watch cricket very often.",
+      "positive": "I watch cricket almost every weekend.",
+      "negative": "I don't watch cricket very often.",
+      "question": "Do you watch cricket very often?",
+      "examples": [
+        ["I don't go to the gym very often.", "Main bahut zyada baar gym nahi jaata."],
+        ["We don't eat out very often.", "Hum bahut zyada baar bahar nahi khaate."]
+      ],
+      "grammar": "don't/doesn't + base verb. very often sentence ke end me. Not very often = rarely.",
+      "mistake": "“I don't watched cricket” → “I don't watch cricket.” don't ke baad base verb."
+    },
+    {
+      "frame": "How was your weekend?",
+      "note": "Weekend khatam ho gaya, isliye was. Aaj ke liye How is your day?",
+      "say": "How was your weekend?",
+      "positive": "It was good, thanks.",
+      "negative": "It wasn't very relaxing.",
+      "question": "How was your weekend?",
+      "examples": [
+        ["It was busy, but I enjoyed it.", "Vyast tha, lekin maza aaya."],
+        ["My weekend was quiet. I stayed home.", "Mera weekend shaant tha. Main ghar par ruka."]
+      ],
+      "grammar": "Past simple be: was/were. Weekend singular → was; days/events plural → were.",
+      "mistake": "“How is your weekend?” (Monday ko) → “How was your weekend?” Weekend past me khatam ho gaya."
+    },
+    {
+      "frame": "I went to ___ / I stayed ___.",
+      "note": "went = go ka past; stayed = ghar ya kisi jagah ruka.",
+      "say": "I went to my cousin's place and stayed there for two hours.",
+      "positive": "I went to my cousin's place and stayed there for two hours.",
+      "negative": "I didn't go out on Sunday.",
+      "question": "Where did you go on Sunday?",
+      "examples": [
+        ["I went to the market in the morning.", "Main subah market gaya."],
+        ["We stayed home and watched a movie.", "Hum ghar par ruke aur movie dekhi."]
+      ],
+      "grammar": "Past simple irregular: go → went. stay → stayed. ghar ke liye: I stayed home / I stayed at home.",
+      "mistake": "“I went to home” → “I went home.” Home ke pehle to nahi lagta."
+    },
+    {
+      "frame": "Do you like ___?",
+      "note": "Like ke baad noun ya verb+ing.",
+      "say": "Do you like working from home?",
+      "positive": "I like working from home.",
+      "negative": "I don't like waking up early.",
+      "question": "Do you like working from home?",
+      "examples": [
+        ["Do you like tea or coffee?", "Aapko chai pasand hai ya coffee?"],
+        ["I like watching movies on Sunday.", "Mujhe Sunday ko movie dekhna pasand hai."]
+      ],
+      "grammar": "like + noun / verb-ing. Short answer: Yes, I do. / No, I don't.",
+      "mistake": "“Do you like work from home?” → “Do you like working from home?” Like ke baad verb-ing."
+    },
+    {
+      "frame": "What about you?",
+      "note": "Same question wapas poochhne ka short tarika.",
+      "say": "I'm a developer. What about you?",
+      "positive": "I'm a developer. What about you?",
+      "negative": "I'm not very busy today. What about you?",
+      "question": "What about you?",
+      "examples": [
+        ["I usually commute by bike. What about you?", "Main aam taur par bike se jaata hoon. Tum?"],
+        ["I like cricket. What about you?", "Mujhe cricket pasand hai. Tumhe?"]
+      ],
+      "grammar": "What about you? = And you? Same topic continue karta hai. Formal me And you? bhi chalega.",
+      "mistake": "“What about your?” → “What about you?” You subject aur object dono me same rehta hai."
+    }
+  ],
+  "grammarRules": [
+    ["usually/always/often/sometimes/never + base verb", "I usually start at ten."],
+    ["am/is/are + usually + adjective/noun", "I'm usually busy on Monday."],
+    ["don't/doesn't + base verb", "I don't watch TV very often."],
+    ["Past simple: was/were; went/stayed", "It was good. I went home."],
+    ["like + noun / verb-ing", "I like working from home."],
+    ["Questions: Do you + base verb? / How was ___?", "Do you like tea? How was your weekend?"]
+  ],
+  "mistakes": [
+    ["I am usually go to office at 10.", "I usually go to office at 10.", "Frequency adverb ke baad base verb."],
+    ["I don't watched cricket.", "I don't watch cricket.", "don't ke baad base verb."],
+    ["How is your weekend?", "How was your weekend?", "Weekend past me khatam ho gaya, isliye was."],
+    ["I went to home.", "I went home.", "Home ke pehle to nahi lagta."],
+    ["Do you like work from home?", "Do you like working from home?", "like ke baad verb-ing."],
+    ["What about your?", "What about you?", "You subject aur object dono me same rehta hai."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "I usually ___ at nine.", "answers": ["start", "begin"], "explain": "Usually ke baad base verb.", "model": "I usually start at nine." },
+      { "prompt": "I don't watch cricket very ___.", "answers": ["often"], "explain": "very often = bahut zyada baar.", "model": "I don't watch cricket very often." },
+      { "prompt": "How ___ your weekend?", "answers": ["was"], "explain": "Weekend singular, past me was.", "model": "How was your weekend?" },
+      { "prompt": "I ___ to my cousin's place.", "answers": ["went"], "explain": "go ka past went.", "model": "I went to my cousin's place." },
+      { "prompt": "I stayed ___ home.", "answers": ["at"], "explain": "at home fixed phrase.", "model": "I stayed at home." },
+      { "prompt": "Do you like ___ from home?", "answers": ["working", "to work"], "explain": "like + verb-ing (ya to + verb).", "model": "Do you like working from home?" }
+    ],
+    "grammar": [
+      { "prompt": "She ___ work at nine.", "answers": ["starts"], "explain": "He/she/it ke saath verb + -s.", "model": "She starts work at nine." },
+      { "prompt": "___ you like tea?", "answers": ["Do"], "explain": "Present simple question me do.", "model": "Do you like tea?" },
+      { "prompt": "I ___ watch TV very often.", "answers": ["don't", "do not"], "explain": "I ke saath don't.", "model": "I don't watch TV very often." },
+      { "prompt": "They ___ to the market yesterday.", "answers": ["went"], "explain": "yesterday = past, go → went.", "model": "They went to the market yesterday." }
+    ],
+    "build": [
+      { "jumbled": "usually / I / at / start / nine", "answers": ["I usually start at nine.", "I usually start at 9."], "explain": "Subject + usually + verb + at + time.", "model": "I usually start at nine." },
+      { "jumbled": "weekend / was / how / your", "answers": ["How was your weekend?"], "explain": "Question word + was + subject.", "model": "How was your weekend?" },
+      { "jumbled": "working / do / like / you / home / from", "answers": ["Do you like working from home?"], "explain": "Do + subject + like + verb-ing.", "model": "Do you like working from home?" }
+    ],
+    "translate": [
+      { "hinglish": "Main aam taur par das baje kaam shuru karta hoon.", "answers": ["I usually start work at ten.", "I usually start work at 10."], "explain": "usually + base verb + at + time.", "model": "I usually start work at ten." },
+      { "hinglish": "Mera weekend achha tha.", "answers": ["My weekend was good.", "It was a good weekend."], "explain": "Past me was; weekend singular.", "model": "My weekend was good." },
+      { "hinglish": "Tumhe ghar se kaam karna pasand hai?", "answers": ["Do you like working from home?", "Do you like to work from home?"], "explain": "Do you like + verb-ing.", "model": "Do you like working from home?" }
+    ]
+  },
+  "repeat": [
+    "I usually start work at ten.",
+    "My weekend was good, thanks. What about you?",
+    "I went to my cousin's place and stayed there for two hours.",
+    "I don't watch cricket very often, but I like it."
+  ],
+  "dialogue": {
+    "context": "Monday morning, office kitchen. Riya = colleague. Short answers do, phir question wapas poochho.",
+    "lines": [
+      { "speaker": "Riya", "text": "Morning! How was your weekend?" },
+      { "speaker": "You", "text": "It was good, thanks. I went to my cousin's place. What about you?", "target": true, "say": "It was good, thanks. I went to my cousin's place. What about you?" },
+      { "speaker": "Riya", "text": "Nice. I stayed home and watched a movie." },
+      { "speaker": "You", "text": "Do you like watching movies at home?", "target": true },
+      { "speaker": "Riya", "text": "Sometimes. I usually go to the theatre." },
+      { "speaker": "You", "text": "Same here. I don't go very often, but I like it.", "target": true }
+    ],
+    "closing": "Har answer ke baad ek question poochho. Small talk tennis jaisa hai — ball wapas hit karo."
+  },
+  "speakPrompts": [
+    { "title": "1. Your morning routine", "prompt": "Subah se office tak 4 lines bolo.", "starter": "I usually wake up at ___ . I ___ at ___ . I usually start work at ___ ." },
+    { "title": "2. Your weekend", "prompt": "Last weekend kya kiya, past simple me bolo.", "starter": "My weekend was ___ . I went to ___ . I stayed ___ ." },
+    { "title": "3. Ask them back", "prompt": "Teen small-talk questions bolo.", "starter": "How was your weekend? Do you like ___ ? What about you?" },
+    { "title": "4. Two-minute chat", "prompt": "Friend ke saath 2 minute conversation record karo.", "starter": "Hi! How are you? ... What about you? ... Do you like ___ ?" }
+  ],
+  "vocab": [
+    { "word": "routine", "collocation": "morning routine", "example": "I have a simple morning routine.", "meaning": "roz ka kaam ka order" },
+    { "word": "commute", "collocation": "a long commute", "example": "My commute takes forty minutes.", "meaning": "ghar se office ka safar" },
+    { "word": "weekend", "collocation": "over the weekend", "example": "I slept a lot over the weekend.", "meaning": "Saturday–Sunday" },
+    { "word": "family", "collocation": "spend time with family", "example": "I spend Sunday with my family.", "meaning": "parivaar" },
+    { "word": "food", "collocation": "home-cooked food", "example": "I prefer home-cooked food.", "meaning": "khana" },
+    { "word": "movie", "collocation": "watch a movie", "example": "We watched a movie on Sunday.", "meaning": "film" },
+    { "word": "cricket", "collocation": "watch cricket", "example": "I don't watch cricket very often.", "meaning": "cricket" },
+    { "word": "gym", "collocation": "go to the gym", "example": "I go to the gym three times a week.", "meaning": "vyayamshala" },
+    { "word": "traffic", "collocation": "heavy traffic", "example": "There was heavy traffic this morning.", "meaning": "bheed aur gaadiyon ka jam" },
+    { "word": "sleep", "collocation": "get enough sleep", "example": "I don't get enough sleep on weekdays.", "meaning": "neend" }
+  ],
+  "selfCheck": [
+    "Apna morning routine 3 lines me bola.",
+    "Last weekend ke baare me past simple (was/went/stayed) use kiya.",
+    "“I usually ___” aur “I don't ___ very often” use kiya.",
+    "Ek question wapas poochha — “What about you?”",
+    "2 minute tak English me bola, Hindi minimum thi.",
+    "went, stayed aur was ka pronunciation clear tha."
+  ],
+  "pronunciation": [
+    { "title": "-s endings", "body": "works = work + /s/; watches = watch + /ɪz/; goes = go + /z/. Practice: works, lives, watches." },
+    { "title": "Sentence rhythm", "body": "Content words par stress: I <strong>USUALLY</strong> <strong>START</strong> <strong>WORK</strong> at <strong>TEN</strong>. usually/at ko halka bolo." },
+    { "title": "was / were", "body": "was = /wɒz/ short; were = /wɜːr/. “It was good” me was ko lamba mat karo." },
+    { "title": "went", "body": "went = /went/, final /t/ clear. “I went home” ko “I wen home” mat bolo." }
+  ],
+  "followUps": [
+    "Mera “usually” sentence me sahi position par hai?",
+    "“How was your weekend?” ka natural reply kya hoga?",
+    "Meri recording me kaunsa word clear nahi tha?",
+    "Small talk me aur kaunse safe questions poochh sakta hoon?",
+    "“I went to my cousin's place” natural lagta hai?"
+  ],
+  "mission": "Ek colleague se ek real small-talk question English me poochho — “How was your weekend?” ya “Do you like ___?” — aur uska answer suno.",
+  "source": {
+    "label": "BBC Learning English · 6 Minute English",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+    "note": "Ek episode transcript ke saath suno. Target: 2 lines repeat karna, poora episode samajhna nahi."
+  },
+  "phrases": [
+    ["How was your weekend?", "Weekend kaisa tha?"],
+    ["It was good, thanks.", "Achha tha, thanks."],
+    ["What about you?", "Tumhara kya?"],
+    ["I usually start at ten.", "Main aam taur par das baje shuru karta hoon."],
+    ["I don't go very often.", "Main bahut zyada baar nahi jaata."],
+    ["I went to my cousin's place.", "Main cousin ke ghar gaya."],
+    ["I stayed home.", "Main ghar par ruka."],
+    ["Do you like working from home?", "Ghar se kaam karna pasand hai?"],
+    ["Same here.", "Mere saath bhi wahi."],
+    ["Not much, just work.", "Kuch khaas nahi, bas kaam."]
+  ]
+}

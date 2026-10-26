@@ -1,0 +1,212 @@
+{
+  "number": 9,
+  "slug": "problems-delays-apologies",
+  "title": "Problems, delays, apologies",
+  "lead": "Is lesson ke baad tum missed deadline, bug, wrong file ya payment delay par calm English me sorry bol sakte ho, reason bata sakte ho, aur recovery plan de sakte ho.",
+  "description": "Week 9 English lesson: apologize for a delay, explain the reason, give a fix time, and keep the client calm.",
+  "patterns": [
+    {
+      "frame": "I'm sorry for the delay.",
+      "note": "Delay ke liye seedhi, simple apology.",
+      "say": "I'm sorry for the delay.",
+      "positive": "I'm sorry for the delay.",
+      "negative": "I'm not happy about the delay either.",
+      "question": "Is there a delay?",
+      "examples": [
+        ["I'm sorry for the late reply.", "Late reply ke liye sorry."],
+        ["Sorry for the confusion.", "Confusion ke liye sorry."]
+      ],
+      "grammar": "sorry for + noun/-ing. sorry to + verb: I'm sorry to say this. Delay ke liye for.",
+      "mistake": "“Sorry for delay” → “Sorry for the delay.” Article the chahiye."
+    },
+    {
+      "frame": "There was an issue with ___.",
+      "note": "Problem kahan thi, clearly bolo.",
+      "say": "There was an issue with the payment gateway.",
+      "positive": "There was an issue with the payment gateway.",
+      "negative": "There wasn't any issue with the design.",
+      "question": "Was there an issue with the server?",
+      "examples": [
+        ["There was an issue with the backup.", "Backup me problem thi."],
+        ["There were two issues with the form.", "Form me do problems thi."]
+      ],
+      "grammar": "There was + singular; there were + plural. issue with + thing.",
+      "mistake": "“There was issue with server” → “There was an issue with the server.” Article a/the."
+    },
+    {
+      "frame": "It's delayed because ___.",
+      "note": "Reason do — blame nahi, fact.",
+      "say": "It's delayed because the content is not ready.",
+      "positive": "It's delayed because the content is not ready.",
+      "negative": "It's not delayed because of us.",
+      "question": "Why is it delayed?",
+      "examples": [
+        ["It's delayed because the client changed the design.", "Delay hui kyunki client ne design badla."],
+        ["It's delayed because of the holiday.", "Holiday ki wajah se delay hui."]
+      ],
+      "grammar": "because + clause (subject + verb). because of + noun. Difference clear rakho.",
+      "mistake": "“because the content not ready” → “because the content is not ready.” Clause me verb chahiye."
+    },
+    {
+      "frame": "We're fixing it.",
+      "note": "Team abhi action me hai — ye confidence deta hai.",
+      "say": "We're fixing it right now.",
+      "positive": "We're fixing it right now.",
+      "negative": "We're not fixing the design today.",
+      "question": "When will it be fixed?",
+      "examples": [
+        ["We're fixing the login bug now.", "Hum login bug abhi theek kar rahe hain."],
+        ["It will be fixed by evening.", "Ye shaam tak theek ho jayega."]
+      ],
+      "grammar": "Present continuous for current action. fix = theek karna. Passive: it will be fixed.",
+      "mistake": "“We fixing it” → “We're fixing it.” be verb chahiye."
+    },
+    {
+      "frame": "I'll update you by ___.",
+      "note": "Client ko next information ka time do.",
+      "say": "I'll update you by 4 p.m. today.",
+      "positive": "I'll update you by 4 p.m. today.",
+      "negative": "I won't have an update before lunch.",
+      "question": "When will you update me?",
+      "examples": [
+        ["I'll update you by Friday afternoon.", "Main Friday dopahar tak update doonga."],
+        ["I'll update you as soon as I know.", "Jaise hi pata chalega, update doonga."]
+      ],
+      "grammar": "update someone by + time. by = deadline. update + person, no to.",
+      "mistake": "“I'll update to you” → “I'll update you.” update + person."
+    },
+    {
+      "frame": "Thank you for your patience.",
+      "note": "Client ke sabr ko recognize karo — call close karne ke liye.",
+      "say": "Thank you for your patience.",
+      "positive": "Thank you for your patience.",
+      "negative": "Sorry for the confusion.",
+      "question": "Can you give us a little more time?",
+      "examples": [
+        ["Thank you for waiting.", "Wait karne ke liye thanks."],
+        ["Thank you for your understanding.", "Samajhne ke liye thanks."]
+      ],
+      "grammar": "Thank you for + noun/-ing. patience = sabr, /ˈpeɪʃns/.",
+      "mistake": "“Thank you for your patient” → “Thank you for your patience.” Patient = mareez; patience = sabr."
+    }
+  ],
+  "grammarRules": [
+    ["sorry for + noun/-ing", "I'm sorry for the delay."],
+    ["There was/were + noun; issue with", "There was an issue with the server."],
+    ["because + clause; because of + noun", "It's delayed because the content is late."],
+    ["Present continuous for a current fix", "We're fixing it right now."],
+    ["update + person (no to)", "I'll update you by Friday."],
+    ["Thank you for + noun/-ing", "Thank you for your patience."]
+  ],
+  "mistakes": [
+    ["Sorry for delay.", "Sorry for the delay.", "Article the."],
+    ["There was issue with server.", "There was an issue with the server.", "a/the article."],
+    ["It's delayed because the content not ready.", "It's delayed because the content is not ready.", "Clause me verb."],
+    ["We fixing it.", "We're fixing it.", "be + verb-ing."],
+    ["I'll update to you by Friday.", "I'll update you by Friday.", "update + person, to nahi."],
+    ["Thank you for your patient.", "Thank you for your patience.", "patience = sabr."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "I'm sorry ___ the delay.", "answers": ["for"], "explain": "sorry for + noun.", "model": "I'm sorry for the delay." },
+      { "prompt": "There was an ___ with the gateway.", "answers": ["issue", "problem"], "explain": "issue = problem.", "model": "There was an issue with the gateway." },
+      { "prompt": "It's delayed ___ the content is not ready.", "answers": ["because"], "explain": "because + clause.", "model": "It's delayed because the content is not ready." },
+      { "prompt": "We're ___ it right now.", "answers": ["fixing"], "explain": "present continuous after be.", "model": "We're fixing it right now." },
+      { "prompt": "I'll update you ___ Friday.", "answers": ["by"], "explain": "by + deadline.", "model": "I'll update you by Friday." },
+      { "prompt": "Thank you for your ___.", "answers": ["patience"], "explain": "patience = sabr.", "model": "Thank you for your patience." }
+    ],
+    "grammar": [
+      { "prompt": "There ___ an issue with the server.", "answers": ["was"], "explain": "Singular issue → was.", "model": "There was an issue with the server." },
+      { "prompt": "It's delayed ___ of the content.", "answers": ["because"], "explain": "because of + noun.", "model": "It's delayed because of the content." },
+      { "prompt": "We ___ fixing it.", "answers": ["are", "'re"], "explain": "We + are + verb-ing.", "model": "We are fixing it." },
+      { "prompt": "I'll update ___ by Friday.", "answers": ["you"], "explain": "update + person.", "model": "I'll update you by Friday." }
+    ],
+    "build": [
+      { "jumbled": "sorry / I'm / the / for / delay", "answers": ["I'm sorry for the delay.", "I am sorry for the delay."], "explain": "sorry for + noun.", "model": "I'm sorry for the delay." },
+      { "jumbled": "issue / was / there / an / with / gateway / the", "answers": ["There was an issue with the gateway."], "explain": "There was + an issue with + noun.", "model": "There was an issue with the gateway." },
+      { "jumbled": "update / I'll / by / you / Friday", "answers": ["I'll update you by Friday.", "I will update you by Friday."], "explain": "update + person + by + time.", "model": "I'll update you by Friday." }
+    ],
+    "translate": [
+      { "hinglish": "Deri ke liye sorry.", "answers": ["Sorry for the delay.", "I'm sorry for the delay.", "I am sorry for the delay."], "explain": "sorry for + the delay.", "model": "I'm sorry for the delay." },
+      { "hinglish": "Payment gateway me problem thi.", "answers": ["There was an issue with the payment gateway.", "There was a problem with the payment gateway."], "explain": "There was an issue with...", "model": "There was an issue with the payment gateway." },
+      { "hinglish": "Main Friday tak update doonga.", "answers": ["I'll update you by Friday.", "I will update you by Friday."], "explain": "update you by Friday.", "model": "I'll update you by Friday." }
+    ]
+  },
+  "repeat": [
+    "I'm sorry for the delay.",
+    "There was an issue with the server.",
+    "We're fixing it right now.",
+    "I'll update you by 4 p.m. today."
+  ],
+  "dialogue": {
+    "context": "Client ka site down hai. Riya = client. Sorry, reason, fix time aur next update — chaar steps.",
+    "lines": [
+      { "speaker": "Riya", "text": "The site is still down. What is happening?" },
+      { "speaker": "You", "text": "I'm sorry for the delay. There was an issue with the server.", "target": true },
+      { "speaker": "Riya", "text": "This is the second time this month." },
+      { "speaker": "You", "text": "I understand. We're fixing it right now. It's delayed because the backup took longer than expected.", "target": true },
+      { "speaker": "Riya", "text": "When will it be fixed?" },
+      { "speaker": "You", "text": "It will be fixed in about one hour. I'll update you by 4 p.m.", "target": true },
+      { "speaker": "Riya", "text": "Okay. Please keep me posted." },
+      { "speaker": "You", "text": "Thank you for your patience. I'll message you as soon as it is live.", "target": true }
+    ],
+    "closing": "Apology ka structure: sorry + reason + fix + next update. Blame mat do, plan do."
+  },
+  "speakPrompts": [
+    { "title": "1. Apologize", "prompt": "Delay ke liye sorry bolo.", "starter": "I'm sorry for the delay. There was an issue with ___ ." },
+    { "title": "2. Explain the reason", "prompt": "Reason clear bolo, blame ke bina.", "starter": "It's delayed because ___ . We're fixing it now." },
+    { "title": "3. Give a fix time", "prompt": "Recovery plan batao.", "starter": "It will be fixed in ___ . I'll update you by ___ ." },
+    { "title": "4. Calm an angry client", "prompt": "Chaar line ka apology record karo.", "starter": "I understand. I'm sorry for ___ . We're fixing ___ . I'll update you by ___ . Thank you for your patience." }
+  ],
+  "vocab": [
+    { "word": "issue", "collocation": "a technical issue", "example": "There was a technical issue with the server.", "meaning": "problem" },
+    { "word": "bug", "collocation": "fix a bug", "example": "We fixed the login bug.", "meaning": "software ki galti" },
+    { "word": "delay", "collocation": "a short delay", "example": "There is a short delay in testing.", "meaning": "deri" },
+    { "word": "fix", "collocation": "fix the problem", "example": "We're fixing the problem now.", "meaning": "theek karna" },
+    { "word": "solve", "collocation": "solve the issue", "example": "We solved the issue in one hour.", "meaning": "hal karna" },
+    { "word": "mistake", "collocation": "a small mistake", "example": "There was a small mistake in the invoice.", "meaning": "galti" },
+    { "word": "patience", "collocation": "thank you for your patience", "example": "Thank you for your patience.", "meaning": "sabr" },
+    { "word": "update", "collocation": "send an update", "example": "I'll send an update by 4 p.m.", "meaning": "nayi jankari" },
+    { "word": "apologize", "collocation": "apologize for the delay", "example": "I apologize for the delay.", "meaning": "sorry bolna" },
+    { "word": "reason", "collocation": "the main reason", "example": "The main reason is the late content.", "meaning": "wajah" }
+  ],
+  "selfCheck": [
+    "“Sorry for the delay” bina jhijhak boli.",
+    "Problem ko “There was an issue with ___” se bataya.",
+    "Reason “because ___” se di, blame ke bina.",
+    "“We're fixing it” se action dikhaya.",
+    "Next update ka time “by ___” se diya.",
+    "“Thank you for your patience” se call close kiya."
+  ],
+  "pronunciation": [
+    { "title": "Tone in apologies", "body": "I'm SO sorry for the deLAY. Voice thodi neeche, slow. Fast apology rude lagti hai." },
+    { "title": "patience", "body": "/ˈpeɪʃns/ — PEI-shns. ‘patient’ (/ˈpeɪʃnt/) se ending different hai." },
+    { "title": "because", "body": "/bɪˈkɒz/ — stress second syllable. “be-CUZ” nahi, “be-CAWZ”." },
+    { "title": "Pausing", "body": "Sorry — there was an issue — we're fixing it. Pause se message clear aur calm lagta hai." }
+  ],
+  "followUps": [
+    "Client ko blame kiye bina reason kaise bataun?",
+    "Apology me kitna sorry bolna chahiye?",
+    "Recovery plan ka best structure kya hai?",
+    "Angry client ko calm karne ke phrases kya hain?",
+    "Meri apology tone sincere lag rahi hai?"
+  ],
+  "mission": "Record a polite delay message: sorry, reason, fix time, next update.",
+  "source": {
+    "label": "BBC Learning English · English at Work",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work",
+    "note": "Problem-solving wala episode chuno. Target: ek apology line aur ek fix-time line note karna."
+  },
+  "phrases": [
+    ["I'm sorry for the delay.", "Deri ke liye sorry."],
+    ["There was an issue with the server.", "Server me problem thi."],
+    ["It's delayed because the content is not ready.", "Delay hui kyunki content taiyar nahi hai."],
+    ["We're fixing it right now.", "Hum ise abhi theek kar rahe hain."],
+    ["It will be fixed in one hour.", "Ye ek ghante me theek ho jayega."],
+    ["I'll update you by 4 p.m.", "Main 4 baje tak update doonga."],
+    ["Thank you for your patience.", "Aapke sabr ke liye thanks."],
+    ["I understand your concern.", "Main aapki chinta samajhta hoon."],
+    ["We will make sure it doesn't happen again.", "Hum dhyan rakhenge ki dobara na ho."],
+    ["Sorry for the confusion.", "Confusion ke liye sorry."]
+  ]
+}

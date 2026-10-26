@@ -1,0 +1,210 @@
+{
+  "number": 11,
+  "slug": "opinions-and-suggestions",
+  "title": "Opinions and suggestions",
+  "lead": "Is lesson ke baad tum design, timeline ya feature par apni opinion English me de sakte ho, politely disagree kar sakte ho, aur better option suggest kar sakte ho.",
+  "description": "Week 11 English lesson: give an opinion, agree and disagree politely, and suggest a better option in a meeting.",
+  "patterns": [
+    {
+      "frame": "I think ___.",
+      "note": "Opinion ka sabse simple starter.",
+      "say": "I think the blue design looks better.",
+      "positive": "I think the blue design looks better.",
+      "negative": "I don't think we need a new logo.",
+      "question": "What do you think?",
+      "examples": [
+        ["I think we should start with the homepage.", "Mujhe lagta hai humein homepage se shuru karna chahiye."],
+        ["I don't think the price is too high.", "Mujhe nahi lagta price zyada hai."]
+      ],
+      "grammar": "I think + clause. Negative often I don't think + clause, not I think not.",
+      "mistake": "“I think that is better design” → “I think the blue design is better.” Clear subject rakho."
+    },
+    {
+      "frame": "In my opinion, ___.",
+      "note": "Thoda formal opinion — meetings ke liye.",
+      "say": "In my opinion, we should start with the homepage.",
+      "positive": "In my opinion, we should start with the homepage.",
+      "negative": "In my opinion, this isn't the right time.",
+      "question": "What's your opinion?",
+      "examples": [
+        ["In my opinion, the simpler design is better.", "Mere hisaab se simple design better hai."],
+        ["In my opinion, we need more testing.", "Mere hisaab se humein zyada testing chahiye."]
+      ],
+      "grammar": "In my opinion, + clause. Comma ke baad complete sentence.",
+      "mistake": "“In my opinion is better” → “In my opinion, it is better.” Opinion ke baad clause chahiye."
+    },
+    {
+      "frame": "Why don't we ___?",
+      "note": "Friendly suggestion, demand nahi.",
+      "say": "Why don't we start with the homepage?",
+      "positive": "Why don't we start with the homepage?",
+      "negative": "Why don't we wait for the feedback?",
+      "question": "Why don't we meet on Monday?",
+      "examples": [
+        ["Why don't we ask the client?", "Client se kyun nahi poochhte?"],
+        ["Why don't we test it first?", "Pehle test kyun nahi karte?"]
+      ],
+      "grammar": "Why don't we + base verb = suggestion. Real question nahi, idea hai.",
+      "mistake": "“Why we don't start?” → “Why don't we start?” Question word + don't + subject."
+    },
+    {
+      "frame": "I agree / I'm not sure.",
+      "note": "Agreement aur polite disagreement dono.",
+      "say": "I agree with you, but I'm not sure about the timeline.",
+      "positive": "I agree with you.",
+      "negative": "I'm not sure about that.",
+      "question": "Do you agree?",
+      "examples": [
+        ["I agree with your point.", "Main aapki baat se sehmat hoon."],
+        ["I'm not sure about the price.", "Main price ke baare me sure nahi hoon."]
+      ],
+      "grammar": "agree with + person; agree to + plan; agree on + decision. I'm not sure = polite disagreement.",
+      "mistake": "“I am agree” → “I agree.” Agree khud verb hai, isliye am nahi."
+    },
+    {
+      "frame": "What if we ___?",
+      "note": "Alternative option offer karo.",
+      "say": "What if we use a simpler design?",
+      "positive": "What if we use a simpler design?",
+      "negative": "What if we don't change it?",
+      "question": "What if we ask the client?",
+      "examples": [
+        ["What if we test both options?", "Kya hum dono options test karein?"],
+        ["What if we move the deadline?", "Kya hum deadline aage badhayein?"]
+      ],
+      "grammar": "What if + subject + present simple = suggestion/possibility.",
+      "mistake": "“What if we will use” → “What if we use.” If clause me present simple."
+    },
+    {
+      "frame": "That sounds good.",
+      "note": "Idea accept karna, short aur natural.",
+      "say": "That sounds good.",
+      "positive": "That sounds good.",
+      "negative": "That doesn't sound right.",
+      "question": "Does that sound good?",
+      "examples": [
+        ["That sounds good. Let's do it.", "Ye achha lagta hai. Chalo karte hain."],
+        ["That sounds expensive.", "Ye mehnga lagta hai."]
+      ],
+      "grammar": "sound + adjective. That sounds good/great/expensive/right.",
+      "mistake": "“That sounds well” → “That sounds good.” Sound ke baad adjective."
+    }
+  ],
+  "grammarRules": [
+    ["I think + clause", "I think the blue design is better."],
+    ["In my opinion, + clause", "In my opinion, we should start small."],
+    ["Why don't we + base verb?", "Why don't we ask the client?"],
+    ["agree with person / agree to plan", "I agree with you. I agree to the plan."],
+    ["What if + present simple?", "What if we test it?"],
+    ["sound + adjective", "That sounds good."]
+  ],
+  "mistakes": [
+    ["I am agree.", "I agree.", "agree khud verb hai."],
+    ["In my opinion is better.", "In my opinion, it is better.", "Opinion ke baad clause."],
+    ["Why we don't start?", "Why don't we start?", "don't before subject."],
+    ["What if we will use a simpler design?", "What if we use a simpler design?", "If clause me present simple."],
+    ["That sounds well.", "That sounds good.", "sound + adjective."],
+    ["I think that is better design.", "I think the blue design is better.", "Clear subject + adjective."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "I ___ the blue design looks better.", "answers": ["think"], "explain": "I think + clause.", "model": "I think the blue design looks better." },
+      { "prompt": "___ my opinion, we should start small.", "answers": ["In"], "explain": "In my opinion, ...", "model": "In my opinion, we should start small." },
+      { "prompt": "Why ___ we start with the homepage?", "answers": ["don't", "do not"], "explain": "Why don't we + base verb.", "model": "Why don't we start with the homepage?" },
+      { "prompt": "I ___ with you.", "answers": ["agree"], "explain": "agree with + person.", "model": "I agree with you." },
+      { "prompt": "What ___ we use a simpler design?", "answers": ["if"], "explain": "What if + subject + present simple.", "model": "What if we use a simpler design?" },
+      { "prompt": "That ___ good.", "answers": ["sounds"], "explain": "sound + adjective.", "model": "That sounds good." }
+    ],
+    "grammar": [
+      { "prompt": "I ___ not sure about that.", "answers": ["am", "'m"], "explain": "I am sure / I'm sure.", "model": "I am not sure about that." },
+      { "prompt": "In my opinion, it ___ better.", "answers": ["is"], "explain": "Opinion ke baad clause.", "model": "In my opinion, it is better." },
+      { "prompt": "What if we ___ the client?", "answers": ["ask"], "explain": "If clause me present simple.", "model": "What if we ask the client?" },
+      { "prompt": "That sounds ___.", "answers": ["good", "great", "right", "expensive"], "explain": "sound + adjective.", "model": "That sounds good." }
+    ],
+    "build": [
+      { "jumbled": "think / I / design / the / blue / better / looks", "answers": ["I think the blue design looks better."], "explain": "I think + subject + verb + adjective.", "model": "I think the blue design looks better." },
+      { "jumbled": "opinion / in / my / start / we / should / small", "answers": ["In my opinion, we should start small.", "In my opinion we should start small."], "explain": "In my opinion, + clause.", "model": "In my opinion, we should start small." },
+      { "jumbled": "if / what / we / ask / client / the", "answers": ["What if we ask the client?"], "explain": "What if + subject + present simple.", "model": "What if we ask the client?" }
+    ],
+    "translate": [
+      { "hinglish": "Mujhe lagta hai blue design better hai.", "answers": ["I think the blue design is better.", "I think the blue design looks better."], "explain": "I think + clause.", "model": "I think the blue design is better." },
+      { "hinglish": "Mere hisaab se humein chhote se shuru karna chahiye.", "answers": ["In my opinion, we should start small.", "In my opinion we should start small."], "explain": "In my opinion, + clause.", "model": "In my opinion, we should start small." },
+      { "hinglish": "Kya hum client se poochh lein?", "answers": ["What if we ask the client?", "Should we ask the client?"], "explain": "What if / Should we suggestion.", "model": "What if we ask the client?" }
+    ]
+  },
+  "repeat": [
+    "I think the blue design looks better.",
+    "In my opinion, we should start small.",
+    "Why don't we ask the client?",
+    "That sounds good."
+  ],
+  "dialogue": {
+    "context": "Design meeting. Riya = client. Opinion, polite disagreement aur better option — teeno use karo.",
+    "lines": [
+      { "speaker": "Riya", "text": "We have two designs. Which one do you prefer?" },
+      { "speaker": "You", "text": "I think the blue design looks better. It feels more professional.", "target": true },
+      { "speaker": "Riya", "text": "I'm not sure. The orange one is more visible." },
+      { "speaker": "You", "text": "That's a good point. What if we use blue for the header and orange for the button?", "target": true },
+      { "speaker": "Riya", "text": "That sounds good. Should we test both with users?" },
+      { "speaker": "You", "text": "I agree. In my opinion, a small test is better than a long debate.", "target": true }
+    ],
+    "closing": "Opinion ka formula: I think + reason. Disagreement ka formula: That's a good point + What if we...?"
+  },
+  "speakPrompts": [
+    { "title": "1. Give an opinion", "prompt": "Design par apni opinion do.", "starter": "I think ___ . In my opinion, ___ ." },
+    { "title": "2. Disagree politely", "prompt": "Sehmat na ho, but softly bolo.", "starter": "That's a good point, but I'm not sure about ___ . What if we ___ ?" },
+    { "title": "3. Suggest an option", "prompt": "Ek better option do.", "starter": "Why don't we ___ ? What if we ___ ?" },
+    { "title": "4. Close with agreement", "prompt": "Meeting me decision close karo.", "starter": "That sounds good. I agree with ___ . Let's ___ ." }
+  ],
+  "vocab": [
+    { "word": "opinion", "collocation": "in my opinion", "example": "In my opinion, the design is clean.", "meaning": "ray" },
+    { "word": "idea", "collocation": "a good idea", "example": "That's a good idea.", "meaning": "soch" },
+    { "word": "better", "collocation": "a better option", "example": "The blue design is a better option.", "meaning": "behtar" },
+    { "word": "option", "collocation": "another option", "example": "Let's try another option.", "meaning": "vikalp" },
+    { "word": "suggest", "collocation": "suggest a change", "example": "I suggest a smaller button.", "meaning": "sujhav dena" },
+    { "word": "agree", "collocation": "agree with you", "example": "I agree with you.", "meaning": "sehmat hona" },
+    { "word": "disagree", "collocation": "politely disagree", "example": "I politely disagree with that point.", "meaning": "asahmat hona" },
+    { "word": "maybe", "collocation": "maybe we should", "example": "Maybe we should test it first.", "meaning": "shayad" },
+    { "word": "possible", "collocation": "is it possible", "example": "Is it possible to finish by Friday?", "meaning": "mumkin" },
+    { "word": "prefer", "collocation": "prefer this design", "example": "I prefer the simpler design.", "meaning": "zyada pasand karna" }
+  ],
+  "selfCheck": [
+    "Ek opinion “I think ___” se di.",
+    "Formal version “In my opinion, ___” use ki.",
+    "Ek suggestion “Why don't we ___?” se di.",
+    "Politely disagree kiya — “I'm not sure about ___”.",
+    "Alternative “What if we ___?” se di.",
+    "Agreement “That sounds good” se close kiya."
+  ],
+  "pronunciation": [
+    { "title": "Contrastive stress", "body": "I think the BLUE design is better, not the ORANGE one. Contrast wale word par stress." },
+    { "title": "Softening", "body": "I'm not sure — voice soft, slow. “I disagree” se zyada polite lagta hai." },
+    { "title": "Linking", "body": "What if → /wɒtɪf/. Why don't we → /waɪdəʊntwi/. Suggestions me words jodo." },
+    { "title": "I think", "body": "Fast speech me “I think” halka hota hai: /aɪ θɪŋk/. Har word par stress mat do." }
+  ],
+  "followUps": [
+    "Meeting me politely disagree karne ka best phrase kya hai?",
+    "“I think” aur “In my opinion” me kya difference hai?",
+    "Client ke idea ko reject karna ho to kaise bolun?",
+    "Meri suggestion confident lag rahi hai ya unsure?",
+    "Decision close karne ka best line kya hai?"
+  ],
+  "mission": "Say one opinion in English in a real meeting — I think ___ because ___.",
+  "source": {
+    "label": "BBC Learning English · 6 Minute English",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+    "note": "Debate ya opinion wala episode chuno. Target: do opinion phrases note karna."
+  },
+  "phrases": [
+    ["I think the blue design is better.", "Mujhe lagta hai blue design better hai."],
+    ["In my opinion, we should start small.", "Mere hisaab se chhote se shuru karna chahiye."],
+    ["Why don't we ask the client?", "Client se kyun nahi poochhte?"],
+    ["I agree with you.", "Main aapse sehmat hoon."],
+    ["I'm not sure about that.", "Main us baare me sure nahi hoon."],
+    ["What if we test both options?", "Kya hum dono options test karein?"],
+    ["That sounds good.", "Ye achha lagta hai."],
+    ["That's a good point.", "Ye achhi baat hai."],
+    ["I prefer the simpler design.", "Mujhe simple design zyada pasand hai."],
+    ["Let's decide by Friday.", "Chalo Friday tak decide karte hain."]
+  ]
+}

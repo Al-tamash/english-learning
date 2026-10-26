@@ -12,6 +12,7 @@
     "test": "vitest",
     "test:e2e": "playwright test",
     "validate:content": "tsx scripts/validate-content.ts",
+    "generate:lessons": "node scripts/generate-weekly-lessons.mjs",
     "preview": "vite preview"
   },
   "keywords": [],

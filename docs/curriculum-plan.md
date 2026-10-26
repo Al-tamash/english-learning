@@ -191,11 +191,11 @@ By Week 12 the learner can introduce himself, make small talk, ask for clarifica
 
 | Content | Status |
 |---|---|
-| Week 1 day-by-day | Detailed above; ready to author |
-| Weeks 2–12 weekly outline | Detailed above |
-| Daily JSON (84 days) | Not authored; batches of 2 weeks after approval |
-| Weekly lessons (12 HTML) | Not authored; Week 1 first |
-| Reference sheets | Not authored; pattern bank + phrase bank first |
+| Week 1 day-by-day | Detailed above; authored |
+| Weeks 2–12 weekly outline | Detailed above; authored |
+| Daily JSON (84 days) | Week 1 authored; Weeks 2–12 not authored |
+| Weekly lessons (12 HTML) | Authored: Weeks 1–12 |
+| Reference sheets | Authored: 12 pattern sheets + indexes |
 | Benchmark prompts | Defined above |
 
 ---
@@ -203,7 +203,7 @@ By Week 12 the learner can introduce himself, make small talk, ask for clarifica
 ## Teaching workspace
 
 - `MISSION.md` — why this matters; every content decision traces here.
-- `lessons/` — weekly HTML lessons, starting with Week 1.
+- `lessons/` — weekly HTML lessons for Weeks 1–12, plus the course index.
 - `reference/` — printable pattern and phrase sheets.
 - `learning-records/` — evidence of what the learner can do.
 - `RESOURCES.md` — trusted sources.

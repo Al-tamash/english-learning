@@ -1,0 +1,210 @@
+{
+  "number": 4,
+  "slug": "client-kickoff-call",
+  "title": "Client kickoff call",
+  "lead": "Is lesson ke baad tum kickoff call open kar sakte ho: scope, requirements, timeline poochho, next step confirm karo, aur summary bhejo.",
+  "description": "Week 4 English lesson: open a client kickoff call, ask for requirements, agree a timeline, and confirm next steps.",
+  "patterns": [
+    {
+      "frame": "We need ___.",
+      "note": "Need ke baad noun ya to + verb.",
+      "say": "We need the logo and content.",
+      "positive": "We need the logo and content.",
+      "negative": "We don't need a new domain.",
+      "question": "What do we need for the kickoff?",
+      "examples": [
+        ["We need two weeks for development.", "Humein development ke liye do hafte chahiye."],
+        ["We need to confirm the scope first.", "Humein pehle scope confirm karna hai."]
+      ],
+      "grammar": "need + noun; need + to + verb. He/she/it ke saath needs. Requirement clear rakho.",
+      "mistake": "“We need to logo” → “We need the logo.” Noun ke pehle to nahi lagta."
+    },
+    {
+      "frame": "I'd like to ___.",
+      "note": "I'd like = I would like; polite wish.",
+      "say": "I'd like to start with the scope.",
+      "positive": "I'd like to start with the scope.",
+      "negative": "I wouldn't like to change the timeline.",
+      "question": "What would you like to discuss first?",
+      "examples": [
+        ["I'd like to show you the first design.", "Main aapko pehla design dikhana chahta hoon."],
+        ["I'd like to ask two questions.", "Main do sawaal poochhna chahta hoon."]
+      ],
+      "grammar": "I'd = I would. would like to + base verb = polite ‘I want’. Question: What would you like...?",
+      "mistake": "“I would like start” → “I'd like to start.” would like ke baad to + base verb."
+    },
+    {
+      "frame": "Could you share ___?",
+      "note": "Polite request; share ke baad kya chahiye.",
+      "say": "Could you share the brand guidelines?",
+      "positive": "Could you share the brand guidelines?",
+      "negative": "We can't share the client's data.",
+      "question": "Could you share the reference site?",
+      "examples": [
+        ["Could you share the logo files?", "Kya aap logo files share kar sakte hain?"],
+        ["Could you share it on WhatsApp?", "Kya aap ise WhatsApp par share kar sakte hain?"]
+      ],
+      "grammar": "Could you + base verb. share something with someone: share it with me.",
+      "mistake": "“Could you share me the file?” → “Could you share the file with me?” share something with someone."
+    },
+    {
+      "frame": "Let's ___.",
+      "note": "Let's = let us; suggestion jo team ko saath karta hai.",
+      "say": "Let's confirm the timeline.",
+      "positive": "Let's confirm the timeline.",
+      "negative": "Let's not add new features this week.",
+      "question": "Should we start with the design?",
+      "examples": [
+        ["Let's start with the homepage.", "Chalo homepage se shuru karte hain."],
+        ["Let's meet again on Monday.", "Chalo Monday ko dobara milte hain."]
+      ],
+      "grammar": "Let's + base verb. Negative: let's not + base verb. ‘Let's to’ kabhi nahi.",
+      "mistake": "“Let's to confirm the timeline” → “Let's confirm the timeline.” Let's ke baad base verb."
+    },
+    {
+      "frame": "When would you like ___?",
+      "note": "Client ki preference poochhne ka polite question.",
+      "say": "When would you like the first draft?",
+      "positive": "When would you like the first draft?",
+      "negative": "I'm not sure when I can send it.",
+      "question": "When would you like to meet next?",
+      "examples": [
+        ["When would you like to start?", "Aap kab shuru karna chahenge?"],
+        ["When would you like the final payment?", "Aap final payment kab chahenge?"]
+      ],
+      "grammar": "When would you like + noun / to + verb. Question word + would + subject + like.",
+      "mistake": "“When you would like to meet?” → “When would you like to meet?” Subject se pehle would."
+    },
+    {
+      "frame": "I'll send you ___.",
+      "note": "Next step promise karne ke liye.",
+      "say": "I'll send you the summary by evening.",
+      "positive": "I'll send you the summary by evening.",
+      "negative": "I won't send the final file today.",
+      "question": "Should I send you the summary?",
+      "examples": [
+        ["I'll send you the invoice tomorrow.", "Main aapko kal invoice bhej doonga."],
+        ["I'll send you the file after the call.", "Main call ke baad file bhej doonga."]
+      ],
+      "grammar": "I'll = I will. Promise ya next step. send someone something; by + deadline.",
+      "mistake": "“I will send to you the file” → “I'll send you the file.” send + person + thing."
+    }
+  ],
+  "grammarRules": [
+    ["need + noun / need to + verb", "We need the logo. We need to confirm."],
+    ["would like to + base verb", "I'd like to start with the scope."],
+    ["Could you + base verb for polite requests", "Could you share the reference?"],
+    ["Let's + base verb; Let's not + base verb", "Let's start. Let's not wait."],
+    ["will / 'll for promises and next steps", "I'll send you the summary."],
+    ["by + deadline; send someone something", "I'll send you the file by Friday."]
+  ],
+  "mistakes": [
+    ["We need to logo.", "We need the logo.", "Noun ke pehle to nahi."],
+    ["I would like start.", "I'd like to start.", "would like ke baad to + base verb."],
+    ["Let's to confirm the timeline.", "Let's confirm the timeline.", "Let's ke baad base verb."],
+    ["I will send to you the file.", "I'll send you the file.", "send + person + thing."],
+    ["When you would like to meet?", "When would you like to meet?", "Question word + would + subject."],
+    ["Could you share me the file?", "Could you share the file with me?", "share something with someone."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "We ___ the logo and content.", "answers": ["need"], "explain": "need + noun.", "model": "We need the logo and content." },
+      { "prompt": "I'd like ___ start with the scope.", "answers": ["to"], "explain": "would like to + base verb.", "model": "I'd like to start with the scope." },
+      { "prompt": "Could you ___ the brand guidelines?", "answers": ["share"], "explain": "share = bhejna/dena.", "model": "Could you share the brand guidelines?" },
+      { "prompt": "___ confirm the timeline.", "answers": ["Let's", "Let us"], "explain": "Let's + base verb.", "model": "Let's confirm the timeline." },
+      { "prompt": "When would you like ___ meet next?", "answers": ["to"], "explain": "would like to + verb.", "model": "When would you like to meet next?" },
+      { "prompt": "I'll ___ you the summary.", "answers": ["send"], "explain": "send + person + thing.", "model": "I'll send you the summary." }
+    ],
+    "grammar": [
+      { "prompt": "I ___ like to discuss the scope.", "answers": ["would", "'d"], "explain": "would like = polite want.", "model": "I would like to discuss the scope." },
+      { "prompt": "Let's ___ with the design.", "answers": ["start", "begin"], "explain": "Let's + base verb.", "model": "Let's start with the design." },
+      { "prompt": "Could you share it ___ me?", "answers": ["with"], "explain": "share something with someone.", "model": "Could you share it with me?" },
+      { "prompt": "We need ___ finish by Friday.", "answers": ["to"], "explain": "need to + base verb.", "model": "We need to finish by Friday." }
+    ],
+    "build": [
+      { "jumbled": "need / we / the / logo / content / and", "answers": ["We need the logo and content."], "explain": "need + noun + and + noun.", "model": "We need the logo and content." },
+      { "jumbled": "like / I'd / to / start / scope / with / the", "answers": ["I'd like to start with the scope.", "I would like to start with the scope."], "explain": "would like to + start with + noun.", "model": "I'd like to start with the scope." },
+      { "jumbled": "send / I'll / the / you / summary", "answers": ["I'll send you the summary.", "I will send you the summary."], "explain": "send + person + thing.", "model": "I'll send you the summary." }
+    ],
+    "translate": [
+      { "hinglish": "Humein logo aur content chahiye.", "answers": ["We need the logo and content."], "explain": "need + noun.", "model": "We need the logo and content." },
+      { "hinglish": "Main scope se shuru karna chahta hoon.", "answers": ["I'd like to start with the scope.", "I would like to start with the scope."], "explain": "would like to + start with.", "model": "I'd like to start with the scope." },
+      { "hinglish": "Kya aap reference site share kar sakte hain?", "answers": ["Could you share the reference site?", "Can you share the reference site?"], "explain": "Could you + share + noun.", "model": "Could you share the reference site?" }
+    ]
+  },
+  "repeat": [
+    "We need the logo and content.",
+    "I'd like to start with the scope.",
+    "Let's confirm the timeline.",
+    "I'll send you the summary by evening."
+  ],
+  "dialogue": {
+    "context": "Client kickoff call. Riya = client, You = developer. Scope, timeline aur next step cover karo.",
+    "lines": [
+      { "speaker": "Riya", "text": "Thanks for joining. Shall we start?" },
+      { "speaker": "You", "text": "Yes. I'd like to start with the scope. We need the logo and content.", "target": true },
+      { "speaker": "Riya", "text": "Sure. When would you like them?" },
+      { "speaker": "You", "text": "By Wednesday, if possible. Could you share the brand guidelines?", "target": true },
+      { "speaker": "Riya", "text": "I'll send them today." },
+      { "speaker": "You", "text": "Great. Let's confirm the timeline, and I'll send you the summary.", "target": true }
+    ],
+    "closing": "Kickoff me teen cheezein: scope, timeline, next step. Call ke end me summary zaroor bolo."
+  },
+  "speakPrompts": [
+    { "title": "1. Open the call", "prompt": "Call ki shuruaat karo.", "starter": "Thanks for joining. I'd like to start with ___ ." },
+    { "title": "2. Ask for what you need", "prompt": "Do cheezein maango.", "starter": "We need ___ and ___ . Could you share ___ ?" },
+    { "title": "3. Agree the timeline", "prompt": "Deadline confirm karo.", "starter": "Let's confirm ___ . When would you like ___ ?" },
+    { "title": "4. Close with next steps", "prompt": "Summary aur next meeting bolo.", "starter": "I'll send you ___ . Let's meet on ___ ." }
+  ],
+  "vocab": [
+    { "word": "requirement", "collocation": "client requirements", "example": "The client requirements are clear.", "meaning": "zaroorat / demand" },
+    { "word": "scope", "collocation": "define the scope", "example": "Let's define the scope first.", "meaning": "kaam ki hadd" },
+    { "word": "timeline", "collocation": "a realistic timeline", "example": "We need a realistic timeline.", "meaning": "kaam ka time plan" },
+    { "word": "design", "collocation": "the first design", "example": "I'll share the first design.", "meaning": "dikhawe ka plan" },
+    { "word": "feedback", "collocation": "give feedback", "example": "Please give feedback by Friday.", "meaning": "ray / suggestion" },
+    { "word": "reference", "collocation": "a reference site", "example": "Could you share a reference site?", "meaning": "misal / example" },
+    { "word": "kickoff", "collocation": "the kickoff call", "example": "The kickoff call is on Monday.", "meaning": "project ki shuruaat" },
+    { "word": "goal", "collocation": "the main goal", "example": "The main goal is more enquiries.", "meaning": "lakshya" },
+    { "word": "deliverable", "collocation": "the final deliverable", "example": "The final deliverable is the website.", "meaning": "jo cheez deliver karni hai" },
+    { "word": "access", "collocation": "website access", "example": "Could you share the website access?", "meaning": "andar aane ki permission" }
+  ],
+  "selfCheck": [
+    "Call open karke scope par baat shuru ki.",
+    "Do concrete cheezein maangi — logo, content, access ya guidelines.",
+    "Timeline “by + day” se confirm kiya.",
+    "Ek polite request (“Could you share ___?”) use ki.",
+    "Next step bola — “I'll send you ___.”",
+    "Call ke end me summary 2 lines me di."
+  ],
+  "pronunciation": [
+    { "title": "Contractions", "body": "I'd = /aɪd/, let's = /lets/, we'll = /wiːl/. Fast speech me yahi natural hai — full forms thode formal lagte hain." },
+    { "title": "Linking", "body": "Would you → /wʊdʒə/. Share it → /ʃeərɪt/. Words ko jodo, ek ek karke mat todo." },
+    { "title": "by + deadline", "body": "by = /baɪ/, buy jaisa. “by Friday” me Friday par stress: by FRIDAY." },
+    { "title": "deliverable", "body": "de-LIV-er-a-ble — stress second syllable par. Char syllables ko equal mat bolo." }
+  ],
+  "followUps": [
+    "Kickoff call me scope kaise aur clearly poochhun?",
+    "“I'd like to” aur “I want to” me kya difference hai?",
+    "Client ko timeline push back karna ho to kaise bolun?",
+    "Meri “Could you share” line polite thi ya direct?",
+    "Kickoff summary ka best 5-line structure kya hai?"
+  ],
+  "mission": "Ek 5-line kickoff summary voice note record karo: scope, timeline, do questions, next step.",
+  "source": {
+    "label": "BBC Learning English · English at Work",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work",
+    "note": "Ek episode suno. Target: ek polite request aur ek next-step line note karna."
+  },
+  "phrases": [
+    ["Thanks for joining.", "Join karne ke liye thanks."],
+    ["I'd like to start with the scope.", "Main scope se shuru karna chahta hoon."],
+    ["We need the logo and content.", "Humein logo aur content chahiye."],
+    ["Could you share the brand guidelines?", "Kya aap brand guidelines share kar sakte hain?"],
+    ["Let's confirm the timeline.", "Chalo timeline confirm karte hain."],
+    ["When would you like the first draft?", "Aap pehla draft kab chahenge?"],
+    ["I'll send you the summary.", "Main aapko summary bhej doonga."],
+    ["By Wednesday, if possible.", "Wednesday tak, agar possible ho."],
+    ["Is that okay with you?", "Kya aapko ye theek hai?"],
+    ["Let's meet again on Monday.", "Chalo Monday ko dobara milte hain."]
+  ]
+}

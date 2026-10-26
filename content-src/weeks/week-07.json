@@ -1,0 +1,210 @@
+{
+  "number": 7,
+  "slug": "calls-and-messages",
+  "title": "Calls and messages",
+  "lead": "Is lesson ke baad tum video call start kar sakte ho, bad network handle kar sakte ho, screen share kar sakte ho, aur call ke baad message se follow-up kar sakte ho.",
+  "description": "Week 7 English lesson: start a call, handle a bad connection, share a screen, reschedule, and follow up by message.",
+  "patterns": [
+    {
+      "frame": "Can you hear me?",
+      "note": "Call ki pehli line — audio check.",
+      "say": "Can you hear me?",
+      "positive": "Can you hear me?",
+      "negative": "I can't hear you clearly.",
+      "question": "Can you hear me now?",
+      "examples": [
+        ["Can you hear me now?", "Ab aap mujhe sun sakte hain?"],
+        ["Sorry, I can't hear you. The audio is breaking.", "Sorry, main aapko sun nahi pa raha. Audio cut ho raha hai."]
+      ],
+      "grammar": "hear = sunna (kaan se aana); listen = dhyan se sunna. Call check ke liye Can you hear me?",
+      "mistake": "“Are you hearing me?” → “Can you hear me?” Hear ke saath can use karo."
+    },
+    {
+      "frame": "I'm on a call.",
+      "note": "Abhi call par busy ho.",
+      "say": "I'm on a call right now.",
+      "positive": "I'm on a call right now.",
+      "negative": "I'm not on a call.",
+      "question": "Are you on a call?",
+      "examples": [
+        ["I'm on a call. Can I call you back?", "Main call par hoon. Kya main baad me call kar sakta hoon?"],
+        ["She's in a meeting right now.", "Woh abhi meeting me hai."]
+      ],
+      "grammar": "on a call = call par busy; in a meeting = meeting me. State hai, isliye present continuous.",
+      "mistake": "“I'm in call” → “I'm on a call.” on a call fixed phrase."
+    },
+    {
+      "frame": "Let me share my screen.",
+      "note": "Screen dikhane ka offer.",
+      "say": "Let me share my screen.",
+      "positive": "Let me share my screen.",
+      "negative": "I can't share my screen right now.",
+      "question": "Can you share your screen?",
+      "examples": [
+        ["Let me share my screen and show you the design.", "Main screen share karke aapko design dikhata hoon."],
+        ["Can you see my screen?", "Kya aap meri screen dekh sakte hain?"]
+      ],
+      "grammar": "Let me + base verb = main karta hoon (offer). share my screen.",
+      "mistake": "“Let me to share my screen” → “Let me share my screen.” let me ke baad base verb."
+    },
+    {
+      "frame": "I'll call you back.",
+      "note": "Baad me call karne ka promise.",
+      "say": "I'll call you back in ten minutes.",
+      "positive": "I'll call you back in ten minutes.",
+      "negative": "I won't be able to call you back today.",
+      "question": "Can I call you back?",
+      "examples": [
+        ["I'll call you back after lunch.", "Main lunch ke baad call back karunga."],
+        ["Can I call you back in five minutes?", "Kya main paanch minute me call back kar sakta hoon?"]
+      ],
+      "grammar": "call back = dobara call karna. will for promise. in + duration (in ten minutes).",
+      "mistake": "“I'll call you back after ten minutes” → “I'll call you back in ten minutes.” in = duration ke baad."
+    },
+    {
+      "frame": "Please check your email/WhatsApp.",
+      "note": "File ya message bhejne ke baad follow-up.",
+      "say": "Please check your email. I've sent the file.",
+      "positive": "Please check your email. I've sent the file.",
+      "negative": "I haven't sent it yet.",
+      "question": "Did you get my email?",
+      "examples": [
+        ["Please check your WhatsApp. I've sent the photo.", "Please WhatsApp check karo. Maine photo bhej di hai."],
+        ["I've sent the invoice. Please check your email.", "Maine invoice bhej diya hai. Please email check karo."]
+      ],
+      "grammar": "Please + base verb. check your email/WhatsApp. I've sent = just sent.",
+      "mistake": "“Please check your email box” → “Please check your email.” email box ki zaroorat nahi."
+    },
+    {
+      "frame": "Sorry, the connection is bad.",
+      "note": "Network problem politely batao.",
+      "say": "Sorry, the connection is bad.",
+      "positive": "Sorry, the connection is bad.",
+      "negative": "The connection is better now.",
+      "question": "Is the connection okay?",
+      "examples": [
+        ["Sorry, the connection is bad. Can you repeat that?", "Sorry, connection kharab hai. Kya aap dobara bol sakte hain?"],
+        ["The connection is better now. Can you hear me?", "Ab connection better hai. Sunai de raha hai?"]
+      ],
+      "grammar": "connection is bad/poor/unstable. Sorry + statement. Blame network, not person.",
+      "mistake": "“My connection is badly” → “The connection is bad.” Bad adjective, badly adverb."
+    }
+  ],
+  "grammarRules": [
+    ["hear vs listen; Can you hear me?", "Can you hear me? I can't hear you."],
+    ["on a call / in a meeting", "I'm on a call. She's in a meeting."],
+    ["Let me + base verb", "Let me share my screen."],
+    ["call back; in + duration", "I'll call you back in ten minutes."],
+    ["Please + base verb; check your email", "Please check your email."],
+    ["connection is bad/poor", "Sorry, the connection is bad."]
+  ],
+  "mistakes": [
+    ["Are you hearing me?", "Can you hear me?", "Hear ke saath can."],
+    ["I'm in call.", "I'm on a call.", "on a call fixed phrase."],
+    ["Let me to share my screen.", "Let me share my screen.", "let me + base verb."],
+    ["I'll call you back after ten minutes.", "I'll call you back in ten minutes.", "in + duration."],
+    ["Please check your email box.", "Please check your email.", "email box ki zaroorat nahi."],
+    ["My connection is badly.", "The connection is bad.", "bad adjective, badly adverb."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "Can you ___ me?", "answers": ["hear"], "explain": "hear = sunai dena.", "model": "Can you hear me?" },
+      { "prompt": "I'm ___ a call right now.", "answers": ["on"], "explain": "on a call fixed phrase.", "model": "I'm on a call right now." },
+      { "prompt": "Let me ___ my screen.", "answers": ["share"], "explain": "share my screen.", "model": "Let me share my screen." },
+      { "prompt": "I'll call you ___.", "answers": ["back"], "explain": "call back = dobara call.", "model": "I'll call you back." },
+      { "prompt": "Please check your ___.", "answers": ["email", "whatsapp"], "explain": "email/WhatsApp par message check karo.", "model": "Please check your email." },
+      { "prompt": "Sorry, the ___ is bad.", "answers": ["connection", "network"], "explain": "connection/network kharab hai.", "model": "Sorry, the connection is bad." }
+    ],
+    "grammar": [
+      { "prompt": "Let me ___ the file.", "answers": ["send", "share"], "explain": "let me + base verb.", "model": "Let me send the file." },
+      { "prompt": "I'll call you back ___ ten minutes.", "answers": ["in"], "explain": "in + duration.", "model": "I'll call you back in ten minutes." },
+      { "prompt": "___ you hear me?", "answers": ["Can"], "explain": "Can you hear me?", "model": "Can you hear me?" },
+      { "prompt": "I'm ___ a meeting.", "answers": ["in"], "explain": "in a meeting.", "model": "I'm in a meeting." }
+    ],
+    "build": [
+      { "jumbled": "hear / you / can / me", "answers": ["Can you hear me?"], "explain": "Can + subject + base verb.", "model": "Can you hear me?" },
+      { "jumbled": "share / let / my / me / screen", "answers": ["Let me share my screen."], "explain": "Let me + base verb + object.", "model": "Let me share my screen." },
+      { "jumbled": "call / I'll / back / you / ten / in / minutes", "answers": ["I'll call you back in ten minutes.", "I will call you back in ten minutes."], "explain": "call back + in + duration.", "model": "I'll call you back in ten minutes." }
+    ],
+    "translate": [
+      { "hinglish": "Kya aap mujhe sun sakte hain?", "answers": ["Can you hear me?"], "explain": "Can you hear me?", "model": "Can you hear me?" },
+      { "hinglish": "Main abhi call par hoon.", "answers": ["I'm on a call right now.", "I am on a call right now."], "explain": "on a call.", "model": "I'm on a call right now." },
+      { "hinglish": "Main aapko das minute me call back karunga.", "answers": ["I'll call you back in ten minutes.", "I will call you back in ten minutes.", "I'll call you back in 10 minutes."], "explain": "call back + in + duration.", "model": "I'll call you back in ten minutes." }
+    ]
+  },
+  "repeat": [
+    "Can you hear me?",
+    "Sorry, the connection is bad.",
+    "Let me share my screen.",
+    "I'll call you back in ten minutes."
+  ],
+  "dialogue": {
+    "context": "Video call, network thoda weak. Riya = client. Audio check, screen share aur follow-up cover karo.",
+    "lines": [
+      { "speaker": "Riya", "text": "Hi, can you hear me?" },
+      { "speaker": "You", "text": "Hi Riya. Yes, I can hear you, but the connection is a little bad.", "target": true },
+      { "speaker": "Riya", "text": "Should I call you on WhatsApp?" },
+      { "speaker": "You", "text": "Let me try my headphones first. Okay, can you hear me now?", "target": true },
+      { "speaker": "Riya", "text": "Yes, much better. Let me share my screen." },
+      { "speaker": "You", "text": "Great, I can see it. I'll send you the notes after the call.", "target": true }
+    ],
+    "closing": "Call ke teen checkpoints: audio, screen, next step. Har call ke end me follow-up message bolo."
+  },
+  "speakPrompts": [
+    { "title": "1. Start a call", "prompt": "Call ki shuruaat karo.", "starter": "Hi, can you hear me? ... Great. Let's start with ___ ." },
+    { "title": "2. Bad network", "prompt": "Network problem politely batao.", "starter": "Sorry, the connection is bad. Can you repeat that? ... Let me call you back in ___ ." },
+    { "title": "3. Share your screen", "prompt": "Screen share ka offer karo.", "starter": "Let me share my screen. Can you see it?" },
+    { "title": "4. Follow-up message", "prompt": "Call ke baad 3-line message bolo.", "starter": "Hi ___ , thanks for the call. Please check your email. I'll call you back on ___ ." }
+  ],
+  "vocab": [
+    { "word": "call", "collocation": "a video call", "example": "Let's have a video call at four.", "meaning": "baat karne ka call" },
+    { "word": "mute", "collocation": "on mute", "example": "You're on mute.", "meaning": "awaz band" },
+    { "word": "screen", "collocation": "share my screen", "example": "Let me share my screen.", "meaning": "display" },
+    { "word": "connection", "collocation": "a bad connection", "example": "Sorry, the connection is bad.", "meaning": "network ka link" },
+    { "word": "message", "collocation": "send a message", "example": "I'll send you a message.", "meaning": "sandesh" },
+    { "word": "email", "collocation": "check your email", "example": "Please check your email.", "meaning": "electronic mail" },
+    { "word": "WhatsApp", "collocation": "on WhatsApp", "example": "I'll send it on WhatsApp.", "meaning": "messaging app" },
+    { "word": "voice note", "collocation": "send a voice note", "example": "I'll send a voice note.", "meaning": "bol kar bheja message" },
+    { "word": "ring", "collocation": "the phone is ringing", "example": "The phone is ringing. Can I call you back?", "meaning": "phone bajna" },
+    { "word": "call back", "collocation": "call you back", "example": "I'll call you back in ten minutes.", "meaning": "dobara call karna" }
+  ],
+  "selfCheck": [
+    "Call start karke audio check kiya.",
+    "Bad network politely bataya.",
+    "Screen share ka offer kiya.",
+    "Callback ka time “in ___ minutes” se diya.",
+    "Follow-up ke liye email/WhatsApp mention kiya.",
+    "Call ke end me next step clear bola."
+  ],
+  "pronunciation": [
+    { "title": "Phone clarity", "body": "Final consonants clear rakho: hearD, senD, calL. Phone par ending chhup jati hai." },
+    { "title": "Pausing", "body": "Ek saans me sab mat bolo. “Sorry — the connection is bad — can you repeat that?” Har dash par chhota pause." },
+    { "title": "can / can't", "body": "can = /kən/ halka; can't = /kɑːnt/ clear. Phone par can't ko zyada clear bolo." },
+    { "title": "Linking", "body": "call you back → /kɔːljuːbæk/. “meet you” → /miːtʃuː/. Natural speech me words jodte hain." }
+  ],
+  "followUps": [
+    "Phone par kaunse phrases sabse clear lagte hain?",
+    "Bad network par call cut karna polite kaise bataun?",
+    "Screen share karte time kya bolna chahiye?",
+    "Follow-up message ka best 3-line format kya hai?",
+    "Mera “can” aur “can't” phone par clear hai?"
+  ],
+  "mission": "Make one real call in English, or record a 2-minute mock call with audio check, screen share, and follow-up.",
+  "source": {
+    "label": "BBC Learning English · English at Work",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work",
+    "note": "Telephone wala episode chuno. Target: ek audio-check line aur ek callback line note karna."
+  },
+  "phrases": [
+    ["Can you hear me?", "Kya aap mujhe sun sakte hain?"],
+    ["Sorry, the connection is bad.", "Sorry, connection kharab hai."],
+    ["Let me share my screen.", "Main screen share karta hoon."],
+    ["Can you see my screen?", "Kya aap meri screen dekh sakte hain?"],
+    ["I'll call you back in ten minutes.", "Main das minute me call back karunga."],
+    ["I'm on a call right now.", "Main abhi call par hoon."],
+    ["Please check your email.", "Please email check karo."],
+    ["Please check your WhatsApp.", "Please WhatsApp check karo."],
+    ["You're on mute.", "Aapka mute on hai."],
+    ["I'll send you the notes after the call.", "Call ke baad notes bhej doonga."]
+  ]
+}

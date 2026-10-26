@@ -36,6 +36,23 @@ it('links to the Week 1 lesson and printable reference', () => {
   );
 });
 
+it('links to the remaining weekly lessons and reference sheets', () => {
+  useAppStore.setState(createInitialState());
+  render(<MemoryRouter initialEntries={['/library']}><App /></MemoryRouter>);
+  expect(screen.getByRole('link', { name: 'Week 7 lesson' })).toHaveAttribute(
+    'href',
+    '/lessons/0007-week-7-calls-and-messages.html',
+  );
+  expect(screen.getByRole('link', { name: 'Week 12 reference' })).toHaveAttribute(
+    'href',
+    '/reference/0012-week-12-patterns.html',
+  );
+  expect(screen.getByRole('link', { name: 'Browse all weeks' })).toHaveAttribute(
+    'href',
+    '/lessons/index.html',
+  );
+});
+
 it('changes the TTS rate in Settings', () => {
   useAppStore.setState(createInitialState());
   render(<MemoryRouter initialEntries={['/settings']}><App /></MemoryRouter>);

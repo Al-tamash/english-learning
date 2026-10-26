@@ -1,0 +1,210 @@
+{
+  "number": 5,
+  "slug": "project-updates-and-status",
+  "title": "Project updates and status",
+  "lead": "Is lesson ke baad tum standup aur client status call me kaam ka progress, pending cheezein, deadline aur delay clear English me bata paoge.",
+  "description": "Week 5 English lesson: give project updates, say what is finished, what is in progress, and when it will be ready.",
+  "patterns": [
+    {
+      "frame": "I've finished ___.",
+      "note": "Kaam complete ho gaya, abhi result important hai.",
+      "say": "I've finished the homepage design.",
+      "positive": "I've finished the homepage design.",
+      "negative": "I haven't finished the contact page yet.",
+      "question": "Have you finished the design?",
+      "examples": [
+        ["I've finished the testing for the login page.", "Maine login page ki testing complete kar li hai."],
+        ["She has finished the content update.", "Usne content update complete kar liya hai."]
+      ],
+      "grammar": "Present perfect: have/has + past participle. Just-completed work with a present result. yet negative aur question ke end me.",
+      "mistake": "“I have finish” → “I've finished.” have ke baad past participle."
+    },
+    {
+      "frame": "I'm working on ___.",
+      "note": "Abhi kaam chal raha hai.",
+      "say": "I'm working on the payment page.",
+      "positive": "I'm working on the payment page.",
+      "negative": "I'm not working on that today.",
+      "question": "What are you working on?",
+      "examples": [
+        ["I'm working on the mobile layout.", "Main mobile layout par kaam kar raha hoon."],
+        ["We're working on the final testing.", "Hum final testing par kaam kar rahe hain."]
+      ],
+      "grammar": "Present continuous: am/is/are + verb-ing. Abhi chal raha kaam.",
+      "mistake": "“I working on it” → “I'm working on it.” be verb chahiye."
+    },
+    {
+      "frame": "It will take ___.",
+      "note": "Kitna time lagega, simple duration me bolo.",
+      "say": "It will take two days.",
+      "positive": "It will take two days.",
+      "negative": "It won't take long.",
+      "question": "How long will it take?",
+      "examples": [
+        ["It will take three hours to fix.", "Ise theek karne me teen ghante lagenge."],
+        ["The design will take one week.", "Design me ek hafta lagega."]
+      ],
+      "grammar": "will take + time. Duration: two days / three hours. How long...? se poochho.",
+      "mistake": "“It will take two days time” → “It will take two days.” days ke baad time nahi."
+    },
+    {
+      "frame": "We are waiting for ___.",
+      "note": "Kisi cheez par ruka hua kaam.",
+      "say": "We are waiting for the content from the client.",
+      "positive": "We are waiting for the content from the client.",
+      "negative": "We aren't waiting for approval now.",
+      "question": "What are we waiting for?",
+      "examples": [
+        ["We are waiting for the logo files.", "Hum logo files ka wait kar rahe hain."],
+        ["I'm waiting for your feedback.", "Main aapke feedback ka wait kar raha hoon."]
+      ],
+      "grammar": "wait for + person/thing. Present continuous because wait abhi chal raha hai.",
+      "mistake": "“We are waiting the client” → “We are waiting for the client.” wait for."
+    },
+    {
+      "frame": "I'll send it by ___.",
+      "note": "Deadline dene ke liye by.",
+      "say": "I'll send it by Friday evening.",
+      "positive": "I'll send it by Friday evening.",
+      "negative": "I won't send it before Monday.",
+      "question": "When will you send it?",
+      "examples": [
+        ["I'll send the report by 5 p.m.", "Main report shaam 5 baje tak bhej doonga."],
+        ["We'll finish it by the end of the week.", "Hum ise hafte ke end tak khatam kar denge."]
+      ],
+      "grammar": "by = deadline ke pehle ya us waqt tak. until = tab tak continuous. Deadline ke liye by.",
+      "mistake": "“I'll send it on Friday” (deadline) → “I'll send it by Friday.” By = latest time."
+    },
+    {
+      "frame": "The current status is ___.",
+      "note": "Ek line me project ki position.",
+      "say": "The current status is in review.",
+      "positive": "The current status is in review.",
+      "negative": "The current status is not clear.",
+      "question": "What is the current status?",
+      "examples": [
+        ["The current status is in progress.", "Abhi kaam chal raha hai."],
+        ["The current status is on hold.", "Kaam abhi ruka hua hai."]
+      ],
+      "grammar": "status is + noun/adjective. Common: in progress, in review, on hold, complete.",
+      "mistake": "“The status is reviewing” → “The status is in review.” Status khud review nahi karta."
+    }
+  ],
+  "grammarRules": [
+    ["Present perfect: have/has + past participle", "I've finished the design."],
+    ["Present continuous: am/is/are + -ing", "I'm working on the payment page."],
+    ["will take + duration", "It will take two days."],
+    ["wait for + person/thing", "We are waiting for the content."],
+    ["by + deadline", "I'll send it by Friday."],
+    ["status is + in progress / in review / on hold / complete", "The status is in review."]
+  ],
+  "mistakes": [
+    ["I have finish the design.", "I've finished the design.", "have + past participle."],
+    ["I working on it.", "I'm working on it.", "be verb + verb-ing."],
+    ["It will take two days time.", "It will take two days.", "days ke baad time nahi."],
+    ["We are waiting the client.", "We are waiting for the client.", "wait for + person."],
+    ["I'll send it on Friday. (deadline)", "I'll send it by Friday.", "Deadline ke liye by."],
+    ["The status is reviewing.", "The status is in review.", "Status ke liye in + noun."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "I've ___ the homepage design.", "answers": ["finished", "completed"], "explain": "have + past participle.", "model": "I've finished the homepage design." },
+      { "prompt": "I'm ___ on the payment page.", "answers": ["working"], "explain": "am/is/are + verb-ing.", "model": "I'm working on the payment page." },
+      { "prompt": "It will ___ two days.", "answers": ["take"], "explain": "will take + duration.", "model": "It will take two days." },
+      { "prompt": "We are waiting ___ the content.", "answers": ["for"], "explain": "wait for.", "model": "We are waiting for the content." },
+      { "prompt": "I'll send it ___ Friday.", "answers": ["by"], "explain": "Deadline ke liye by.", "model": "I'll send it by Friday." },
+      { "prompt": "The current ___ is in review.", "answers": ["status"], "explain": "status = current position.", "model": "The current status is in review." }
+    ],
+    "grammar": [
+      { "prompt": "She ___ finished the testing.", "answers": ["has"], "explain": "She ke saath has + past participle.", "model": "She has finished the testing." },
+      { "prompt": "I ___ working on the contact page.", "answers": ["am", "'m"], "explain": "I ke saath am + verb-ing.", "model": "I am working on the contact page." },
+      { "prompt": "It ___ take three hours.", "answers": ["will", "'ll"], "explain": "Future duration: will take.", "model": "It will take three hours." },
+      { "prompt": "We are waiting ___ approval.", "answers": ["for"], "explain": "wait for + noun.", "model": "We are waiting for approval." }
+    ],
+    "build": [
+      { "jumbled": "finished / I've / the / homepage / design", "answers": ["I've finished the homepage design.", "I have finished the homepage design."], "explain": "have + past participle + object.", "model": "I've finished the homepage design." },
+      { "jumbled": "will / it / two / take / days", "answers": ["It will take two days."], "explain": "It + will + take + duration.", "model": "It will take two days." },
+      { "jumbled": "send / I'll / by / it / Friday", "answers": ["I'll send it by Friday.", "I will send it by Friday."], "explain": "send + object + by + deadline.", "model": "I'll send it by Friday." }
+    ],
+    "translate": [
+      { "hinglish": "Maine homepage design complete kar liya hai.", "answers": ["I've finished the homepage design.", "I have finished the homepage design.", "I've completed the homepage design."], "explain": "Present perfect for finished work.", "model": "I've finished the homepage design." },
+      { "hinglish": "Main payment page par kaam kar raha hoon.", "answers": ["I'm working on the payment page.", "I am working on the payment page."], "explain": "Present continuous for current work.", "model": "I'm working on the payment page." },
+      { "hinglish": "Isme do din lagenge.", "answers": ["It will take two days.", "It'll take two days."], "explain": "will take + duration.", "model": "It will take two days." }
+    ]
+  },
+  "repeat": [
+    "I've finished the homepage design.",
+    "I'm working on the mobile version now.",
+    "It will take two days.",
+    "I'll send it by Friday evening."
+  ],
+  "dialogue": {
+    "context": "Daily standup. Riya = project manager. Finished, in progress, blocked, deadline — chaar cheezein cover karo.",
+    "lines": [
+      { "speaker": "Riya", "text": "Quick update — where are we on the homepage?" },
+      { "speaker": "You", "text": "I've finished the design. I'm working on the mobile version now.", "target": true },
+      { "speaker": "Riya", "text": "How long will it take?" },
+      { "speaker": "You", "text": "It will take two days. We are waiting for the content from your team.", "target": true },
+      { "speaker": "Riya", "text": "I'll send it today. Can you share a status update by Friday?" },
+      { "speaker": "You", "text": "Yes, I'll send it by Friday evening. The current status is in progress.", "target": true }
+    ],
+    "closing": "Update ka formula: finished + in progress + blocked + deadline. Char lines, no story."
+  },
+  "speakPrompts": [
+    { "title": "1. What is finished", "prompt": "Do completed cheezein bolo.", "starter": "I've finished ___ . I've also finished ___ ." },
+    { "title": "2. What is in progress", "prompt": "Abhi ka kaam bolo.", "starter": "I'm working on ___ . It will take ___ ." },
+    { "title": "3. What is blocked", "prompt": "Kis cheez ka wait hai.", "starter": "We are waiting for ___ from ___ ." },
+    { "title": "4. 60-second status update", "prompt": "Poora update record karo.", "starter": "Here is my update. I've finished ___ . I'm working on ___ . It will take ___ . I'll send it by ___ ." }
+  ],
+  "vocab": [
+    { "word": "progress", "collocation": "make progress", "example": "We are making good progress.", "meaning": "aage badhna" },
+    { "word": "update", "collocation": "a status update", "example": "I'll send a status update by Friday.", "meaning": "nayi jankari" },
+    { "word": "complete", "collocation": "complete the design", "example": "I've completed the design.", "meaning": "khatam karna" },
+    { "word": "pending", "collocation": "pending approval", "example": "The invoice is pending approval.", "meaning": "baaki / ruka hua" },
+    { "word": "review", "collocation": "in review", "example": "The homepage is in review.", "meaning": "jaanch" },
+    { "word": "approve", "collocation": "approve the design", "example": "Please approve the design today.", "meaning": "manzoori dena" },
+    { "word": "deadline", "collocation": "meet the deadline", "example": "We will meet the deadline.", "meaning": "aakhri tareekh" },
+    { "word": "delay", "collocation": "a small delay", "example": "There is a small delay in testing.", "meaning": "deri" },
+    { "word": "ready", "collocation": "ready for review", "example": "The page is ready for review.", "meaning": "taiyar" },
+    { "word": "testing", "collocation": "final testing", "example": "We are doing final testing.", "meaning": "jaanch parakh" }
+  ],
+  "selfCheck": [
+    "Ek finished cheez “I've finished ___” se boli.",
+    "Ek current task “I'm working on ___” se boli.",
+    "Duration “It will take ___” se di.",
+    "Ek blocker “We are waiting for ___” se bataya.",
+    "Deadline “by ___” ke saath di.",
+    "Poora update 60 seconds me, bina story ke, bola."
+  ],
+  "pronunciation": [
+    { "title": "-ed endings", "body": "finished = /ˈfɪnɪʃt/ (t sound); completed = /kəmˈpliːtɪd/ (id sound); moved = /muːvd/ (d sound). Teen alag endings suno." },
+    { "title": "Numbers and dates", "body": "two days, three hours, Friday the 30th. Numbers par stress, aur ‘th’ ko teeth ke beech se bolo." },
+    { "title": "Contractions", "body": "I've = /aɪv/, I'm = /aɪm/, I'll = /aɪl/. Fast speech me yahi natural hai." },
+    { "title": "Sentence stress", "body": "I've FINISHED the DESIGN. I'm WORKING on the PAYMENT page. Content words par stress." }
+  ],
+  "followUps": [
+    "Status update ka sabse short natural structure kya hai?",
+    "“I've finished” aur “I finished” me kya difference hai?",
+    "Delay batate time kya bolna chahiye?",
+    "Client ko deadline push karni ho to kaise bolun?",
+    "Mera standup update 60 seconds me fit ho raha hai?"
+  ],
+  "mission": "Send a 60-second status update in English — voice note ya real standup me.",
+  "source": {
+    "label": "BBC Learning English · English at Work",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work",
+    "note": "Ek episode suno. Target: ek update line aur ek deadline line note karna."
+  },
+  "phrases": [
+    ["Here is my update.", "Ye mera update hai."],
+    ["I've finished the design.", "Maine design complete kar liya hai."],
+    ["I'm working on the mobile version.", "Main mobile version par kaam kar raha hoon."],
+    ["It will take two days.", "Isme do din lagenge."],
+    ["We are waiting for the content.", "Hum content ka wait kar rahe hain."],
+    ["I'll send it by Friday evening.", "Main Friday shaam tak bhej doonga."],
+    ["The current status is in progress.", "Abhi kaam chal raha hai."],
+    ["The page is ready for review.", "Page review ke liye taiyar hai."],
+    ["There is a small delay.", "Thodi deri hai."],
+    ["We will meet the deadline.", "Hum deadline meet karenge."]
+  ]
+}

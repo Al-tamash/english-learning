@@ -15,7 +15,7 @@ for (const [source, target] of pageDirs) {
 }
 
 await mkdir(join(outDir, 'assets'), { recursive: true });
-for (const file of ['course.css', 'quiz.js']) {
+for (const file of ['course.css', 'quiz.js', 'say.js']) {
   await cp(join('assets', file), join(outDir, 'assets', file));
 }
 

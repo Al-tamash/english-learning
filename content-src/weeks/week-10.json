@@ -1,0 +1,212 @@
+{
+  "number": 10,
+  "slug": "money-quotes-follow-ups",
+  "title": "Money, quotes, follow-ups",
+  "lead": "Is lesson ke baad tum quote, invoice, advance aur payment follow-up English me politely handle kar paoge — bina awkward silence ke.",
+  "description": "Week 10 English lesson: share a quote, send an invoice, ask for an advance, and follow up on payment politely.",
+  "patterns": [
+    {
+      "frame": "The cost is ___.",
+      "note": "Total amount clearly bolo.",
+      "say": "The cost is fifteen thousand rupees.",
+      "positive": "The cost is fifteen thousand rupees.",
+      "negative": "The cost isn't final yet.",
+      "question": "What is the total cost?",
+      "examples": [
+        ["The cost is twenty thousand rupees plus GST.", "Kharche bees hazaar rupaye plus GST hain."],
+        ["The monthly cost is five thousand rupees.", "Monthly kharche paanch hazaar rupaye hain."]
+      ],
+      "grammar": "cost is + amount. cost = total; price = ek item ka daam. hundred/thousand/lakh singular rehte hain.",
+      "mistake": "“The cost is fifteen thousands” → “The cost is fifteen thousand.” Thousand singular."
+    },
+    {
+      "frame": "Could you confirm ___?",
+      "note": "Amount, date ya scope confirm karne ke liye.",
+      "say": "Could you confirm the advance amount?",
+      "positive": "Could you confirm the advance amount?",
+      "negative": "I can't confirm the discount yet.",
+      "question": "Could you confirm the payment date?",
+      "examples": [
+        ["Could you confirm the final amount?", "Kya aap final amount confirm kar sakte hain?"],
+        ["Could you confirm the invoice details?", "Kya aap invoice details confirm kar sakte hain?"]
+      ],
+      "grammar": "Could you confirm + noun/clause. Polite confirmation. confirm + thing, not person.",
+      "mistake": "“Could you confirm me the amount?” → “Could you confirm the amount?” confirm + thing."
+    },
+    {
+      "frame": "We need the payment.",
+      "note": "Direct but polite — please add karo.",
+      "say": "We need the payment before delivery.",
+      "positive": "We need the payment before delivery.",
+      "negative": "We don't need the full amount now.",
+      "question": "When can we expect the payment?",
+      "examples": [
+        ["We need the advance to start the work.", "Kaam shuru karne ke liye advance chahiye."],
+        ["We need the balance before the final handover.", "Final handover se pehle balance chahiye."]
+      ],
+      "grammar": "need + noun. before + noun/-ing. Please se tone soft karo.",
+      "mistake": "“We need to payment” → “We need the payment.” Noun ke pehle to nahi."
+    },
+    {
+      "frame": "I'll send the invoice.",
+      "note": "Invoice bhejne ka promise.",
+      "say": "I'll send the invoice today.",
+      "positive": "I'll send the invoice today.",
+      "negative": "I haven't sent the invoice yet.",
+      "question": "Did you send the invoice?",
+      "examples": [
+        ["I'll send the invoice on email.", "Main email par invoice bhej doonga."],
+        ["I've sent the invoice on WhatsApp.", "Maine WhatsApp par invoice bhej diya hai."]
+      ],
+      "grammar": "invoice = bill. send the invoice. by email / on WhatsApp.",
+      "mistake": "“I'll send you invoice” → “I'll send you the invoice.” Article the chahiye."
+    },
+    {
+      "frame": "When can we expect ___?",
+      "note": "Payment ka polite follow-up.",
+      "say": "When can we expect the payment?",
+      "positive": "When can we expect the payment?",
+      "negative": "I'm not sure when we can expect it.",
+      "question": "When can we expect the next update?",
+      "examples": [
+        ["When can we expect the advance?", "Advance kab tak expect kar sakte hain?"],
+        ["When can we expect the purchase order?", "Purchase order kab tak milega?"]
+      ],
+      "grammar": "When can + subject + base verb. expect + noun. Polite follow-up.",
+      "mistake": "“When we can expect payment?” → “When can we expect the payment?” Can subject se pehle."
+    },
+    {
+      "frame": "Is there any update on ___?",
+      "note": "Soft follow-up — pressure kam, reminder clear.",
+      "say": "Is there any update on the payment?",
+      "positive": "Is there any update on the payment?",
+      "negative": "There is no update yet.",
+      "question": "Is there any update on the invoice?",
+      "examples": [
+        ["Is there any update on the advance?", "Advance par koi update hai?"],
+        ["Is there any update on the approval?", "Approval par koi update hai?"]
+      ],
+      "grammar": "Is there any update on + noun? Follow-up ka polite tarika.",
+      "mistake": "“Any update on payment?” is okay informally, but “Is there any update on the payment?” polite hota hai."
+    }
+  ],
+  "grammarRules": [
+    ["cost is + amount; thousand/lakh singular", "The cost is fifteen thousand rupees."],
+    ["Could you confirm + noun/clause", "Could you confirm the amount?"],
+    ["need + noun (not to + noun)", "We need the payment."],
+    ["will send the invoice; use the article", "I'll send the invoice today."],
+    ["When can + subject + base verb?", "When can we expect the payment?"],
+    ["Is there any update on + noun?", "Is there any update on the invoice?"]
+  ],
+  "mistakes": [
+    ["The cost is fifteen thousands.", "The cost is fifteen thousand.", "Thousand singular."],
+    ["Could you confirm me the amount?", "Could you confirm the amount?", "confirm + thing."],
+    ["We need to payment.", "We need the payment.", "need + noun."],
+    ["I'll send you invoice.", "I'll send you the invoice.", "Article the."],
+    ["When we can expect payment?", "When can we expect the payment?", "Can subject se pehle."],
+    ["Any update on payment?", "Is there any update on the payment?", "Full polite question."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "The cost ___ fifteen thousand rupees.", "answers": ["is"], "explain": "The cost is + amount.", "model": "The cost is fifteen thousand rupees." },
+      { "prompt": "Could you ___ the advance amount?", "answers": ["confirm"], "explain": "confirm = pakka karna.", "model": "Could you confirm the advance amount?" },
+      { "prompt": "We ___ the payment before delivery.", "answers": ["need"], "explain": "need + noun.", "model": "We need the payment before delivery." },
+      { "prompt": "I'll send the ___ today.", "answers": ["invoice", "bill"], "explain": "invoice = bill.", "model": "I'll send the invoice today." },
+      { "prompt": "When can we ___ the payment?", "answers": ["expect"], "explain": "expect = umeed karna.", "model": "When can we expect the payment?" },
+      { "prompt": "Is there any ___ on the invoice?", "answers": ["update"], "explain": "any update on + noun.", "model": "Is there any update on the invoice?" }
+    ],
+    "grammar": [
+      { "prompt": "The cost ___ final.", "answers": ["is"], "explain": "cost is + adjective.", "model": "The cost is final." },
+      { "prompt": "Could you confirm ___ amount?", "answers": ["the"], "explain": "Specific amount → the.", "model": "Could you confirm the amount?" },
+      { "prompt": "We need ___ payment.", "answers": ["the"], "explain": "Specific payment → the.", "model": "We need the payment." },
+      { "prompt": "When ___ we expect the payment?", "answers": ["can"], "explain": "When can + subject + verb.", "model": "When can we expect the payment?" }
+    ],
+    "build": [
+      { "jumbled": "cost / the / fifteen / is / thousand", "answers": ["The cost is fifteen thousand.", "The cost is fifteen thousand rupees."], "explain": "The cost is + amount.", "model": "The cost is fifteen thousand rupees." },
+      { "jumbled": "confirm / could / the / you / advance", "answers": ["Could you confirm the advance?", "Could you confirm the advance amount?"], "explain": "Could you confirm + noun.", "model": "Could you confirm the advance?" },
+      { "jumbled": "send / I'll / invoice / the / today", "answers": ["I'll send the invoice today.", "I will send the invoice today."], "explain": "I'll + send + the invoice.", "model": "I'll send the invoice today." }
+    ],
+    "translate": [
+      { "hinglish": "Kharche pandrah hazaar rupaye hain.", "answers": ["The cost is fifteen thousand rupees.", "The cost is 15,000 rupees."], "explain": "The cost is + amount.", "model": "The cost is fifteen thousand rupees." },
+      { "hinglish": "Kya aap advance confirm kar sakte hain?", "answers": ["Could you confirm the advance?", "Can you confirm the advance?", "Could you confirm the advance amount?"], "explain": "Could you confirm + noun.", "model": "Could you confirm the advance?" },
+      { "hinglish": "Payment ka koi update hai?", "answers": ["Is there any update on the payment?", "Any update on the payment?"], "explain": "Is there any update on...?", "model": "Is there any update on the payment?" }
+    ]
+  },
+  "repeat": [
+    "The cost is fifteen thousand rupees.",
+    "Could you confirm the advance amount?",
+    "I'll send the invoice today.",
+    "Is there any update on the payment?"
+  ],
+  "dialogue": {
+    "context": "Payment follow-up call. Riya = client. Invoice, total, advance aur discount — politely cover karo.",
+    "lines": [
+      { "speaker": "Riya", "text": "Hi, we haven't received the invoice yet." },
+      { "speaker": "You", "text": "Sorry about that. I'll send the invoice today.", "target": true },
+      { "speaker": "Riya", "text": "What is the total cost?" },
+      { "speaker": "You", "text": "The cost is fifteen thousand rupees, plus GST. We need the advance before we start.", "target": true },
+      { "speaker": "Riya", "text": "Can you give a discount?" },
+      { "speaker": "You", "text": "We can offer a five percent discount on the total. Could you confirm the advance by Friday?", "target": true },
+      { "speaker": "Riya", "text": "I'll confirm tomorrow." },
+      { "speaker": "You", "text": "Great. Is there any update on the purchase order?", "target": true }
+    ],
+    "closing": "Money conversation me teen cheezein clear: amount, date, next step. Guess mat karo, confirm karo."
+  },
+  "speakPrompts": [
+    { "title": "1. Share the cost", "prompt": "Total amount clearly bolo.", "starter": "The cost is ___ rupees, plus GST." },
+    { "title": "2. Ask for the advance", "prompt": "Advance politely maango.", "starter": "We need the advance before we start. Could you confirm it by ___ ?" },
+    { "title": "3. Send the invoice", "prompt": "Invoice bhejne ka message bolo.", "starter": "I'll send the invoice today on ___ . Please check it." },
+    { "title": "4. Payment follow-up", "prompt": "Do-line follow-up record karo.", "starter": "Hi ___ , is there any update on the payment? When can we expect ___ ?" }
+  ],
+  "vocab": [
+    { "word": "cost", "collocation": "the total cost", "example": "The total cost is fifteen thousand rupees.", "meaning": "kul kharcha" },
+    { "word": "price", "collocation": "the final price", "example": "The final price includes GST.", "meaning": "daam" },
+    { "word": "quote", "collocation": "send a quote", "example": "I'll send the quote by Monday.", "meaning": "likhit daam" },
+    { "word": "invoice", "collocation": "send the invoice", "example": "I'll send the invoice today.", "meaning": "bill" },
+    { "word": "payment", "collocation": "make the payment", "example": "Please make the payment by Friday.", "meaning": "bhugtan" },
+    { "word": "advance", "collocation": "an advance payment", "example": "We need a fifty percent advance.", "meaning": "pehle diya paisa" },
+    { "word": "balance", "collocation": "the balance amount", "example": "The balance is due on delivery.", "meaning": "baaki paisa" },
+    { "word": "GST", "collocation": "plus GST", "example": "The price is five thousand plus GST.", "meaning": "tax" },
+    { "word": "discount", "collocation": "a five percent discount", "example": "We can offer a five percent discount.", "meaning": "chhoot" },
+    { "word": "confirm", "collocation": "confirm the payment", "example": "Please confirm the payment date.", "meaning": "pakka karna" }
+  ],
+  "selfCheck": [
+    "Total amount bina jhijhak boli.",
+    "“Could you confirm ___?” se ek cheez confirm ki.",
+    "Advance ya payment ki zaroorat clear batayi.",
+    "Invoice bhejne ka time diya.",
+    "Follow-up “Is there any update on ___?” se kiya.",
+    "GST/lakh/crore ka amount clear bola."
+  ],
+  "pronunciation": [
+    { "title": "Numbers", "body": "fifteen /fɪfˈtiːn/ vs fifty /ˈfɪfti/. Stress end me fifteen, start me fifty." },
+    { "title": "Lakh/crore vs million", "body": "1 lakh = 100,000; 1 crore = 10 million. Client Indian ho to lakh/crore, international ho to million bolo." },
+    { "title": "invoice", "body": "/ˈɪnvɔɪs/ — IN-voice. Stress first syllable par." },
+    { "title": "Linking", "body": "Could you → /wʊdʒə/. “Could you confirm” ko “could-ja confirm” jaisa jodo." }
+  ],
+  "followUps": [
+    "Payment follow-up me kitna direct hona chahiye?",
+    "Lakh/crore ko international client ko kaise bataun?",
+    "Advance na mile to kaam kaise handle karun?",
+    "Discount dene ka best time kya hai?",
+    "Mera amount pronunciation clear hai?"
+  ],
+  "mission": "Record a payment follow-up message: amount, invoice, advance date, and polite reminder.",
+  "source": {
+    "label": "BBC Learning English · English at Work",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work",
+    "note": "Money aur negotiation wala episode chuno. Target: ek amount line aur ek follow-up line note karna."
+  },
+  "phrases": [
+    ["The cost is fifteen thousand rupees.", "Kharche pandrah hazaar rupaye hain."],
+    ["Could you confirm the advance?", "Kya aap advance confirm kar sakte hain?"],
+    ["We need the payment before delivery.", "Delivery se pehle payment chahiye."],
+    ["I'll send the invoice today.", "Main aaj invoice bhej doonga."],
+    ["Is there any update on the payment?", "Payment par koi update hai?"],
+    ["When can we expect the payment?", "Payment kab tak expect kar sakte hain?"],
+    ["The balance is due on delivery.", "Balance delivery par dena hai."],
+    ["The price includes GST.", "Price me GST shamil hai."],
+    ["We can offer a five percent discount.", "Hum paanch percent discount de sakte hain."],
+    ["Please make the payment by Friday.", "Please Friday tak payment kar dijiye."]
+  ]
+}

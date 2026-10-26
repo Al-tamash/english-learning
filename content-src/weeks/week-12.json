@@ -1,0 +1,212 @@
+{
+  "number": 12,
+  "slug": "fluency-and-real-calls",
+  "title": "Fluency and real calls",
+  "lead": "Final week. Is lesson ke baad tum poora client call structure kar paoge: summarize, main point, next step, schedule, aur polite close.",
+  "description": "Week 12 English lesson: summarize a call, confirm action items, schedule the next step, and close with confidence.",
+  "patterns": [
+    {
+      "frame": "Let me summarize.",
+      "note": "Call ke end me points short me repeat karo.",
+      "say": "Let me summarize the main points.",
+      "positive": "Let me summarize the main points.",
+      "negative": "I don't have a full summary yet.",
+      "question": "Can you summarize the call?",
+      "examples": [
+        ["Let me summarize what we decided.", "Main summarize karta hoon kya decide hua."],
+        ["Let me summarize the three action items.", "Main teen action items summarize karta hoon."]
+      ],
+      "grammar": "Let me + base verb. summarize = short me repeat karna. Summary me 2–3 points, not story.",
+      "mistake": "“Let me to summarize” → “Let me summarize.” let me ke baad base verb."
+    },
+    {
+      "frame": "The main point is ___.",
+      "note": "Ek sabse important point nikalo.",
+      "say": "The main point is the deadline.",
+      "positive": "The main point is the deadline.",
+      "negative": "The main point isn't the price.",
+      "question": "What is the main point?",
+      "examples": [
+        ["The main point is the launch date.", "Main point launch date hai."],
+        ["The main point is the client's approval.", "Main point client ki approval hai."]
+      ],
+      "grammar": "The main point is + noun/clause. Ek point, five nahi.",
+      "mistake": "“The main point is about the deadline” → “The main point is the deadline.” Direct noun better."
+    },
+    {
+      "frame": "Before we finish, ___.",
+      "note": "Call close karne se pehle last item.",
+      "say": "Before we finish, let's confirm the next call.",
+      "positive": "Before we finish, let's confirm the next call.",
+      "negative": "Before we finish, let's not forget the payment question.",
+      "question": "Before we finish, can we confirm the date?",
+      "examples": [
+        ["Before we finish, I have one question.", "Finish karne se pehle, ek sawaal hai."],
+        ["Before we finish, let's agree on the next step.", "Finish se pehle next step par agree karein."]
+      ],
+      "grammar": "Before + subject + verb, + main clause. before we finish = call end hone se pehle.",
+      "mistake": "“Before finish, let's confirm” → “Before we finish, let's confirm.” Subject chahiye."
+    },
+    {
+      "frame": "I'll follow up with ___.",
+      "note": "Call ke baad kaam ka owner bolo.",
+      "say": "I'll follow up with the client tomorrow.",
+      "positive": "I'll follow up with the client tomorrow.",
+      "negative": "I won't follow up until Monday.",
+      "question": "Who will follow up?",
+      "examples": [
+        ["I'll follow up with the design team.", "Main design team se follow up karunga."],
+        ["I'll follow up on the invoice.", "Main invoice par follow up karunga."]
+      ],
+      "grammar": "follow up with + person; follow up on + topic. Future promise.",
+      "mistake": "“I'll follow up to the client” → “I'll follow up with the client.” with person."
+    },
+    {
+      "frame": "Could we schedule ___?",
+      "note": "Next call ka time set karo.",
+      "say": "Could we schedule the next call for Monday?",
+      "positive": "Could we schedule the next call for Monday?",
+      "negative": "We can't schedule it this week.",
+      "question": "Could we schedule a call?",
+      "examples": [
+        ["Could we schedule a demo for Thursday?", "Kya hum Thursday ke liye demo schedule kar sakte hain?"],
+        ["Could we schedule the review for next week?", "Kya hum review next week ke liye rakh sakte hain?"]
+      ],
+      "grammar": "Could we + base verb. schedule something for + time.",
+      "mistake": "“Could we schedule to Monday?” → “Could we schedule it for Monday?” for + time."
+    },
+    {
+      "frame": "Thanks for your time.",
+      "note": "Call close karne ki simple, professional line.",
+      "say": "Thanks for your time.",
+      "positive": "Thanks for your time.",
+      "negative": "I don't want to take more of your time.",
+      "question": "Do you have five more minutes?",
+      "examples": [
+        ["Thanks for your time. I'll send the notes.", "Aapke time ke liye thanks. Main notes bhej doonga."],
+        ["Thanks for your time today.", "Aaj ke time ke liye thanks."]
+      ],
+      "grammar": "Thanks for + noun/-ing. Call close karne ka polite line. time uncountable.",
+      "mistake": "“Thanks for your times” → “Thanks for your time.” Time uncountable."
+    }
+  ],
+  "grammarRules": [
+    ["Let me + base verb", "Let me summarize the points."],
+    ["The main point is + noun/clause", "The main point is the deadline."],
+    ["Before + subject + verb, main clause", "Before we finish, let's confirm."],
+    ["follow up with person / on topic", "I'll follow up with the client."],
+    ["Could we + base verb; schedule for + time", "Could we schedule it for Monday?"],
+    ["Thanks for + noun/-ing", "Thanks for your time."]
+  ],
+  "mistakes": [
+    ["Let me to summarize.", "Let me summarize.", "let me + base verb."],
+    ["The main point is about the deadline.", "The main point is the deadline.", "Direct noun better."],
+    ["Before finish, let's confirm.", "Before we finish, let's confirm.", "Before + subject + verb."],
+    ["I'll follow up to the client.", "I'll follow up with the client.", "follow up with person."],
+    ["Could we schedule to Monday?", "Could we schedule it for Monday?", "schedule for + time."],
+    ["Thanks for your times.", "Thanks for your time.", "Time uncountable."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "Let me ___ the main points.", "answers": ["summarize", "summarise"], "explain": "summarize = short me repeat.", "model": "Let me summarize the main points." },
+      { "prompt": "The main ___ is the deadline.", "answers": ["point"], "explain": "The main point is...", "model": "The main point is the deadline." },
+      { "prompt": "___ we finish, let's confirm the next call.", "answers": ["Before"], "explain": "Before we finish, ...", "model": "Before we finish, let's confirm the next call." },
+      { "prompt": "I'll follow up ___ the client.", "answers": ["with"], "explain": "follow up with person.", "model": "I'll follow up with the client." },
+      { "prompt": "Could we ___ the next call for Monday?", "answers": ["schedule", "set"], "explain": "schedule + object + for + time.", "model": "Could we schedule the next call for Monday?" },
+      { "prompt": "Thanks for your ___.", "answers": ["time"], "explain": "Thanks for your time.", "model": "Thanks for your time." }
+    ],
+    "grammar": [
+      { "prompt": "Let me ___ the call.", "answers": ["summarize", "summarise"], "explain": "let me + base verb.", "model": "Let me summarize the call." },
+      { "prompt": "The main point ___ the deadline.", "answers": ["is"], "explain": "The main point is + noun.", "model": "The main point is the deadline." },
+      { "prompt": "I'll follow up ___ the invoice.", "answers": ["on"], "explain": "follow up on + topic.", "model": "I'll follow up on the invoice." },
+      { "prompt": "Could we schedule it ___ Monday?", "answers": ["for"], "explain": "schedule for + time.", "model": "Could we schedule it for Monday?" }
+    ],
+    "build": [
+      { "jumbled": "summarize / let / the / me / points / main", "answers": ["Let me summarize the main points."], "explain": "Let me + base verb + object.", "model": "Let me summarize the main points." },
+      { "jumbled": "point / the / main / deadline / is / the", "answers": ["The main point is the deadline."], "explain": "The main point is + noun.", "model": "The main point is the deadline." },
+      { "jumbled": "schedule / could / the / we / call / next", "answers": ["Could we schedule the next call?"], "explain": "Could we + base verb.", "model": "Could we schedule the next call?" }
+    ],
+    "translate": [
+      { "hinglish": "Main main points summarize karta hoon.", "answers": ["Let me summarize the main points.", "I'll summarize the main points."], "explain": "Let me + summarize.", "model": "Let me summarize the main points." },
+      { "hinglish": "Main point deadline hai.", "answers": ["The main point is the deadline.", "The main point is the deadline date."], "explain": "The main point is + noun.", "model": "The main point is the deadline." },
+      { "hinglish": "Kya hum next call Monday ke liye schedule kar sakte hain?", "answers": ["Could we schedule the next call for Monday?", "Can we schedule the next call for Monday?"], "explain": "schedule something for + time.", "model": "Could we schedule the next call for Monday?" }
+    ]
+  },
+  "repeat": [
+    "Let me summarize the main points.",
+    "The main point is the deadline.",
+    "Before we finish, let's confirm the next call.",
+    "I'll follow up with the client tomorrow."
+  ],
+  "dialogue": {
+    "context": "Final mock client call. Riya = client. Summary, next step, schedule aur close — poora structure.",
+    "lines": [
+      { "speaker": "Riya", "text": "Okay, I think we have covered everything." },
+      { "speaker": "You", "text": "Let me summarize. The main point is the launch date — the 15th.", "target": true },
+      { "speaker": "Riya", "text": "Yes, and we need the content by the 10th." },
+      { "speaker": "You", "text": "Correct. Before we finish, let's confirm the next call.", "target": true },
+      { "speaker": "Riya", "text": "How about Monday at four?" },
+      { "speaker": "You", "text": "That works. Could we schedule it for Monday at four?", "target": true },
+      { "speaker": "Riya", "text": "Sure. Can you send the notes?" },
+      { "speaker": "You", "text": "Yes, I'll follow up with the notes today. Thanks for your time.", "target": true }
+    ],
+    "closing": "Poora call: open → discuss → summarize → next step → schedule → thanks. Ye structure roz use karo."
+  },
+  "speakPrompts": [
+    { "title": "1. Summarize", "prompt": "Call ke teen points summarize karo.", "starter": "Let me summarize. The main point is ___ . We also agreed on ___ ." },
+    { "title": "2. Confirm action items", "prompt": "Kaun kya karega, bolo.", "starter": "I'll follow up with ___ . You will send ___ by ___ ." },
+    { "title": "3. Schedule next call", "prompt": "Next meeting set karo.", "starter": "Could we schedule the next call for ___ ? Does that work for you?" },
+    { "title": "4. Full 2-minute call", "prompt": "Poora mock call record karo.", "starter": "Hi, thanks for joining. Let's start with ___ . ... Let me summarize. ... Thanks for your time." }
+  ],
+  "vocab": [
+    { "word": "summary", "collocation": "a quick summary", "example": "Let me give you a quick summary.", "meaning": "chhota saar" },
+    { "word": "action item", "collocation": "the action items", "example": "We have three action items.", "meaning": "kaam jo karna hai" },
+    { "word": "follow-up", "collocation": "a follow-up email", "example": "I'll send a follow-up email.", "meaning": "baad me yaad dilana" },
+    { "word": "schedule", "collocation": "schedule a call", "example": "Let's schedule a call for Monday.", "meaning": "time tay karna" },
+    { "word": "decide", "collocation": "decide the next step", "example": "Let's decide the next step.", "meaning": "faisla karna" },
+    { "word": "next step", "collocation": "the next step", "example": "The next step is the design.", "meaning": "agle kadam" },
+    { "word": "owner", "collocation": "the task owner", "example": "Who is the owner of this task?", "meaning": "zimmedar insaan" },
+    { "word": "deadline", "collocation": "meet the deadline", "example": "We will meet the deadline.", "meaning": "aakhri tareekh" },
+    { "word": "recap", "collocation": "a quick recap", "example": "Here is a quick recap.", "meaning": "short summary" },
+    { "word": "close", "collocation": "close the call", "example": "Let's close the call with next steps.", "meaning": "khatam karna" }
+  ],
+  "selfCheck": [
+    "Call ko “Let me summarize” se close kiya.",
+    "Ek main point clearly bola.",
+    "Next step ka owner aur time bataya.",
+    "Next call schedule kiya — “Could we schedule ___ for ___?”",
+    "“Before we finish” se last question poochha.",
+    "“Thanks for your time” se call close kiya."
+  ],
+  "pronunciation": [
+    { "title": "Pausing", "body": "Let me summarize — the main point is — the deadline. Pause se listener ko process karne ka time milta hai." },
+    { "title": "Rhythm", "body": "Content words par stress: LET me SUMmarize the MAIN POINT. Function words halke." },
+    { "title": "Final intonation", "body": "Statements me voice neeche. “Thanks for your time.” — end me confident fall." },
+    { "title": "Confidence", "body": "Speed slow rakho. Bhool gaye to “Let me check that and follow up” bolo — pause se better hai." }
+  ],
+  "followUps": [
+    "10-minute client call ka best structure kya hai?",
+    "Call ke end me summary ka short format kya hai?",
+    "Action items kaise confirm karun?",
+    "Meri speed call me zyada fast lagti hai?",
+    "Week 1 se ab tak meri recording me kya improve hua?"
+  ],
+  "mission": "Complete one real client call using five target phrases, then record a 2-minute reflection in English.",
+  "source": {
+    "label": "BBC Learning English · English at Work",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/english-at-work",
+    "note": "Ek full episode suno aur call-close structure note karo. Phir apna 2-minute mock call record karo."
+  },
+  "phrases": [
+    ["Let me summarize.", "Main summarize karta hoon."],
+    ["The main point is the deadline.", "Main point deadline hai."],
+    ["Before we finish, let's confirm the next call.", "Finish se pehle next call confirm karein."],
+    ["I'll follow up with the client.", "Main client se follow up karunga."],
+    ["Could we schedule it for Monday?", "Kya hum ise Monday ke liye rakh sakte hain?"],
+    ["Thanks for your time.", "Aapke time ke liye thanks."],
+    ["That works for me.", "Mere liye theek hai."],
+    ["The next step is the design.", "Agla kadam design hai."],
+    ["I'll send the notes today.", "Main aaj notes bhej doonga."],
+    ["Does that work for you?", "Kya ye aapke liye theek hai?"]
+  ]
+}

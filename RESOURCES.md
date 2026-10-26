@@ -20,6 +20,12 @@
 - [BBC Learning English](https://www.bbc.co.uk/learningenglish/)
   Short audio with transcripts, including 6 Minute English and pronunciation. Use for shadowing extras.
 
+- [BBC Learning English · English at Work](https://www.bbc.co.uk/learningenglish/english/features/english-at-work)
+  Short workplace dramas with transcripts. The primary listening source for the client-call weeks: kickoff, updates, calls, meetings, problems, money, and closing a call.
+
+- [BBC Learning English · 6 Minute English](https://www.bbc.co.uk/learningenglish/english/features/6-minute-english)
+  Weekly topical listening. Use for small talk, explaining technology simply, and opinions. Listen once with the transcript, then repeat two lines.
+
 - [YouGlish](https://youglish.com/)
   Hear a word or phrase in real videos. Use when a phrase feels textbook-like and you want to hear how people actually say it.
 

@@ -1,0 +1,210 @@
+{
+  "number": 6,
+  "slug": "explain-technical-work-simply",
+  "title": "Explain technical work simply",
+  "lead": "Is lesson ke baad tum hosting, domain, speed, SEO ya bug ko non-technical client ko simple English me samjha paoge — bina jargon ke.",
+  "description": "Week 6 English lesson: explain hosting, domains, speed, security, and bugs in simple English to non-technical clients.",
+  "patterns": [
+    {
+      "frame": "It's like ___.",
+      "note": "Comparison se client ko turant idea milta hai.",
+      "say": "It's like a shop address for your website.",
+      "positive": "It's like a shop address for your website.",
+      "negative": "It's not like a physical shop.",
+      "question": "What is it like?",
+      "examples": [
+        ["Hosting is like rent for your website.", "Hosting website ke kiraye jaisa hai."],
+        ["A domain is like your shop's name board.", "Domain aapki dukaan ke naam ke board jaisa hai."]
+      ],
+      "grammar": "It's like + noun. Comparison ke liye. Like yahan ‘pasand’ nahi, ‘jaisa’ hai.",
+      "mistake": "“It's like to a shop” → “It's like a shop.” like ke baad noun, to nahi."
+    },
+    {
+      "frame": "This allows you to ___.",
+      "note": "Feature se client kya kar sakta hai.",
+      "say": "This allows you to update the website yourself.",
+      "positive": "This allows you to update the website yourself.",
+      "negative": "This doesn't allow you to change the design.",
+      "question": "What does this allow me to do?",
+      "examples": [
+        ["This allows you to add new products.", "Isse aap naye products add kar sakte hain."],
+        ["The panel allows you to change photos.", "Panel se aap photos badal sakte hain."]
+      ],
+      "grammar": "allow + person + to + verb. This allows you to... = isse aap kar sakte ho.",
+      "mistake": "“This allows you update” → “This allows you to update.” allow ke baad to."
+    },
+    {
+      "frame": "The problem is ___.",
+      "note": "Problem ko seedha noun se bolo.",
+      "say": "The problem is the large images.",
+      "positive": "The problem is the large images.",
+      "negative": "The problem isn't the hosting.",
+      "question": "What is the problem?",
+      "examples": [
+        ["The problem is the old plugin.", "Problem purane plugin ki hai."],
+        ["The problem is the slow server.", "Problem slow server ki hai."]
+      ],
+      "grammar": "The problem is + noun/clause. Simple rakho: noun se shuru karo.",
+      "mistake": "“The problem is because the images” → “The problem is the images.” because ki zaroorat nahi."
+    },
+    {
+      "frame": "It means ___.",
+      "note": "Technical baat ka client ke liye matlab.",
+      "say": "It means the page will open faster.",
+      "positive": "It means the page will open faster.",
+      "negative": "It doesn't mean the website is new.",
+      "question": "What does it mean?",
+      "examples": [
+        ["It means your site is safe.", "Iska matlab aapki site safe hai."],
+        ["It means Google can read your pages.", "Iska matlab Google aapke pages padh sakta hai."]
+      ],
+      "grammar": "mean + noun/clause. It means = iska matlab hai.",
+      "mistake": "“It means that is faster” → “It means the page will open faster.” Clear subject rakho."
+    },
+    {
+      "frame": "For example, ___.",
+      "note": "Abstract baat ko ek real example se jodo.",
+      "say": "For example, a customer can pay online.",
+      "positive": "For example, a customer can pay online.",
+      "negative": "Not every page needs a form.",
+      "question": "Can you give an example?",
+      "examples": [
+        ["For example, you can change the price in one click.", "Jaise, aap ek click me price badal sakte hain."],
+        ["For example, a new user can sign up in one minute.", "Jaise, naya user ek minute me sign up kar sakta hai."]
+      ],
+      "grammar": "For example, + complete sentence. Comma ke baad sentence complete rakho.",
+      "mistake": "“For example a customer can pay” → “For example, a customer can pay.” Example ko complete sentence banao."
+    },
+    {
+      "frame": "You don't need to ___.",
+      "note": "Client ko dar mat lagne do — kya nahi karna.",
+      "say": "You don't need to install anything.",
+      "positive": "You need to click save.",
+      "negative": "You don't need to install anything.",
+      "question": "Do I need to do anything?",
+      "examples": [
+        ["You don't need to learn coding.", "Aapko coding seekhne ki zaroorat nahi."],
+        ["You don't need to call the developer for this.", "Iske liye developer ko call karne ki zaroorat nahi."]
+      ],
+      "grammar": "don't need to + base verb = zaroorat nahi. mustn't = mat karo — meaning different hai.",
+      "mistake": "“You don't need install” → “You don't need to install.” need to + base verb."
+    }
+  ],
+  "grammarRules": [
+    ["It's like + noun (comparison)", "It's like a shop address."],
+    ["allow + person + to + verb", "This allows you to update the site."],
+    ["The problem is + noun/clause", "The problem is the large images."],
+    ["mean(s) + noun/clause", "It means the page will load faster."],
+    ["For example, + full sentence", "For example, you can pay online."],
+    ["don't need to + base verb (≠ mustn't)", "You don't need to install anything."]
+  ],
+  "mistakes": [
+    ["It's like to a shop.", "It's like a shop.", "like + noun, to nahi."],
+    ["This allows you update.", "This allows you to update.", "allow + person + to + verb."],
+    ["The problem is because the images.", "The problem is the images.", "The problem is + noun."],
+    ["It means that is faster.", "It means the page will open faster.", "mean + clear clause."],
+    ["You don't need install anything.", "You don't need to install anything.", "need to + base verb."],
+    ["For example a customer can pay online", "For example, a customer can pay online.", "Example ko complete sentence banao."]
+  ],
+  "practice": {
+    "pattern": [
+      { "prompt": "It's ___ a shop address for your website.", "answers": ["like"], "explain": "like = jaisa.", "model": "It's like a shop address for your website." },
+      { "prompt": "This allows you ___ update the site.", "answers": ["to"], "explain": "allow you to + verb.", "model": "This allows you to update the site." },
+      { "prompt": "The ___ is the large images.", "answers": ["problem"], "explain": "The problem is + noun.", "model": "The problem is the large images." },
+      { "prompt": "It ___ the page will open faster.", "answers": ["means"], "explain": "It means = iska matlab.", "model": "It means the page will open faster." },
+      { "prompt": "For ___, a customer can pay online.", "answers": ["example"], "explain": "For example = jaise.", "model": "For example, a customer can pay online." },
+      { "prompt": "You don't need ___ install anything.", "answers": ["to"], "explain": "need to + base verb.", "model": "You don't need to install anything." }
+    ],
+    "grammar": [
+      { "prompt": "This allows you ___ edit the text.", "answers": ["to"], "explain": "allow + person + to + verb.", "model": "This allows you to edit the text." },
+      { "prompt": "The problem ___ the images.", "answers": ["is"], "explain": "The problem is + noun.", "model": "The problem is the images." },
+      { "prompt": "You don't need ___ change the design.", "answers": ["to"], "explain": "don't need to + base verb.", "model": "You don't need to change the design." },
+      { "prompt": "It ___ like a shop.", "answers": ["is"], "explain": "It's like + noun.", "model": "It is like a shop." }
+    ],
+    "build": [
+      { "jumbled": "like / it's / a / shop / address", "answers": ["It's like a shop address.", "It is like a shop address."], "explain": "It + is + like + noun.", "model": "It's like a shop address." },
+      { "jumbled": "allows / this / you / to / update / site / the", "answers": ["This allows you to update the site."], "explain": "allow + person + to + verb.", "model": "This allows you to update the site." },
+      { "jumbled": "problem / the / is / images / large / the", "answers": ["The problem is the large images."], "explain": "The problem is + noun phrase.", "model": "The problem is the large images." }
+    ],
+    "translate": [
+      { "hinglish": "Ye ek dukaan ke address jaisa hai.", "answers": ["It's like a shop address.", "It is like a shop address."], "explain": "like = jaisa.", "model": "It's like a shop address." },
+      { "hinglish": "Isse aap website khud update kar sakte hain.", "answers": ["This allows you to update the website yourself.", "This lets you update the website yourself."], "explain": "allow you to + verb.", "model": "This allows you to update the website yourself." },
+      { "hinglish": "Problem badi images hai.", "answers": ["The problem is the large images.", "The problem is big images."], "explain": "The problem is + noun.", "model": "The problem is the large images." }
+    ]
+  },
+  "repeat": [
+    "Hosting is like rent for your website.",
+    "This allows you to update the website yourself.",
+    "The problem is the large images.",
+    "You don't need to install anything."
+  ],
+  "dialogue": {
+    "context": "Shop owner client ko hosting samjha rahe ho. Riya = client. Jargon zero, comparison aur example use karo.",
+    "lines": [
+      { "speaker": "Riya", "text": "So why do I need hosting?" },
+      { "speaker": "You", "text": "Hosting is like rent for your website. The files live on a server.", "target": true },
+      { "speaker": "Riya", "text": "And the domain?" },
+      { "speaker": "You", "text": "The domain is like your shop's name board. It's the address people type.", "target": true },
+      { "speaker": "Riya", "text": "Will it be fast? Do I need to learn coding?" },
+      { "speaker": "You", "text": "Yes, it will load faster. You don't need to install anything. For example, you can change a photo from your phone.", "target": true }
+    ],
+    "closing": "Technical answer se pehle ek comparison do, phir ek example. Client ko rule nahi, result chahiye."
+  },
+  "speakPrompts": [
+    { "title": "1. Hosting", "prompt": "Hosting ko ek comparison se samjhao.", "starter": "Hosting is like ___ . It means ___ ." },
+    { "title": "2. Domain", "prompt": "Domain aur address ka relation batao.", "starter": "A domain is like ___ . For example, ___ ." },
+    { "title": "3. A problem", "prompt": "Slow site ka reason simple bolo.", "starter": "The problem is ___ . It means ___ ." },
+    { "title": "4. 60-second explanation", "prompt": "Ek technical cheez non-technical friend ko samjhao.", "starter": "It's like ___ . This allows you to ___ . You don't need to ___ ." }
+  ],
+  "vocab": [
+    { "word": "hosting", "collocation": "website hosting", "example": "Hosting is like rent for your website.", "meaning": "website files rakhne ki jagah" },
+    { "word": "domain", "collocation": "a domain name", "example": "The domain is your site's address.", "meaning": "website ka naam/address" },
+    { "word": "responsive", "collocation": "a responsive website", "example": "The site is responsive on mobile.", "meaning": "har screen par fit" },
+    { "word": "load", "collocation": "load faster", "example": "The page will load faster.", "meaning": "khulna" },
+    { "word": "speed", "collocation": "page speed", "example": "Page speed matters for Google.", "meaning": "raftaar" },
+    { "word": "security", "collocation": "website security", "example": "Security keeps client data safe.", "meaning": "suraksha" },
+    { "word": "backup", "collocation": "take a backup", "example": "We take a backup every night.", "meaning": "copy jo safe rakhi jaye" },
+    { "word": "plugin", "collocation": "a WordPress plugin", "example": "The plugin adds a contact form.", "meaning": "extra feature ka module" },
+    { "word": "integration", "collocation": "payment integration", "example": "The payment integration is ready.", "meaning": "do systems ka jodna" },
+    { "word": "user", "collocation": "a new user", "example": "A new user can sign up in a minute.", "meaning": "istemal karne wala" }
+  ],
+  "selfCheck": [
+    "Ek technical word ko comparison se samjhaya.",
+    "“This allows you to ___” se benefit bataya.",
+    "Problem ko “The problem is ___” se seedha bola.",
+    "Ek example diya — “For example, ___”.",
+    "Client ka dar kam kiya — “You don't need to ___”.",
+    "60 seconds me jargon ke bina bola."
+  ],
+  "pronunciation": [
+    { "title": "Technical stress", "body": "HOSTing, doMAIN, reSPONsive, seCURity. Stress ek syllable par, baaki halke." },
+    { "title": "Integration", "body": "in-te-GRA-tion — stress third syllable par. ‘integration’ ko jaldi bolne ki koshish mat karo." },
+    { "title": "It's like", "body": "Linking: it's-like = /ɪtslaɪk/. Do words ko jodo, ruk kar mat bolo." },
+    { "title": "Contrast stress", "body": "The problem is the IMAGES, not the HOSTING. Contrast par stress badalta hai." }
+  ],
+  "followUps": [
+    "Hosting ko ek line me aur simple kaise samjhaun?",
+    "“It's like” ke aur natural comparisons kya hain?",
+    "Client ko jargon se bachne ka rule kya hai?",
+    "Mera explanation 60 seconds me fit hai?",
+    "“You don't need to” ka tone confident lagta hai?"
+  ],
+  "mission": "Explain one technical thing to a non-technical friend in 60 seconds — ek comparison, ek example, zero jargon.",
+  "source": {
+    "label": "BBC Learning English · 6 Minute English",
+    "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english",
+    "note": "Technology wala episode chuno. Target: do simple explanation phrases note karna."
+  },
+  "phrases": [
+    ["It's like rent for your website.", "Ye aapki website ke kiraye jaisa hai."],
+    ["This allows you to update the site.", "Isse aap site update kar sakte hain."],
+    ["The problem is the large images.", "Problem badi images ki hai."],
+    ["It means the page will open faster.", "Iska matlab page jaldi khulega."],
+    ["For example, you can pay online.", "Jaise, aap online pay kar sakte hain."],
+    ["You don't need to install anything.", "Aapko kuch install karne ki zaroorat nahi."],
+    ["It's the address people type.", "Ye woh address hai jo log type karte hain."],
+    ["The site is safe and secure.", "Site safe aur secure hai."],
+    ["We take a backup every night.", "Hum har raat backup lete hain."],
+    ["In simple words, it's faster.", "Simple shabdon me, ye tez hai."]
+  ]
+}
