@@ -528,6 +528,16 @@ a:focus-visible {
   font-size: 0.86rem;
 }
 
+.mistake-table .wrong {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.mistake-table .right {
+  color: var(--success);
+  font-weight: 700;
+}
+
 .quiz-card {
   display: flex;
   flex-direction: column;
@@ -876,6 +886,23 @@ a:focus-visible {
   .section-subtitle {
     margin: -3pt 0 5pt;
     font-size: 8.5pt;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+
+  .grammar-table {
+    font-size: 7.8pt;
+  }
+
+  .grammar-table th,
+  .grammar-table td {
+    padding: 2pt 3pt;
+  }
+
+  .grammar-table tr {
+    break-inside: avoid;
   }
 
   .pattern-grid,

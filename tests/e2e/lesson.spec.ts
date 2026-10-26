@@ -159,3 +159,30 @@ test('disables Suno buttons if speech synthesis is unavailable', async ({ page }
     'Is browser me voice available nahi hai.',
   );
 });
+
+test('reference includes grammar rules, mistakes, and print styles', async ({ page }) => {
+  const reference = pathToFileURL(path.resolve('reference/0001-week-1-patterns.html')).href;
+  await page.goto(reference);
+
+  await expect(page.getByRole('heading', { name: 'Grammar quick rules' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Common mistakes' })).toBeVisible();
+  await expect(page.locator('.rules-table tbody tr')).toHaveCount(6);
+  await expect(page.locator('.mistake-table tbody tr')).toHaveCount(8);
+  await expect(
+    page.locator('.mistake-table').getByText('I am having 3 years experience.'),
+  ).toBeVisible();
+  await expect(
+    page.locator('.mistake-table').getByText('I have 3 years of experience.'),
+  ).toBeVisible();
+
+  await page.setViewportSize({ width: 360, height: 800 });
+  await page.goto(reference);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
+    true,
+  );
+
+  await page.emulateMedia({ media: 'print' });
+  await expect(page.locator('.site-header')).toBeHidden();
+  await expect(page.locator('.print-btn')).toBeHidden();
+  await expect(page.locator('.page-break')).toHaveCSS('break-before', 'page');
+});
