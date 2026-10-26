@@ -18,6 +18,27 @@ export function LibraryScreen() {
       <h2 className="mt-1 text-2xl font-bold">Library</h2>
       <p className="mt-1 text-sm text-muted">Kisi bhi din ko dobara practice karo.</p>
 
+      <div className="mt-4 rounded-2xl border border-line bg-background p-4">
+        <p className="text-sm font-semibold">Week 1 lesson</p>
+        <p className="mt-1 text-xs text-muted">
+          Poora lesson padho, quiz karo, aur patterns print karo.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <a
+            href="/lessons/0001-week-1-introduce-yourself.html"
+            className="rounded-lg bg-accent px-3 py-1.5 text-xs font-semibold text-accent-ink"
+          >
+            Open lesson
+          </a>
+          <a
+            href="/reference/0001-week-1-patterns.html"
+            className="rounded-lg border border-line bg-surface px-3 py-1.5 text-xs font-semibold"
+          >
+            Printable patterns
+          </a>
+        </div>
+      </div>
+
       <div className="mt-5 space-y-2">
         {days.map((day) => (
           <div

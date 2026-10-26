@@ -47,7 +47,14 @@ The E2E tests use the production preview at `http://localhost:4173`.
 npm run build
 ```
 
-The deployable output is in `dist/`. It contains the SPA redirect file, web manifest, service worker, and generated PWA icons.
+The deployable output is in `dist/`. It contains the SPA redirect file, web manifest, service worker, generated PWA icons, and the standalone lesson pages.
+
+The Week 1 lesson and printable reference are copied into `dist/` during the build, so they deploy at:
+
+- `/lessons/0001-week-1-introduce-yourself.html`
+- `/reference/0001-week-1-patterns.html`
+
+They are also linked from the Library screen.
 
 ## Deploy
 

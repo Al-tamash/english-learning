@@ -3,6 +3,9 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  build: {
+    emptyOutDir: false,
+  },
   plugins: [
     react(),
     VitePWA({
@@ -36,6 +39,7 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
         globPatterns: ['**/*.{js,css,html,svg,png,json}'],
         navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/lessons\//, /^\/reference\//],
       },
     }),
   ],

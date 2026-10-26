@@ -15,8 +15,13 @@ The build output is `dist/`. Before uploading, confirm these files exist:
 - `dist/_redirects`
 - `dist/manifest.webmanifest`
 - `dist/sw.js`
+- `dist/lessons/0001-week-1-introduce-yourself.html`
+- `dist/reference/0001-week-1-patterns.html`
+- `dist/assets/course.css`
 
 `_redirects` contains `/* /index.html 200` so React Router routes work after a direct visit or reload.
+
+The build also copies the standalone lesson and reference pages into `dist/`. After deploying, verify `/lessons/0001-week-1-introduce-yourself.html` opens the lesson instead of the app shell.
 
 ## 2. Cloudflare account and Wrangler
 

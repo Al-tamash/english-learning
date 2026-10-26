@@ -23,6 +23,19 @@ it('shows completed days and strong words', () => {
   expect(screen.getByText('Words strong: 1')).toBeInTheDocument();
 });
 
+it('links to the Week 1 lesson and printable reference', () => {
+  useAppStore.setState(createInitialState());
+  render(<MemoryRouter initialEntries={['/library']}><App /></MemoryRouter>);
+  expect(screen.getByRole('link', { name: 'Open lesson' })).toHaveAttribute(
+    'href',
+    '/lessons/0001-week-1-introduce-yourself.html',
+  );
+  expect(screen.getByRole('link', { name: 'Printable patterns' })).toHaveAttribute(
+    'href',
+    '/reference/0001-week-1-patterns.html',
+  );
+});
+
 it('changes the TTS rate in Settings', () => {
   useAppStore.setState(createInitialState());
   render(<MemoryRouter initialEntries={['/settings']}><App /></MemoryRouter>);
