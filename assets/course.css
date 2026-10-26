@@ -187,6 +187,122 @@ a:focus-visible {
   background: var(--accent-soft);
 }
 
+.say:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.repeat-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.repeat-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  padding: 0.65rem 0.8rem;
+}
+
+.repeat-line p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.dialogue {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.dialogue-line {
+  display: grid;
+  grid-template-columns: 4.3rem 1fr auto;
+  gap: 0.6rem;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  padding: 0.55rem 0;
+}
+
+.dialogue-line:last-child {
+  border-bottom: 0;
+}
+
+.speaker {
+  color: var(--accent-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding-top: 0.15rem;
+  text-transform: uppercase;
+}
+
+.dialogue-line p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.dialogue-target {
+  border-radius: 0.5rem;
+  background: var(--accent-soft);
+  padding: 0.4rem 0.55rem;
+}
+
+.vocab-grid {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.vocab-card {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--surface);
+  padding: 0.85rem;
+}
+
+.vocab-card h3 {
+  margin: 0 0 0.2rem;
+  color: var(--accent-dark);
+  font-size: 1rem;
+}
+
+.vocab-card p {
+  margin: 0.15rem 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.vocab-card .vocab-example {
+  color: var(--ink);
+}
+
+.checklist {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: var(--surface);
+  padding: 0.55rem 0.7rem;
+  font-size: 0.9rem;
+}
+
+.checklist input {
+  margin-top: 0.25rem;
+  accent-color: var(--accent);
+}
+
 .section {
   margin-top: 2rem;
 }
@@ -662,12 +778,26 @@ a:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .vocab-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .ref-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .word-columns {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .dialogue-line {
+    grid-template-columns: 1fr auto;
+  }
+
+  .speaker {
+    grid-column: 1 / -1;
   }
 }
 

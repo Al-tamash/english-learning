@@ -127,3 +127,35 @@ test('teaches the Week 1 roadmap, grammar notes, and common mistakes', async ({ 
     true,
   );
 });
+
+test('adds listen-and-repeat, dialogue, vocabulary, and self-check', async ({ page }) => {
+  const lesson = pathToFileURL(path.resolve('lessons/0001-week-1-introduce-yourself.html')).href;
+  await page.goto(lesson);
+
+  await expect(page.getByRole('heading', { name: 'Listen and repeat' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Model dialogue' })).toBeVisible();
+  await expect(page.getByText("Hi, I'm Riya from Acme. What do you do?")).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Vocabulary in action' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '60-second self-check' })).toBeVisible();
+  await expect(page.locator('.checklist input[type="checkbox"]')).toHaveCount(6);
+  await expect(page.getByText('three years / thirty years')).toBeVisible();
+  await expect(page.getByText('Content words par stress')).toBeVisible();
+
+  await page.getByLabel('Naam, city, role, company bola.').check();
+  await expect(page.getByLabel('Naam, city, role, company bola.')).toBeChecked();
+  expect(await page.locator('[data-say]').count()).toBeGreaterThanOrEqual(16);
+});
+
+test('disables Suno buttons if speech synthesis is unavailable', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'speechSynthesis', { configurable: true, value: undefined });
+  });
+  const lesson = pathToFileURL(path.resolve('lessons/0001-week-1-introduce-yourself.html')).href;
+  await page.goto(lesson);
+
+  await expect(page.locator('.say').first()).toBeDisabled();
+  await expect(page.locator('.say').first()).toHaveAttribute(
+    'title',
+    'Is browser me voice available nahi hai.',
+  );
+});
