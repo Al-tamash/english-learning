@@ -99,3 +99,31 @@ test('checks grammar practice with explanations, variants, and model answers', a
   await location.getByRole('button', { name: 'Check' }).click();
   await expect(location.getByText('Sahi')).toBeVisible();
 });
+
+test('teaches the Week 1 roadmap, grammar notes, and common mistakes', async ({ page }) => {
+  const lesson = pathToFileURL(path.resolve('lessons/0001-week-1-introduce-yourself.html')).href;
+  await page.goto(lesson);
+
+  await expect(page.getByText('Week 1 · Weekly Lesson', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Week 1 roadmap' })).toBeVisible();
+  await expect(
+    page.getByText('Lesson 1 = Week 1 ka weekly lesson; Day 1 = app ka pehla practice session.'),
+  ).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Grammar corner' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Common mistakes' })).toBeVisible();
+  await expect(page.locator('.pattern-card .grammar-note')).toHaveCount(6);
+  await expect(page.locator('.pattern-card .mistake-note')).toHaveCount(6);
+  await expect(page.locator('.mistake-card')).toHaveCount(8);
+  await expect(
+    page.locator('.mistake-card').getByText('I am having 3 years experience.'),
+  ).toBeVisible();
+  await expect(
+    page.locator('.mistake-card').getByText('I have 3 years of experience.'),
+  ).toBeVisible();
+
+  await page.setViewportSize({ width: 360, height: 800 });
+  await page.goto(lesson);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
+    true,
+  );
+});

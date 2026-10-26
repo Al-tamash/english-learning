@@ -308,6 +308,110 @@ a:focus-visible {
   font-size: 0.78rem;
 }
 
+.roadmap-grid,
+.mistake-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.roadmap-card {
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--surface);
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(15, 118, 110, 0.04);
+}
+
+.roadmap-step {
+  margin: 0;
+  color: var(--accent-dark);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.roadmap-card h3 {
+  margin: 0.25rem 0 0.35rem;
+  font-size: 1rem;
+}
+
+.roadmap-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.grammar-note,
+.mistake-note {
+  margin: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.65rem;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 0.82rem;
+}
+
+.mistake-note {
+  border-left-color: var(--danger);
+  background: #fff1f0;
+}
+
+.grammar-note strong {
+  color: var(--accent-dark);
+}
+
+.mistake-note strong {
+  color: var(--danger);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.grammar-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  font-size: 0.86rem;
+}
+
+.grammar-table th,
+.grammar-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.55rem 0.6rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.grammar-table th {
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mistake-card {
+  border-color: #f1b5ae;
+  background: #fff8f7;
+}
+
+.mistake-card .wrong {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+.mistake-card .right {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.mistake-card p {
+  margin: 0.15rem 0;
+  font-size: 0.86rem;
+}
+
 .quiz-card {
   display: flex;
   flex-direction: column;
@@ -542,6 +646,14 @@ a:focus-visible {
   }
 
   .pattern-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .roadmap-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .mistake-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
