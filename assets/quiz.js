@@ -1,3 +1,12 @@
+function normalizeAnswer(value) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/\s+/g, ' ')
+    .replace(/[.!?]+$/, '');
+}
+
 function initQuiz(root) {
   const input = root.querySelector('input[data-answer]');
   const button = root.querySelector('button[data-check]');
@@ -8,14 +17,27 @@ function initQuiz(root) {
   }
 
   const check = () => {
-    const expected = (input.dataset.answer || '').trim().toLowerCase();
-    const actual = input.value.trim().toLowerCase();
-    const correct = actual === expected;
+    const accepted = (input.dataset.answer || '')
+      .split('|')
+      .map(normalizeAnswer)
+      .filter(Boolean);
+    const correct = accepted.includes(normalizeAnswer(input.value));
 
     input.setAttribute('aria-invalid', String(!correct));
 
     if (feedback) {
-      feedback.textContent = correct ? 'Sahi' : 'Phir se';
+      const parts = [correct ? 'Sahi' : 'Phir se'];
+      const explanation = (input.dataset.explain || '').trim();
+      const model = (input.dataset.model || '').trim();
+
+      if (explanation) {
+        parts.push(explanation);
+      }
+      if (!correct && model) {
+        parts.push(`Model: ${model}`);
+      }
+
+      feedback.textContent = parts.join(' ');
       feedback.classList.toggle('correct', correct);
       feedback.classList.toggle('wrong', !correct);
     }

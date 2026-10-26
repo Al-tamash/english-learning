@@ -174,17 +174,24 @@
         </section>
 
         <section class="section" aria-labelledby="quiz-title">
-          <h2 class="section-heading" id="quiz-title">Quiz — 6 blanks</h2>
+          <h2 class="section-heading" id="quiz-title">Practice 1: pattern fill-ins</h2>
           <p class="section-subtitle">
-            Blank me ek word likho. Trimmed lowercase compare hota hai, so “At” aur “at” dono sahi
-            hain. Check dabao, feedback dekho, phir agla.
+            Blank me ek word likho. Capital letters aur extra spaces ki chinta mat karo. Check
+            dabao, feedback dekho, phir agla.
           </p>
 
           <div class="quiz-grid">
             <div class="quiz-card" data-quiz>
               <label class="quiz-label" for="q1">I work ___ Edone Solutions.</label>
               <div class="quiz-row">
-                <input id="q1" type="text" data-answer="at" autocomplete="off" />
+                <input
+                  id="q1"
+                  type="text"
+                  data-answer="at"
+                  data-explain="Company ke pehle at."
+                  data-model="I work at Edone Solutions."
+                  autocomplete="off"
+                />
                 <button class="btn" type="button" data-check>Check</button>
               </div>
               <p class="feedback" data-feedback aria-live="polite"></p>
@@ -193,7 +200,14 @@
             <div class="quiz-card" data-quiz>
               <label class="quiz-label" for="q2">I'm ___ Nagpur.</label>
               <div class="quiz-row">
-                <input id="q2" type="text" data-answer="from" autocomplete="off" />
+                <input
+                  id="q2"
+                  type="text"
+                  data-answer="from"
+                  data-explain="Origin ke liye from."
+                  data-model="I'm from Nagpur."
+                  autocomplete="off"
+                />
                 <button class="btn" type="button" data-check>Check</button>
               </div>
               <p class="feedback" data-feedback aria-live="polite"></p>
@@ -202,7 +216,14 @@
             <div class="quiz-card" data-quiz>
               <label class="quiz-label" for="q3">I live ___ Pune.</label>
               <div class="quiz-row">
-                <input id="q3" type="text" data-answer="in" autocomplete="off" />
+                <input
+                  id="q3"
+                  type="text"
+                  data-answer="in"
+                  data-explain="City ke pehle in."
+                  data-model="I live in Pune."
+                  autocomplete="off"
+                />
                 <button class="btn" type="button" data-check>Check</button>
               </div>
               <p class="feedback" data-feedback aria-live="polite"></p>
@@ -211,7 +232,14 @@
             <div class="quiz-card" data-quiz>
               <label class="quiz-label" for="q4">I have three years of ___.</label>
               <div class="quiz-row">
-                <input id="q4" type="text" data-answer="experience" autocomplete="off" />
+                <input
+                  id="q4"
+                  type="text"
+                  data-answer="experience"
+                  data-explain="Experience = kaam ka tajurba; “years of experience”."
+                  data-model="I have three years of experience."
+                  autocomplete="off"
+                />
                 <button class="btn" type="button" data-check>Check</button>
               </div>
               <p class="feedback" data-feedback aria-live="polite"></p>
@@ -220,7 +248,14 @@
             <div class="quiz-card" data-quiz>
               <label class="quiz-label" for="q5">I build responsive websites ___ small businesses.</label>
               <div class="quiz-row">
-                <input id="q5" type="text" data-answer="for" autocomplete="off" />
+                <input
+                  id="q5"
+                  type="text"
+                  data-answer="for"
+                  data-explain="for = kiske liye."
+                  data-model="I build responsive websites for small businesses."
+                  autocomplete="off"
+                />
                 <button class="btn" type="button" data-check>Check</button>
               </div>
               <p class="feedback" data-feedback aria-live="polite"></p>
@@ -229,7 +264,277 @@
             <div class="quiz-card" data-quiz>
               <label class="quiz-label" for="q6">I'm good ___ frontend development.</label>
               <div class="quiz-row">
-                <input id="q6" type="text" data-answer="at" autocomplete="off" />
+                <input
+                  id="q6"
+                  type="text"
+                  data-answer="at"
+                  data-explain="good at fixed phrase."
+                  data-model="I'm good at frontend development."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="grammar-practice-title">
+          <h2 class="section-heading" id="grammar-practice-title">Practice 2: grammar fill-ins</h2>
+          <p class="section-subtitle">
+            Ek word ya short form likho. “Doesn't” aur “does not” dono accepted hain.
+          </p>
+
+          <div class="quiz-grid">
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="g1">She ___ at a bank.</label>
+              <div class="quiz-row">
+                <input
+                  id="g1"
+                  type="text"
+                  data-answer="works"
+                  data-explain="He/she/it ke saath verb me -s lagta hai."
+                  data-model="She works at a bank."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="g2">___ you work here?</label>
+              <div class="quiz-row">
+                <input
+                  id="g2"
+                  type="text"
+                  data-answer="Do"
+                  data-explain="Present simple question me do/does."
+                  data-model="Do you work here?"
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="g3">He ___ work at a big company.</label>
+              <div class="quiz-row">
+                <input
+                  id="g3"
+                  type="text"
+                  data-answer="doesn't|does not"
+                  data-explain="He/she/it ke saath doesn't."
+                  data-model="He doesn't work at a big company."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="g4">I'm ___ engineer.</label>
+              <div class="quiz-row">
+                <input
+                  id="g4"
+                  type="text"
+                  data-answer="an"
+                  data-explain="Vowel sound ke pehle an."
+                  data-model="I'm an engineer."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="g5">I'm good ___ design.</label>
+              <div class="quiz-row">
+                <input
+                  id="g5"
+                  type="text"
+                  data-answer="at"
+                  data-explain="good at fixed phrase."
+                  data-model="I'm good at design."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="g6">How many years of experience ___ you have?</label>
+              <div class="quiz-row">
+                <input
+                  id="g6"
+                  type="text"
+                  data-answer="do"
+                  data-explain="Question me do/does auxiliary."
+                  data-model="How many years of experience do you have?"
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="build-title">
+          <h2 class="section-heading" id="build-title">Practice 3: build the sentence</h2>
+          <p class="section-subtitle">
+            Jumbled words ko sahi order me full sentence banao. Capital letters aur final
+            punctuation ki chinta mat karo.
+          </p>
+
+          <div class="quiz-grid">
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="b1">
+                Build: at / I / Edone Solutions / work / as / a / web developer
+              </label>
+              <div class="quiz-row">
+                <input
+                  id="b1"
+                  type="text"
+                  data-answer="I work at Edone Solutions as a web developer.|I work at Edone Solutions as web developer.|I work as a web developer at Edone Solutions."
+                  data-explain="Subject + verb + at + company + as + role."
+                  data-model="I work at Edone Solutions as a web developer."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="b2">
+                Build: from / I'm / Nagpur / but / I / live / in / Pune
+              </label>
+              <div class="quiz-row">
+                <input
+                  id="b2"
+                  type="text"
+                  data-answer="I'm from Nagpur, but I live in Pune.|I am from Nagpur, but I live in Pune.|I'm from Nagpur but I live in Pune.|I am from Nagpur but I live in Pune.|I live in Pune, but I'm from Nagpur.|I live in Pune but I am from Nagpur."
+                  data-explain="Origin from; current city in."
+                  data-model="I'm from Nagpur, but I live in Pune."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="b3">
+                Build: experience / three / I / of / have / years
+              </label>
+              <div class="quiz-row">
+                <input
+                  id="b3"
+                  type="text"
+                  data-answer="I have three years of experience.|I have 3 years of experience."
+                  data-explain="have + number + years of + experience."
+                  data-model="I have three years of experience."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="b4">
+                Build: good / I'm / at / design / frontend
+              </label>
+              <div class="quiz-row">
+                <input
+                  id="b4"
+                  type="text"
+                  data-answer="I'm good at frontend design.|I am good at frontend design."
+                  data-explain="good at + noun."
+                  data-model="I'm good at frontend design."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="translate-title">
+          <h2 class="section-heading" id="translate-title">Practice 4: Hinglish → English</h2>
+          <p class="section-subtitle">
+            Hinglish prompt ka English version likho. Ek se zyada sahi answers accepted hain; wrong
+            attempt par model answer dikhega.
+          </p>
+
+          <div class="quiz-grid">
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="t1">Main Edone Solutions me web developer hoon.</label>
+              <div class="quiz-row">
+                <input
+                  id="t1"
+                  type="text"
+                  data-answer="I work at Edone Solutions as a web developer.|I am a web developer at Edone Solutions.|I'm a web developer at Edone Solutions."
+                  data-explain="Company at; role as; singular job a."
+                  data-model="I work at Edone Solutions as a web developer."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="t2">
+                Main Nagpur se hoon, lekin Pune me rehta hoon.
+              </label>
+              <div class="quiz-row">
+                <input
+                  id="t2"
+                  type="text"
+                  data-answer="I'm from Nagpur, but I live in Pune.|I am from Nagpur, but I live in Pune.|I'm from Nagpur but I live in Pune.|I am from Nagpur but I live in Pune.|I live in Pune, but I'm from Nagpur.|I live in Pune but I am from Nagpur."
+                  data-explain="from = origin; in = current city."
+                  data-model="I'm from Nagpur, but I live in Pune."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="t3">Mere paas teen saal ka experience hai.</label>
+              <div class="quiz-row">
+                <input
+                  id="t3"
+                  type="text"
+                  data-answer="I have three years of experience.|I have 3 years of experience."
+                  data-explain="have + years of experience."
+                  data-model="I have three years of experience."
+                  autocomplete="off"
+                />
+                <button class="btn" type="button" data-check>Check</button>
+              </div>
+              <p class="feedback" data-feedback aria-live="polite"></p>
+            </div>
+
+            <div class="quiz-card" data-quiz>
+              <label class="quiz-label" for="t4">Mujhe frontend design achha aata hai.</label>
+              <div class="quiz-row">
+                <input
+                  id="t4"
+                  type="text"
+                  data-answer="I'm good at frontend design.|I am good at frontend design."
+                  data-explain="good at + skill."
+                  data-model="I'm good at frontend design."
+                  autocomplete="off"
+                />
                 <button class="btn" type="button" data-check>Check</button>
               </div>
               <p class="feedback" data-feedback aria-live="polite"></p>
