@@ -1,15 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ChangeEvent } from 'react';
 import { getEnglishVoices } from '../audio/tts';
 import { clearAllRecordings, clearOldPracticeRecordings } from '../audio/recordingStore';
-import { useAppStore } from '../store/appStore';
+import {
+  getPersistenceStatus,
+  requestPersistence,
+  type PersistenceStatus,
+} from '../storage/persistence';
+import { useAppStore, type AppData } from '../store/appStore';
+import { downloadBackup, parseBackup, pickAppData } from '../store/backup';
+
+const STORAGE_LABEL: Record<PersistenceStatus, string> = {
+  checking: 'Storage status check ho raha hai...',
+  persisted: 'Persistent storage on hai.',
+  'best-effort': 'Best effort — browser kabhi storage clear kar sakta hai.',
+  unsupported: 'Ye browser persistent storage support nahi karta.',
+  error: 'Storage status check nahi hua.',
+};
 
 export function SettingsScreen() {
   const settings = useAppStore((state) => state.settings);
   const updateSettings = useAppStore((state) => state.updateSettings);
+  const replaceAll = useAppStore((state) => state.replaceAll);
   const resetAll = useAppStore((state) => state.resetAll);
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>(() => getEnglishVoices());
   const [confirming, setConfirming] = useState(false);
   const [resetting, setResetting] = useState(false);
+  const [pendingImport, setPendingImport] = useState<AppData | null>(null);
+  const [notice, setNotice] = useState('');
+  const [storageStatus, setStorageStatus] = useState<PersistenceStatus>('checking');
+  const [requestingStorage, setRequestingStorage] = useState(false);
 
   useEffect(() => {
     void clearOldPracticeRecordings(new Date(), 30);
@@ -20,6 +39,60 @@ export function SettingsScreen() {
     synthesis?.addEventListener?.('voiceschanged', updateVoices);
     return () => synthesis?.removeEventListener?.('voiceschanged', updateVoices);
   }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    void getPersistenceStatus().then((status) => {
+      if (!cancelled) {
+        setStorageStatus(status);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const exportBackup = () => {
+    try {
+      downloadBackup(pickAppData(useAppStore.getState()));
+      setNotice('Backup download ho gaya.');
+    } catch {
+      setNotice('Backup download nahi hua. Browser storage check karo.');
+    }
+  };
+
+  const chooseImport = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) {
+      return;
+    }
+    try {
+      setPendingImport(parseBackup(await file.text()));
+      setNotice('');
+    } catch (error) {
+      setPendingImport(null);
+      setNotice(error instanceof Error ? error.message : 'Backup import nahi hua.');
+    }
+  };
+
+  const confirmImport = () => {
+    if (!pendingImport) {
+      return;
+    }
+    replaceAll(pendingImport);
+    setPendingImport(null);
+    setNotice('Backup import ho gaya.');
+  };
+
+  const requestStorage = async () => {
+    setRequestingStorage(true);
+    try {
+      setStorageStatus(await requestPersistence());
+    } finally {
+      setRequestingStorage(false);
+    }
+  };
 
   const reset = async () => {
     if (resetting) {
@@ -39,7 +112,7 @@ export function SettingsScreen() {
     <div className="space-y-4">
       <section className="rounded-3xl border border-line bg-surface p-5 shadow-sm sm:p-6">
         <h2 className="text-2xl font-bold">Settings</h2>
-        <p className="mt-1 text-sm text-muted">Awaaz aur voice check yahan se control karo.</p>
+        <p className="mt-1 text-sm text-muted">Awaaz, backup aur storage yahan se control karo.</p>
 
         <div className="mt-5 space-y-4">
           <label className="block">
@@ -102,6 +175,54 @@ export function SettingsScreen() {
       </section>
 
       <section className="rounded-3xl border border-line bg-surface p-5 shadow-sm">
+        <h3 className="text-lg font-semibold">Backup & restore</h3>
+        <p className="mt-1 text-sm text-muted">
+          Progress, SRS aur settings ka JSON backup. Recordings isme include nahi hote.
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={exportBackup}
+            className="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-accent-ink"
+          >
+            Export JSON
+          </button>
+          <label className="cursor-pointer rounded-xl border border-line bg-background px-4 py-2 text-sm font-semibold">
+            Import JSON
+            <input
+              type="file"
+              accept=".json,application/json"
+              aria-label="Import JSON"
+              className="sr-only"
+              onChange={(event) => void chooseImport(event)}
+            />
+          </label>
+        </div>
+        {notice && (
+          <p role="status" aria-live="polite" className="mt-3 text-sm text-muted">
+            {notice}
+          </p>
+        )}
+
+        <div className="mt-4 rounded-xl border border-line bg-background p-3">
+          <p className="text-sm font-semibold">Browser storage</p>
+          <p className="mt-1 text-xs text-muted">{STORAGE_LABEL[storageStatus]}</p>
+          {storageStatus !== 'persisted' &&
+            storageStatus !== 'unsupported' &&
+            storageStatus !== 'checking' && (
+              <button
+                type="button"
+                onClick={() => void requestStorage()}
+                disabled={requestingStorage}
+                className="mt-2 rounded-xl border border-line bg-surface px-3 py-1.5 text-xs font-semibold disabled:opacity-60"
+              >
+                {requestingStorage ? 'Request ho raha hai...' : 'Persistent storage request karo'}
+              </button>
+            )}
+        </div>
+      </section>
+
+      <section className="rounded-3xl border border-line bg-surface p-5 shadow-sm">
         <h3 className="text-lg font-semibold">Data</h3>
         <p className="mt-1 text-sm text-muted">
           Progress, SRS aur local recordings sab is device se delete ho jayengi.
@@ -114,6 +235,40 @@ export function SettingsScreen() {
           Reset data
         </button>
       </section>
+
+      {pendingImport && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="import-title"
+          className="fixed inset-0 z-20 flex items-center justify-center bg-ink/30 p-4"
+        >
+          <div className="w-full max-w-sm rounded-2xl border border-line bg-surface p-5 shadow-lg">
+            <h3 id="import-title" className="text-lg font-semibold">
+              Backup import karein?
+            </h3>
+            <p className="mt-2 text-sm text-muted">
+              Current progress replace ho jayega. Recordings delete nahi honge.
+            </p>
+            <div className="mt-4 flex gap-2">
+              <button
+                type="button"
+                onClick={confirmImport}
+                className="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-accent-ink"
+              >
+                Import karo
+              </button>
+              <button
+                type="button"
+                onClick={() => setPendingImport(null)}
+                className="rounded-xl border border-line bg-background px-4 py-2 text-sm font-semibold"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {confirming && (
         <div

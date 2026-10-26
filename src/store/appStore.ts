@@ -4,6 +4,7 @@ import { getDay } from '../content';
 import type { Stage } from '../content/types';
 import { advance, createSession, type SessionMode, type SessionState } from '../session/engine';
 import { createCard, schedule, type SrsCard, type SrsRating } from '../srs/srs';
+import { reportSave } from './saveStatus';
 import { nextStreak, type StreakState } from './streak';
 
 export interface DayProgress {
@@ -33,6 +34,8 @@ export interface AppData {
   activeSession: SessionState | null;
 }
 
+export const STORAGE_KEY = 'bol-app-v1';
+
 export interface AppActions {
   startSession: (dayId: string, mode: SessionMode, now?: Date) => void;
   setStage: (stage: Stage) => void;
@@ -44,6 +47,7 @@ export interface AppActions {
   ) => void;
   rateWord: (itemId: string, rating: SrsRating, now?: Date) => void;
   updateSettings: (patch: Partial<Settings>) => void;
+  replaceAll: (data: AppData) => void;
   resetAll: () => void;
 }
 
@@ -100,7 +104,13 @@ function blankProgress(dayId: string, now: Date): DayProgress {
 
 const safeStorage: StateStorage = {
   getItem: (name) => {
-    const raw = localStorage.getItem(name);
+    let raw: string | null;
+    try {
+      raw = localStorage.getItem(name);
+    } catch {
+      reportSave('error');
+      return null;
+    }
     if (!raw) {
       return null;
     }
@@ -108,15 +118,28 @@ const safeStorage: StateStorage = {
       JSON.parse(raw);
       return raw;
     } catch {
-      localStorage.removeItem(name);
+      try {
+        localStorage.removeItem(name);
+      } catch {
+        // Ignore storage access errors; the app still runs in memory.
+      }
       return null;
     }
   },
   setItem: (name, value) => {
-    localStorage.setItem(name, value);
+    try {
+      localStorage.setItem(name, value);
+      reportSave('saved');
+    } catch {
+      reportSave('error');
+    }
   },
   removeItem: (name) => {
-    localStorage.removeItem(name);
+    try {
+      localStorage.removeItem(name);
+    } catch {
+      reportSave('error');
+    }
   },
 };
 
@@ -244,13 +267,17 @@ export const useAppStore = create<AppState>()(
         }));
       },
 
+      replaceAll: (data) => {
+        set({ ...data });
+      },
+
       resetAll: () => {
         set(createInitialState());
-        localStorage.removeItem('bol-app-v1');
+        safeStorage.removeItem(STORAGE_KEY);
       },
     }),
     {
-      name: 'bol-app-v1',
+      name: STORAGE_KEY,
       version: 1,
       storage: createJSONStorage(() => safeStorage),
     },

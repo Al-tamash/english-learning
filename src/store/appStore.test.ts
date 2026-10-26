@@ -40,6 +40,28 @@ it('persists the active stage for reload', () => {
   expect(raw.state.activeSession.stage).toBe('pattern');
 });
 
+it('replaces all data when a backup is imported', () => {
+  const imported = createInitialState();
+  imported.days.w01d02 = {
+    dayId: 'w01d02',
+    status: 'done',
+    stagesCompleted: ['warmup', 'pattern', 'words', 'shadow', 'scenario', 'wrap'],
+    speakingSeconds: 600,
+    selfRating: 5,
+    missionDone: false,
+    completedAt: now.toISOString(),
+    updatedAt: now.toISOString(),
+  };
+  imported.streak = { current: 3, best: 5, lastCompletedDate: '2026-10-24' };
+
+  useAppStore.getState().replaceAll(imported);
+
+  const state = useAppStore.getState();
+  expect(state.days.w01d02.status).toBe('done');
+  expect(state.streak).toEqual(imported.streak);
+  expect(state.activeSession).toBeNull();
+});
+
 it('schedules a word when rated', () => {
   useAppStore.getState().rateWord('w_developer', 'good', now);
   expect(useAppStore.getState().srs.w_developer.intervalDays).toBe(1);

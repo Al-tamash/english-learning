@@ -1,4 +1,7 @@
+import { useEffect } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import { requestPersistence } from '../storage/persistence';
+import { SaveIndicator } from './SaveIndicator';
 
 const links = [
   { to: '/', label: 'Aaj', end: true },
@@ -8,12 +11,19 @@ const links = [
 ];
 
 export function Layout() {
+  useEffect(() => {
+    void requestPersistence();
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-ink">
       <header className="border-b border-line bg-surface">
         <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4">
           <h1 className="text-2xl font-bold tracking-tight text-accent">Bol</h1>
-          <span className="text-sm text-muted">Roz bolne ki practice</span>
+          <div className="flex items-center gap-3">
+            <span className="hidden text-sm text-muted sm:inline">Roz bolne ki practice</span>
+            <SaveIndicator />
+          </div>
         </div>
       </header>
 
