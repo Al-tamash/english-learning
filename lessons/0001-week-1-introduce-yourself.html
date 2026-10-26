@@ -579,7 +579,7 @@
                 <input
                   id="b1"
                   type="text"
-                  data-answer="I work at Edone Solutions as a web developer.|I work at Edone Solutions as web developer.|I work as a web developer at Edone Solutions."
+                  data-answer="I work at Edone Solutions as a web developer.|I work as a web developer at Edone Solutions."
                   data-explain="Subject + verb + at + company + as + role."
                   data-model="I work at Edone Solutions as a web developer."
                   autocomplete="off"
@@ -597,7 +597,7 @@
                 <input
                   id="b2"
                   type="text"
-                  data-answer="I'm from Nagpur, but I live in Pune.|I am from Nagpur, but I live in Pune.|I'm from Nagpur but I live in Pune.|I am from Nagpur but I live in Pune.|I live in Pune, but I'm from Nagpur.|I live in Pune but I am from Nagpur."
+                  data-answer="I'm from Nagpur, but I live in Pune.|I am from Nagpur, but I live in Pune.|I'm from Nagpur but I live in Pune.|I am from Nagpur but I live in Pune.|I live in Pune, but I'm from Nagpur.|I live in Pune but I'm from Nagpur.|I live in Pune but I am from Nagpur."
                   data-explain="Origin from; current city in."
                   data-model="I'm from Nagpur, but I live in Pune."
                   autocomplete="off"
@@ -615,7 +615,7 @@
                 <input
                   id="b3"
                   type="text"
-                  data-answer="I have three years of experience.|I have 3 years of experience."
+                  data-answer="I have three years of experience.|I have 3 years of experience.|I have three years' experience.|I have 3 years' experience."
                   data-explain="have + number + years of + experience."
                   data-model="I have three years of experience."
                   autocomplete="off"
@@ -677,7 +677,7 @@
                 <input
                   id="t2"
                   type="text"
-                  data-answer="I'm from Nagpur, but I live in Pune.|I am from Nagpur, but I live in Pune.|I'm from Nagpur but I live in Pune.|I am from Nagpur but I live in Pune.|I live in Pune, but I'm from Nagpur.|I live in Pune but I am from Nagpur."
+                  data-answer="I'm from Nagpur, but I live in Pune.|I am from Nagpur, but I live in Pune.|I'm from Nagpur but I live in Pune.|I am from Nagpur but I live in Pune.|I live in Pune, but I'm from Nagpur.|I live in Pune but I'm from Nagpur.|I live in Pune but I am from Nagpur."
                   data-explain="from = origin; in = current city."
                   data-model="I'm from Nagpur, but I live in Pune."
                   autocomplete="off"
@@ -693,7 +693,7 @@
                 <input
                   id="t3"
                   type="text"
-                  data-answer="I have three years of experience.|I have 3 years of experience."
+                  data-answer="I have three years of experience.|I have 3 years of experience.|I have three years' experience.|I have 3 years' experience."
                   data-explain="have + years of experience."
                   data-model="I have three years of experience."
                   autocomplete="off"
@@ -1029,35 +1029,77 @@
     <script>
       (function () {
         const buttons = document.querySelectorAll('[data-say]');
-        if (!('speechSynthesis' in window) || !window.speechSynthesis) {
+        const synth = window.speechSynthesis;
+        const unavailableMessage = 'Is browser me voice available nahi hai.';
+
+        function disableButtons() {
           buttons.forEach((button) => {
             button.disabled = true;
-            button.title = 'Is browser me voice available nahi hai.';
+            button.title = unavailableMessage;
           });
+        }
+
+        function enableButtons() {
+          buttons.forEach((button) => {
+            button.disabled = false;
+            button.removeAttribute('title');
+          });
+        }
+
+        if (
+          !('speechSynthesis' in window) ||
+          !synth ||
+          typeof SpeechSynthesisUtterance === 'undefined'
+        ) {
+          disableButtons();
           return;
         }
 
         function pickVoice() {
-          const voices = window.speechSynthesis.getVoices();
+          const voices = synth.getVoices();
           return (
-            voices.find((voice) => voice.lang === 'en-IN' && /male|ravi|prabhat|rishi/i.test(voice.name)) ||
+            voices.find(
+              (voice) => voice.lang === 'en-IN' && /male|ravi|prabhat|rishi/i.test(voice.name),
+            ) ||
             voices.find((voice) => voice.lang === 'en-IN') ||
             voices.find((voice) => voice.lang && voice.lang.toLowerCase().startsWith('en')) ||
             null
           );
         }
 
+        function refreshButtonState() {
+          const voice = pickVoice();
+          if (voice) {
+            enableButtons();
+          } else {
+            disableButtons();
+          }
+          return voice;
+        }
+
+        refreshButtonState();
+
+        if (typeof synth.addEventListener === 'function') {
+          synth.addEventListener('voiceschanged', refreshButtonState);
+        }
+
         buttons.forEach((button) => {
           button.addEventListener('click', () => {
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(button.dataset.say || '');
-            utterance.lang = 'en-IN';
-            utterance.rate = 0.88;
-            const voice = pickVoice();
-            if (voice) {
-              utterance.voice = voice;
+            const voice = refreshButtonState();
+            if (!voice) {
+              return;
             }
-            window.speechSynthesis.speak(utterance);
+
+            try {
+              synth.cancel();
+              const utterance = new SpeechSynthesisUtterance(button.dataset.say || '');
+              utterance.lang = 'en-IN';
+              utterance.rate = 0.88;
+              utterance.voice = voice;
+              synth.speak(utterance);
+            } catch (error) {
+              disableButtons();
+            }
           });
         });
       })();

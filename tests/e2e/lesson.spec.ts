@@ -74,10 +74,28 @@ test('checks grammar practice with explanations, variants, and model answers', a
   await build.getByRole('button', { name: 'Check' }).click();
   await expect(build.getByText('Sahi')).toBeVisible();
 
+  await build.getByRole('textbox').fill('I work at Edone Solutions as web developer.');
+  await build.getByRole('button', { name: 'Check' }).click();
+  await expect(build.getByText('Phir se')).toBeVisible();
+  await expect(
+    build.getByText('Model: I work at Edone Solutions as a web developer.'),
+  ).toBeVisible();
+
+  const originBuild = page
+    .locator('.quiz-card')
+    .filter({ hasText: "Build: from / I'm / Nagpur / but / I / live / in / Pune" });
+  await originBuild.getByRole('textbox').fill("I live in Pune but I'm from Nagpur");
+  await originBuild.getByRole('button', { name: 'Check' }).click();
+  await expect(originBuild.getByText('Sahi')).toBeVisible();
+
   const translation = page
     .locator('.quiz-card')
     .filter({ hasText: 'Mere paas teen saal ka experience hai.' });
   await translation.getByRole('textbox').fill('i have 3 years of experience.');
+  await translation.getByRole('button', { name: 'Check' }).click();
+  await expect(translation.getByText('Sahi')).toBeVisible();
+
+  await translation.getByRole('textbox').fill("I have three years' experience.");
   await translation.getByRole('button', { name: 'Check' }).click();
   await expect(translation.getByText('Sahi')).toBeVisible();
 
@@ -96,6 +114,10 @@ test('checks grammar practice with explanations, variants, and model answers', a
     .locator('.quiz-card')
     .filter({ hasText: 'Main Nagpur se hoon, lekin Pune me rehta hoon.' });
   await location.getByRole('textbox').fill('I’m from Nagpur but I live in Pune');
+  await location.getByRole('button', { name: 'Check' }).click();
+  await expect(location.getByText('Sahi')).toBeVisible();
+
+  await location.getByRole('textbox').fill("I live in Pune but I'm from Nagpur");
   await location.getByRole('button', { name: 'Check' }).click();
   await expect(location.getByText('Sahi')).toBeVisible();
 });
@@ -154,6 +176,28 @@ test('disables Suno buttons if speech synthesis is unavailable', async ({ page }
   await page.goto(lesson);
 
   await expect(page.locator('.say').first()).toBeDisabled();
+  await expect(page.locator('.say').first()).toHaveAttribute(
+    'title',
+    'Is browser me voice available nahi hai.',
+  );
+});
+
+test('disables Suno buttons when no English voice is available', async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window, 'speechSynthesis', {
+      configurable: true,
+      value: {
+        addEventListener: () => {},
+        cancel: () => {},
+        getVoices: () => [],
+        speak: () => {},
+      },
+    });
+  });
+  const lesson = pathToFileURL(path.resolve('lessons/0001-week-1-introduce-yourself.html')).href;
+  await page.goto(lesson);
+
+  await expect(page.locator('.say:disabled')).toHaveCount(16);
   await expect(page.locator('.say').first()).toHaveAttribute(
     'title',
     'Is browser me voice available nahi hai.',

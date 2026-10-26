@@ -250,9 +250,9 @@ Sentence-building cards:
 
 | ID | Label | Accepted answers (join with `|`) | `data-explain` | `data-model` |
 |---|---|---|---|---|
-| b1 | `Build: at / I / Edone Solutions / work / as / a / web developer` | `I work at Edone Solutions as a web developer.` / `I work at Edone Solutions as web developer.` / `I work as a web developer at Edone Solutions.` | `Subject + verb + at + company + as + role.` | `I work at Edone Solutions as a web developer.` |
-| b2 | `Build: from / I'm / Nagpur / but / I / live / in / Pune` | `I'm from Nagpur, but I live in Pune.` / `I am from Nagpur, but I live in Pune.` / `I'm from Nagpur but I live in Pune.` / `I am from Nagpur but I live in Pune.` / `I live in Pune, but I'm from Nagpur.` / `I live in Pune but I am from Nagpur.` | `Origin from; current city in.` | `I'm from Nagpur, but I live in Pune.` |
-| b3 | `Build: experience / three / I / of / have / years` | `I have three years of experience.` / `I have 3 years of experience.` | `have + number + years of + experience.` | `I have three years of experience.` |
+| b1 | `Build: at / I / Edone Solutions / work / as / a / web developer` | `I work at Edone Solutions as a web developer.` / `I work as a web developer at Edone Solutions.` | `Subject + verb + at + company + as + role.` | `I work at Edone Solutions as a web developer.` |
+| b2 | `Build: from / I'm / Nagpur / but / I / live / in / Pune` | `I'm from Nagpur, but I live in Pune.` / `I am from Nagpur, but I live in Pune.` / `I'm from Nagpur but I live in Pune.` / `I am from Nagpur but I live in Pune.` / `I live in Pune, but I'm from Nagpur.` / `I live in Pune but I'm from Nagpur.` / `I live in Pune but I am from Nagpur.` | `Origin from; current city in.` | `I'm from Nagpur, but I live in Pune.` |
+| b3 | `Build: experience / three / I / of / have / years` | `I have three years of experience.` / `I have 3 years of experience.` / `I have three years' experience.` / `I have 3 years' experience.` | `have + number + years of + experience.` | `I have three years of experience.` |
 | b4 | `Build: good / I'm / at / design / frontend` | `I'm good at frontend design.` / `I am good at frontend design.` | `good at + noun.` | `I'm good at frontend design.` |
 
 Translation cards:
@@ -260,8 +260,8 @@ Translation cards:
 | ID | Prompt | Accepted answers (join with `|`) | `data-explain` | `data-model` |
 |---|---|---|---|---|
 | t1 | `Main Edone Solutions me web developer hoon.` | `I work at Edone Solutions as a web developer.` / `I am a web developer at Edone Solutions.` / `I'm a web developer at Edone Solutions.` | `Company at; role as; singular job a.` | `I work at Edone Solutions as a web developer.` |
-| t2 | `Main Nagpur se hoon, lekin Pune me rehta hoon.` | `I'm from Nagpur, but I live in Pune.` / `I am from Nagpur, but I live in Pune.` / `I'm from Nagpur but I live in Pune.` / `I am from Nagpur but I live in Pune.` / `I live in Pune, but I'm from Nagpur.` / `I live in Pune but I am from Nagpur.` | `from = origin; in = current city.` | `I'm from Nagpur, but I live in Pune.` |
-| t3 | `Mere paas teen saal ka experience hai.` | `I have three years of experience.` / `I have 3 years of experience.` | `have + years of experience.` | `I have three years of experience.` |
+| t2 | `Main Nagpur se hoon, lekin Pune me rehta hoon.` | `I'm from Nagpur, but I live in Pune.` / `I am from Nagpur, but I live in Pune.` / `I'm from Nagpur but I live in Pune.` / `I am from Nagpur but I live in Pune.` / `I live in Pune, but I'm from Nagpur.` / `I live in Pune but I'm from Nagpur.` / `I live in Pune but I am from Nagpur.` | `from = origin; in = current city.` | `I'm from Nagpur, but I live in Pune.` |
+| t3 | `Mere paas teen saal ka experience hai.` | `I have three years of experience.` / `I have 3 years of experience.` / `I have three years' experience.` / `I have 3 years' experience.` | `have + years of experience.` | `I have three years of experience.` |
 | t4 | `Mujhe frontend design achha aata hai.` | `I'm good at frontend design.` / `I am good at frontend design.` | `good at + skill.` | `I'm good at frontend design.` |
 
 - [ ] **Step 7: Run the test to verify it passes**
@@ -1216,7 +1216,7 @@ Run:
 npm run test:e2e
 ```
 
-Expected: PASS — 9 tests (4 existing + 5 new), including the built-site and service-worker lesson tests.
+Expected: PASS — 10 tests (4 existing + 6 new), including the built-site and service-worker lesson tests. Final review added a no-voice TTS regression test.
 
 - [ ] **Step 4: Check the standalone pages manually**
 
@@ -1304,3 +1304,10 @@ True
 ```
 
 If the content is stale, wait for the Cloudflare deployment, then hard-refresh; the service worker can serve the old app shell briefly.
+
+## Final Review Corrections
+
+- b1 rejects the missing-article sentence `I work at Edone Solutions as web developer.`
+- b2/t2 also accept `I live in Pune but I'm from Nagpur.`
+- b3/t3 also accept `I have three years' experience.` and `I have 3 years' experience.`
+- All `Suno` buttons disable when `getVoices()` has no English voice; `voiceschanged` re-checks availability.
