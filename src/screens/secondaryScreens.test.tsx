@@ -18,7 +18,7 @@ it('shows completed days and strong words', () => {
   useAppStore.setState(state);
 
   render(<MemoryRouter initialEntries={['/progress']}><App /></MemoryRouter>);
-  expect(screen.getByText('Days complete: 1/7')).toBeInTheDocument();
+  expect(screen.getByText('Days complete: 1/14')).toBeInTheDocument();
   expect(screen.getByText('Speaking time: 15 min')).toBeInTheDocument();
   expect(screen.getByText('Words strong: 1')).toBeInTheDocument();
 });
