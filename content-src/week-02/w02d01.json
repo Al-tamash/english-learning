@@ -1,0 +1,182 @@
+{
+  "id": "w02d01",
+  "week": 2,
+  "day": 1,
+  "type": "learning",
+  "theme": "Your morning routine",
+  "title": "What do you usually do?",
+  "goal_hi": "Apna morning routine aur office routine simple present me batana.",
+  "pattern": {
+    "id": "p_w02_routine",
+    "frame": "I usually ___ at ___.",
+    "forms": {
+      "positive": "I usually check my email at nine.",
+      "negative": "I don't usually check email at night.",
+      "question": "What do you usually do in the morning?"
+    },
+    "note_hi": "Usually + verb; time ke pehle at.",
+    "examples": [
+      {
+        "en": "I usually check my email at nine.",
+        "hi": "Main aam taur par nau baje email check karta hoon."
+      },
+      {
+        "en": "I usually start work at ten.",
+        "hi": "Main aam taur par das baje kaam shuru karta hoon."
+      },
+      {
+        "en": "She usually takes the metro to the office.",
+        "hi": "Woh aam taur par office metro se jaati hai."
+      },
+      {
+        "en": "I usually have breakfast at eight.",
+        "hi": "Main aam taur par aath baje nashta karta hoon."
+      },
+      {
+        "en": "We usually have a standup at ten thirty.",
+        "hi": "Hum aam taur par das baje tees minute par standup karte hain."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w02_routine",
+      "term": "routine",
+      "hi": "roz ka kaam ka order",
+      "collocation": "morning routine",
+      "example_en": "I have a simple morning routine.",
+      "example_hi": "Mera morning routine simple hai.",
+      "tags": ["routine"]
+    },
+    {
+      "id": "w02_commute",
+      "term": "commute",
+      "hi": "ghar se office ka safar",
+      "collocation": "a long commute",
+      "example_en": "My commute takes forty minutes.",
+      "example_hi": "Mera safar chalees minute leta hai.",
+      "tags": ["travel"]
+    },
+    {
+      "id": "w02_alarm",
+      "term": "alarm",
+      "hi": "uthne ka alarm",
+      "collocation": "set an alarm",
+      "example_en": "I set an alarm for seven.",
+      "example_hi": "Main saat baje ka alarm lagata hoon.",
+      "tags": ["routine"]
+    },
+    {
+      "id": "w02_breakfast",
+      "term": "breakfast",
+      "hi": "subah ka nashta",
+      "collocation": "have breakfast",
+      "example_en": "I have breakfast at eight.",
+      "example_hi": "Main aath baje nashta karta hoon.",
+      "tags": ["food"]
+    },
+    {
+      "id": "w02_schedule",
+      "term": "schedule",
+      "hi": "din ka plan",
+      "collocation": "a busy schedule",
+      "example_en": "My schedule is full today.",
+      "example_hi": "Aaj mera schedule bhara hai.",
+      "tags": ["work"]
+    }
+  ],
+  "dialogue": {
+    "title": "Monday morning chat",
+    "context_hi": "Office kitchen, Monday 9:30. Colleague Riya se short morning chat.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Morning! You're here early today.",
+        "hi": "Morning! Aaj tum jaldi aa gaye."
+      },
+      {
+        "speaker": "B",
+        "en": "Morning! Yeah, I usually start at nine. What about you?",
+        "hi": "Morning! Haan, main aam taur par nau baje shuru karta hoon. Tum?"
+      },
+      {
+        "speaker": "A",
+        "en": "I usually start at ten, but I have a client call today.",
+        "hi": "Main aam taur par das baje shuru karti hoon, par aaj client call hai."
+      },
+      {
+        "speaker": "B",
+        "en": "Busy day, then. Do you want a coffee?",
+        "hi": "Toh busy din hai. Coffee chahiye?"
+      },
+      {
+        "speaker": "A",
+        "en": "Sure, thanks. I usually have one before my first call.",
+        "hi": "Haan, thanks. Main aam taur par pehli call se pehle ek leti hoon."
+      },
+      {
+        "speaker": "B",
+        "en": "Same here. I usually check my email with coffee.",
+        "hi": "Mere saath bhi wahi. Main aam taur par coffee ke saath email check karta hoon."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "Third person -s clear bolo: start-s, check-s, take-s. 's' ko chhodo mat.",
+      "pairs": ["starts / start", "checks / check"]
+    }
+  },
+  "scenario": {
+    "id": "s_w02_monday_chat",
+    "title_hi": "Monday morning chat",
+    "setting_hi": "Office kitchen me colleague Riya se subah ki baat.",
+    "turns": [
+      {
+        "prompt_en": "Morning! You're here early. What time do you usually start?",
+        "hint_hi": "Batao ki aap aam taur par nau baje shuru karte ho.",
+        "keywords": ["usually", "start", "nine"],
+        "model_en": "I usually start at nine."
+      },
+      {
+        "prompt_en": "Do you check email before the standup?",
+        "hint_hi": "Haan, coffee ke saath email check karte ho.",
+        "keywords": ["check", "email", "coffee"],
+        "model_en": "Yes, I usually check my email with coffee."
+      },
+      {
+        "prompt_en": "What about your commute? Do you take the metro?",
+        "hint_hi": "Nahi, bike se aate ho aur lagbhag bees minute lagte hain.",
+        "keywords": ["commute", "bike", "twenty minutes"],
+        "model_en": "I usually commute by bike. It takes about twenty minutes."
+      },
+      {
+        "prompt_en": "What do you do on a busy morning?",
+        "hint_hi": "Alarm saat baje, breakfast, phir office.",
+        "keywords": ["alarm", "breakfast", "office"],
+        "model_en": "My alarm rings at seven. I have breakfast and leave for the office."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I usually ___ work at ten.",
+      "answer": "start"
+    },
+    {
+      "type": "fill",
+      "prompt": "She ___ work at nine.",
+      "answer": "starts"
+    },
+    {
+      "type": "choice",
+      "prompt": "Main aam taur par das baje kaam shuru karta hoon.",
+      "answer": "I usually start work at ten.",
+      "options": [
+        "I usually start work at ten.",
+        "I start usually work at ten.",
+        "I usually starting work at ten."
+      ]
+    }
+  ],
+  "mission": null
+}

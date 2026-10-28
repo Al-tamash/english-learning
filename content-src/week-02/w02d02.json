@@ -1,0 +1,182 @@
+{
+  "id": "w02d02",
+  "week": 2,
+  "day": 2,
+  "type": "learning",
+  "theme": "Habits you don't have",
+  "title": "I don't watch cricket very often.",
+  "goal_hi": "Apni aadat aur routine ke baare me negative sentence aur sawal batana.",
+  "pattern": {
+    "id": "p_w02_negative_habit",
+    "frame": "I don't ___ very often.",
+    "forms": {
+      "positive": "I watch cricket almost every weekend.",
+      "negative": "I don't watch cricket very often.",
+      "question": "Do you watch cricket very often?"
+    },
+    "note_hi": "Negative habit; very often = bahut zyada baar nahi.",
+    "examples": [
+      {
+        "en": "I don't watch cricket very often.",
+        "hi": "Main bahut zyada baar cricket nahi dekhta."
+      },
+      {
+        "en": "I don't go to the gym very often.",
+        "hi": "Main bahut zyada baar gym nahi jaata."
+      },
+      {
+        "en": "We don't eat out very often.",
+        "hi": "Hum bahut zyada baar bahar nahi khaate."
+      },
+      {
+        "en": "I don't watch movies very often.",
+        "hi": "Main bahut zyada baar movie nahi dekhta."
+      },
+      {
+        "en": "She doesn't travel very often.",
+        "hi": "Woh bahut zyada baar travel nahi karti."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w02_gym",
+      "term": "gym",
+      "hi": "vyayamshala",
+      "collocation": "go to the gym",
+      "example_en": "I go to the gym on Saturday.",
+      "example_hi": "Main Saturday ko gym jaata hoon.",
+      "tags": ["health"]
+    },
+    {
+      "id": "w02_cricket",
+      "term": "cricket",
+      "hi": "cricket",
+      "collocation": "watch cricket",
+      "example_en": "I don't watch cricket very often.",
+      "example_hi": "Main bahut zyada baar cricket nahi dekhta.",
+      "tags": ["sport"]
+    },
+    {
+      "id": "w02_movie",
+      "term": "movie",
+      "hi": "film",
+      "collocation": "watch a movie",
+      "example_en": "We watched a movie on Sunday.",
+      "example_hi": "Humne Sunday ko movie dekhi.",
+      "tags": ["free time"]
+    },
+    {
+      "id": "w02_hobby",
+      "term": "hobby",
+      "hi": "shauk",
+      "collocation": "a new hobby",
+      "example_en": "My hobby is walking.",
+      "example_hi": "Mera shauk paidal chalna hai.",
+      "tags": ["free time"]
+    },
+    {
+      "id": "w02_walk",
+      "term": "walk",
+      "hi": "paidal chalna",
+      "collocation": "go for a walk",
+      "example_en": "I go for a walk in the evening.",
+      "example_hi": "Main shaam ko paidal chalne jaata hoon.",
+      "tags": ["health"]
+    }
+  ],
+  "dialogue": {
+    "title": "Lunch with a colleague",
+    "context_hi": "Office canteen, lunch break. Colleague se gym aur free time ki baat.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "You're not going to the gym today?",
+        "hi": "Aaj gym nahi ja rahe?"
+      },
+      {
+        "speaker": "B",
+        "en": "No, I don't go to the gym very often. I usually walk in the evening.",
+        "hi": "Nahi, main bahut zyada baar gym nahi jaata. Main aam taur par shaam ko paidal chalta hoon."
+      },
+      {
+        "speaker": "A",
+        "en": "I don't watch cricket very often either. I prefer movies.",
+        "hi": "Main bhi bahut zyada baar cricket nahi dekhti. Mujhe movies pasand hain."
+      },
+      {
+        "speaker": "B",
+        "en": "Same here. I watch a movie on Sunday, but not every week.",
+        "hi": "Mere saath bhi wahi. Main Sunday ko movie dekhta hoon, par har hafte nahi."
+      },
+      {
+        "speaker": "A",
+        "en": "Do you have any hobby?",
+        "hi": "Tumhara koi shauk hai?"
+      },
+      {
+        "speaker": "B",
+        "en": "I like walking. It's simple and I don't need a gym.",
+        "hi": "Mujhe paidal chalna pasand hai. Simple hai aur gym ki zarurat nahi."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "Sentence rhythm: content words par stress do — I DON'T WATCH CRICKET very often. 'very often' ko jaldi bolo.",
+      "pairs": ["don't / doesn't", "watch / watches"]
+    }
+  },
+  "scenario": {
+    "id": "s_w02_lunch_colleague",
+    "title_hi": "Lunch with a colleague",
+    "setting_hi": "Office canteen me lunch break par colleague se baat.",
+    "turns": [
+      {
+        "prompt_en": "Do you go to the gym after work?",
+        "hint_hi": "Nahi, bahut zyada baar nahi jaate. Shaam ko walk karte ho.",
+        "keywords": ["don't", "gym", "often"],
+        "model_en": "No, I don't go to the gym very often. I usually walk in the evening."
+      },
+      {
+        "prompt_en": "Do you watch cricket?",
+        "hint_hi": "Cricket bahut zyada baar nahi dekhte, par pasand hai.",
+        "keywords": ["cricket", "very often", "like"],
+        "model_en": "I don't watch cricket very often, but I like it."
+      },
+      {
+        "prompt_en": "What do you do in the evening?",
+        "hint_hi": "Walk ya movie — dono me se ek batao.",
+        "keywords": ["walk", "movie", "evening"],
+        "model_en": "I usually go for a walk or watch a movie."
+      },
+      {
+        "prompt_en": "Do you have a hobby?",
+        "hint_hi": "Apna shauk batao — walking.",
+        "keywords": ["hobby", "walking"],
+        "model_en": "I like walking. It's my hobby."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I don't ___ cricket very often.",
+      "answer": "watch"
+    },
+    {
+      "type": "fill",
+      "prompt": "___ you like tea?",
+      "answer": "Do"
+    },
+    {
+      "type": "choice",
+      "prompt": "Main bahut zyada baar gym nahi jaata.",
+      "answer": "I don't go to the gym very often.",
+      "options": [
+        "I don't go to the gym very often.",
+        "I don't went to the gym very often.",
+        "I not go to the gym very often."
+      ]
+    }
+  ],
+  "mission": null
+}

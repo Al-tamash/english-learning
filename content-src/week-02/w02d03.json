@@ -1,0 +1,182 @@
+{
+  "id": "w02d03",
+  "week": 2,
+  "day": 3,
+  "type": "learning",
+  "theme": "Weekend small talk",
+  "title": "How was your weekend?",
+  "goal_hi": "Monday ko weekend ke baare me past simple me baat karna.",
+  "pattern": {
+    "id": "p_w02_weekend_past",
+    "frame": "How was your weekend?",
+    "forms": {
+      "positive": "It was good, thanks.",
+      "negative": "It wasn't very relaxing.",
+      "question": "How was your weekend?"
+    },
+    "note_hi": "Weekend khatam ho gaya, isliye was. Aaj ke liye How is your day?",
+    "examples": [
+      {
+        "en": "How was your weekend?",
+        "hi": "Aapka weekend kaisa tha?"
+      },
+      {
+        "en": "It was good, thanks. How was yours?",
+        "hi": "Achha tha, thanks. Aapka kaisa tha?"
+      },
+      {
+        "en": "It was busy, but I enjoyed it.",
+        "hi": "Vyast tha, lekin maza aaya."
+      },
+      {
+        "en": "My weekend was quiet. I stayed home.",
+        "hi": "Mera weekend shaant tha. Main ghar par ruka."
+      },
+      {
+        "en": "The traffic was bad on Sunday.",
+        "hi": "Sunday ko traffic kharab tha."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w02_weekend",
+      "term": "weekend",
+      "hi": "Saturday–Sunday",
+      "collocation": "over the weekend",
+      "example_en": "I slept a lot over the weekend.",
+      "example_hi": "Weekend par maine bahut soya.",
+      "tags": ["time"]
+    },
+    {
+      "id": "w02_family",
+      "term": "family",
+      "hi": "parivaar",
+      "collocation": "spend time with family",
+      "example_en": "I spend Sunday with my family.",
+      "example_hi": "Main Sunday parivaar ke saath bitaata hoon.",
+      "tags": ["people"]
+    },
+    {
+      "id": "w02_traffic",
+      "term": "traffic",
+      "hi": "bheed aur gaadiyon ka jam",
+      "collocation": "heavy traffic",
+      "example_en": "There was heavy traffic this morning.",
+      "example_hi": "Aaj subah bahut traffic tha.",
+      "tags": ["city"]
+    },
+    {
+      "id": "w02_tired",
+      "term": "tired",
+      "hi": "thaka hua",
+      "collocation": "feel tired",
+      "example_en": "I feel tired on Monday.",
+      "example_hi": "Monday ko main thaka hua feel karta hoon.",
+      "tags": ["feeling"]
+    },
+    {
+      "id": "w02_relax",
+      "term": "relax",
+      "hi": "aaram karna",
+      "collocation": "relax at home",
+      "example_en": "I relax at home on Sunday.",
+      "example_hi": "Main Sunday ko ghar par aaram karta hoon.",
+      "tags": ["feeling"]
+    }
+  ],
+  "dialogue": {
+    "title": "Monday weekend catch-up",
+    "context_hi": "Monday morning, desk ke paas. Colleague se weekend ki baat.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Morning! How was your weekend?",
+        "hi": "Morning! Weekend kaisa tha?"
+      },
+      {
+        "speaker": "B",
+        "en": "It was good, thanks. I stayed home with my family.",
+        "hi": "Achha tha, thanks. Main parivaar ke saath ghar par raha."
+      },
+      {
+        "speaker": "A",
+        "en": "Nice. Was it relaxing?",
+        "hi": "Badhiya. Aaram wala tha?"
+      },
+      {
+        "speaker": "B",
+        "en": "Not really. There was a lot of traffic and we went out on Sunday.",
+        "hi": "Khaas nahi. Bahut traffic tha aur Sunday ko hum bahar gaye."
+      },
+      {
+        "speaker": "A",
+        "en": "Oh no. So you're tired today?",
+        "hi": "Oh no. Toh aaj thake hue ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "A little. I just want to relax this evening.",
+        "hi": "Thoda. Aaj shaam bas aaram karna hai."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "was = /wɒz/ short, were = /wɜːr/. 'It was good' me was ko lamba mat kholo.",
+      "pairs": ["was / were", "weekend / weekends"]
+    }
+  },
+  "scenario": {
+    "id": "s_w02_weekend_plans",
+    "title_hi": "Weekend plans talk",
+    "setting_hi": "Monday desk chat me colleague aapka weekend poochta hai.",
+    "turns": [
+      {
+        "prompt_en": "How was your weekend?",
+        "hint_hi": "Achha tha — thanks ke saath batao.",
+        "keywords": ["was", "good", "thanks"],
+        "model_en": "It was good, thanks."
+      },
+      {
+        "prompt_en": "Did you go anywhere?",
+        "hint_hi": "Sunday ko family ke ghar gaye the.",
+        "keywords": ["went", "family", "Sunday"],
+        "model_en": "I went to my family's place on Sunday."
+      },
+      {
+        "prompt_en": "Was the traffic bad?",
+        "hint_hi": "Haan, bahut traffic tha.",
+        "keywords": ["traffic", "bad"],
+        "model_en": "Yes, there was a lot of traffic."
+      },
+      {
+        "prompt_en": "Are you tired today?",
+        "hint_hi": "Thoda thaka hua ho, shaam ko relax karna hai.",
+        "keywords": ["tired", "relax", "evening"],
+        "model_en": "A little, so I want to relax this evening."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "How ___ your weekend?",
+      "answer": "was"
+    },
+    {
+      "type": "fill",
+      "prompt": "They ___ to the market yesterday.",
+      "answer": "went"
+    },
+    {
+      "type": "choice",
+      "prompt": "Mera weekend achha tha.",
+      "answer": "My weekend was good.",
+      "options": [
+        "My weekend was good.",
+        "My weekend is good.",
+        "My weekend were good."
+      ]
+    }
+  ],
+  "mission": null
+}
