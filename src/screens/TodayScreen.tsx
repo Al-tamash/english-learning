@@ -1,5 +1,11 @@
 import { useNavigate } from 'react-router-dom';
-import { getAllDays, getDay } from '../content';
+import {
+  getAllDays,
+  getAuthoredWeeks,
+  getDay,
+  getDaysForWeek,
+  getWeekMeta,
+} from '../content';
 import { useAppStore } from '../store/appStore';
 
 export function TodayScreen() {
@@ -13,19 +19,32 @@ export function TodayScreen() {
     ? getDay(activeSession.dayId)
     : getAllDays().find((day) => days[day.id]?.status !== 'done');
 
+  const authoredWeeks = getAuthoredWeeks();
+  const lastWeek = authoredWeeks[authoredWeeks.length - 1] ?? 0;
+  const courseComplete = authoredWeeks.length === getWeekMeta().length;
+
   if (!nextDay && !activeSession) {
     return (
       <section className="space-y-3 rounded-3xl border border-line bg-surface p-6 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-wide text-accent">Week {1}</p>
-        <h2 className="text-2xl font-bold">Week 1 complete</h2>
-        <p className="text-muted">Week 2 jald aa raha hai.</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+          Week {lastWeek}
+        </p>
+        <h2 className="text-2xl font-bold">
+          {courseComplete ? 'Course complete' : `Week ${lastWeek} complete`}
+        </h2>
+        <p className="text-muted">
+          {courseComplete
+            ? 'Saare 84 din complete.'
+            : `Week ${lastWeek + 1} jald aa raha hai.`}
+        </p>
         <p className="text-sm font-medium">Streak: {streak.current} din</p>
       </section>
     );
   }
 
   const day = nextDay!;
-  const completed = getAllDays().filter((item) => days[item.id]?.status === 'done').length;
+  const weekDays = getDaysForWeek(day.week);
+  const doneInWeek = weekDays.filter((item) => days[item.id]?.status === 'done').length;
   const isReview = day.type === 'review';
 
   const start = (mode: 'full' | 'short') => {
@@ -94,12 +113,12 @@ export function TodayScreen() {
       <section className="rounded-3xl border border-line bg-surface p-5 shadow-sm">
         <div className="flex items-center justify-between gap-3">
           <p className="text-sm font-semibold">Week {day.week} progress</p>
-          <p className="text-sm text-muted">{completed} / {getAllDays().length} din</p>
+          <p className="text-sm text-muted">{doneInWeek} / {weekDays.length} din</p>
         </div>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-background">
           <div
             className="h-full rounded-full bg-accent transition-all"
-            style={{ width: `${(completed / getAllDays().length) * 100}%` }}
+            style={{ width: `${(doneInWeek / weekDays.length) * 100}%` }}
           />
         </div>
       </section>
