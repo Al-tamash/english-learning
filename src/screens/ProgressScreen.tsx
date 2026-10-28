@@ -1,4 +1,4 @@
-import { getAllDays } from '../content';
+import { getAllDays, getDaysForWeek, getWeekMeta } from '../content';
 import { useAppStore } from '../store/appStore';
 
 const STATUS_LABEL = {
@@ -18,11 +18,16 @@ export function ProgressScreen() {
     0,
   );
   const strongWords = Object.values(srs).filter((card) => card.intervalDays >= 7).length;
+  const authoredWeeks = getWeekMeta().filter(
+    (meta) => getDaysForWeek(meta.week).length > 0,
+  );
 
   return (
     <div className="space-y-4">
       <section className="rounded-3xl border border-line bg-surface p-6 shadow-sm">
-        <p className="text-xs font-semibold uppercase tracking-wide text-accent">Week 1</p>
+        <p className="text-xs font-semibold uppercase tracking-wide text-accent">
+          Course progress
+        </p>
         <h2 className="mt-1 text-2xl font-bold">Progress</h2>
         <div className="mt-4 grid gap-3 sm:grid-cols-3">
           <div className="rounded-2xl bg-background p-4">
@@ -40,41 +45,48 @@ export function ProgressScreen() {
         <p className="mt-4 text-sm text-muted">Streak: {streak.current} din · Best: {streak.best} din</p>
       </section>
 
-      <section className="rounded-3xl border border-line bg-surface p-5 shadow-sm">
-        <h3 className="text-lg font-semibold">Week 1 days</h3>
-        <div className="mt-3 space-y-2">
-          {allDays.map((day) => {
-            const progress = days[day.id];
-            const status = progress?.status ?? 'not_started';
-            return (
-              <div
-                key={day.id}
-                className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-line bg-background p-3"
-              >
-                <div>
-                  <p className="text-sm font-semibold">
-                    Day {day.day} · {day.title}
-                  </p>
-                  <p className="text-xs text-muted">
-                    {day.type === 'review' ? 'Review + benchmark' : day.pattern?.frame}
-                  </p>
-                </div>
-                <span
-                  className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-                    status === 'done'
-                      ? 'bg-accent/15 text-accent'
-                      : status === 'in_progress'
-                        ? 'bg-amber-100 text-amber-800'
-                        : 'bg-line/60 text-muted'
-                  }`}
+      {authoredWeeks.map((meta) => (
+        <section
+          key={meta.week}
+          className="rounded-3xl border border-line bg-surface p-5 shadow-sm"
+        >
+          <h3 className="text-lg font-semibold">
+            Week {meta.week} · {meta.title}
+          </h3>
+          <div className="mt-3 space-y-2">
+            {getDaysForWeek(meta.week).map((day) => {
+              const progress = days[day.id];
+              const status = progress?.status ?? 'not_started';
+              return (
+                <div
+                  key={day.id}
+                  className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-line bg-background p-3"
                 >
-                  {STATUS_LABEL[status]}
-                </span>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+                  <div>
+                    <p className="text-sm font-semibold">
+                      Day {day.day} · {day.title}
+                    </p>
+                    <p className="text-xs text-muted">
+                      {day.type === 'review' ? 'Review + benchmark' : day.pattern?.frame}
+                    </p>
+                  </div>
+                  <span
+                    className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                      status === 'done'
+                        ? 'bg-accent/15 text-accent'
+                        : status === 'in_progress'
+                          ? 'bg-amber-100 text-amber-800'
+                          : 'bg-line/60 text-muted'
+                    }`}
+                  >
+                    {STATUS_LABEL[status]}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      ))}
     </div>
   );
 }

@@ -23,6 +23,18 @@ it('shows completed days and strong words', () => {
   expect(screen.getByText('Words strong: 1')).toBeInTheDocument();
 });
 
+it('shows a section for each authored week', () => {
+  useAppStore.setState(createInitialState());
+  render(
+    <MemoryRouter initialEntries={['/progress']}>
+      <App />
+    </MemoryRouter>,
+  );
+  expect(screen.getByText('Week 1 · Introduce yourself and your work')).toBeInTheDocument();
+  expect(screen.getByText('Week 2 · Daily routine and small talk')).toBeInTheDocument();
+  expect(screen.getByText('Day 1 · What do you usually do?')).toBeInTheDocument();
+});
+
 it('links to the Week 1 lesson and printable reference', () => {
   useAppStore.setState(createInitialState());
   render(<MemoryRouter initialEntries={['/library']}><App /></MemoryRouter>);
