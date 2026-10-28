@@ -65,6 +65,18 @@ it('links to the remaining weekly lessons and reference sheets', () => {
   );
 });
 
+it('offers Week 2 practice in the library', () => {
+  useAppStore.setState(createInitialState());
+  render(
+    <MemoryRouter initialEntries={['/library']}>
+      <App />
+    </MemoryRouter>,
+  );
+  expect(
+    screen.getByRole('button', { name: 'Practice Day 1 · Week 2' }),
+  ).toBeInTheDocument();
+});
+
 it('changes the TTS rate in Settings', () => {
   useAppStore.setState(createInitialState());
   render(<MemoryRouter initialEntries={['/settings']}><App /></MemoryRouter>);
