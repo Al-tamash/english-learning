@@ -16,6 +16,16 @@ function sampleData() {
     completedAt: now.toISOString(),
     updatedAt: now.toISOString(),
   };
+  data.days.w02d01 = {
+    dayId: 'w02d01',
+    status: 'done',
+    stagesCompleted: ['warmup', 'pattern', 'words', 'shadow', 'scenario', 'wrap'],
+    speakingSeconds: 1200,
+    selfRating: 5,
+    missionDone: false,
+    completedAt: now.toISOString(),
+    updatedAt: now.toISOString(),
+  };
   return data;
 }
 
@@ -27,6 +37,8 @@ describe('backup file', () => {
     expect(parsed.localProfileId).toBe(data.localProfileId);
     expect(parsed.days.w01d01.status).toBe('done');
     expect(parsed.days.w01d01.selfRating).toBe(4);
+    expect(parsed.days.w02d01.status).toBe('done');
+    expect(parsed.days.w02d01.selfRating).toBe(5);
     expect(parsed.streak).toEqual(data.streak);
   });
 

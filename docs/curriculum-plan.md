@@ -193,7 +193,7 @@ By Week 12 the learner can introduce himself, make small talk, ask for clarifica
 |---|---|
 | Week 1 day-by-day | Detailed above; authored |
 | Weeks 2–12 weekly outline | Detailed above; authored |
-| Daily JSON (84 days) | Week 1 authored; Weeks 2–12 not authored |
+| Daily JSON (84 days) | Weeks 1–2 authored; Weeks 3–12 not authored |
 | Weekly lessons (12 HTML) | Authored: Weeks 1–12 |
 | Reference sheets | Authored: 12 pattern sheets + indexes |
 | Benchmark prompts | Defined above |

@@ -25,7 +25,7 @@ test('completes a short Day 1 session and survives reload + offline', async ({ p
   }
   await page.getByRole('button', { name: '4', exact: true }).click();
   await page.getByRole('button', { name: 'Session khatam', exact: true }).click();
-  await expect(page.getByText('Days complete: 1/7')).toBeVisible();
+  await expect(page.getByText('Days complete: 1/14')).toBeVisible();
 
   await page.goto('/');
   await expect(page.getByText('Day 2 · Week 1')).toBeVisible();
