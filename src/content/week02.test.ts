@@ -6,6 +6,7 @@ import d03 from '../../content-src/week-02/w02d03.json';
 import d04 from '../../content-src/week-02/w02d04.json';
 import d05 from '../../content-src/week-02/w02d05.json';
 import d06 from '../../content-src/week-02/w02d06.json';
+import d07 from '../../content-src/week-02/w02d07.json';
 
 const days = [d01, d02, d03].map((day) => parseDay(day));
 const allLearningDays = [d01, d02, d03, d04, d05, d06].map((day) => parseDay(day));
@@ -73,4 +74,25 @@ it('keeps the last three patterns in weekly order', () => {
     'Do you like ___?',
     'What about you?',
   ]);
+});
+
+it('closes the week with a review day', () => {
+  const review = parseDay(d07);
+  expect(review.id).toBe('w02d07');
+  expect(review.type).toBe('review');
+  expect(review.pattern).toBeNull();
+  expect(review.words).toHaveLength(0);
+  expect(review.dialogue).toBeNull();
+  expect(review.scenario).toBeNull();
+  expect(review.quiz).toHaveLength(3);
+  expect(review.mission?.id).toBe('m_week2_small_talk');
+  expect(review.mission?.steps_hi).toHaveLength(4);
+});
+
+it('has seven Week 2 days and 30 unique words overall', () => {
+  const week = [d01, d02, d03, d04, d05, d06, d07].map((day) => parseDay(day));
+  expect(week).toHaveLength(7);
+  expect(week.filter((d) => d.type === 'learning')).toHaveLength(6);
+  const ids = week.flatMap((d) => d.words.map((w) => w.id));
+  expect(new Set(ids).size).toBe(30);
 });

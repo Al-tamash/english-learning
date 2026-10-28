@@ -1,0 +1,40 @@
+{
+  "id": "w02d07",
+  "week": 2,
+  "day": 7,
+  "type": "review",
+  "theme": "Week 2 review",
+  "title": "Review + benchmark",
+  "goal_hi": "Week 2 ke patterns aur words yaad karke Monday small talk confidently karna.",
+  "pattern": null,
+  "words": [],
+  "dialogue": null,
+  "scenario": null,
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I ___ start work at ten. (word order)",
+      "answer": "usually"
+    },
+    {
+      "type": "fill",
+      "prompt": "How ___ your weekend?",
+      "answer": "was"
+    },
+    {
+      "type": "fill",
+      "prompt": "Do you like ___ from home?",
+      "answer": "working"
+    }
+  ],
+  "mission": {
+    "id": "m_week2_small_talk",
+    "title_hi": "Ek colleague se ek real small-talk question English me poochho — “How was your weekend?” ya “Do you like ___?” — aur uska answer suno.",
+    "steps_hi": [
+      "Ek small-talk question chuno: “How was your weekend?” ya “Do you like ___?”",
+      "Colleague se English me poochho.",
+      "Uska answer dhyan se suno.",
+      "Ek follow-up poochho — “What about you?” ya “Why?”"
+    ]
+  }
+}
