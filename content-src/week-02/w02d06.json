@@ -1,0 +1,178 @@
+{
+  "id": "w02d06",
+  "week": 2,
+  "day": 6,
+  "type": "learning",
+  "theme": "Keep the conversation going",
+  "title": "What about you?",
+  "goal_hi": "Jawab dene ke baad wahi sawal wapas poochh kar baat aage badhana.",
+  "pattern": {
+    "id": "p_w02_followup",
+    "frame": "What about you?",
+    "forms": {
+      "positive": "I'm a developer. What about you?",
+      "negative": "I'm not very busy today. What about you?",
+      "question": "What about you?"
+    },
+    "note_hi": "Same question wapas poochhne ka short tarika.",
+    "examples": [
+      {
+        "en": "I'm a developer. What about you?",
+        "hi": "Main developer hoon. Tum?"
+      },
+      {
+        "en": "I usually commute by bike. What about you?",
+        "hi": "Main aam taur par bike se jaata hoon. Tum?"
+      },
+      {
+        "en": "I like cricket. What about you?",
+        "hi": "Mujhe cricket pasand hai. Tumhe?"
+      },
+      {
+        "en": "I'm not very busy today. What about you?",
+        "hi": "Main aaj zyada busy nahi hoon. Tum?"
+      },
+      {
+        "en": "I'm mostly remote. What about you?",
+        "hi": "Main zyadatar remote kaam karta hoon. Tum?"
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w02_early",
+      "term": "early",
+      "hi": "jaldi",
+      "collocation": "arrive early",
+      "example_en": "I arrived early for the event.",
+      "example_hi": "Main event ke liye jaldi pahuncha.",
+      "tags": ["time"]
+    },
+    {
+      "id": "w02_late",
+      "term": "late",
+      "hi": "der se",
+      "collocation": "run late",
+      "example_en": "The meeting ran late.",
+      "example_hi": "Meeting der tak chali.",
+      "tags": ["time"]
+    },
+    {
+      "id": "w02_busy",
+      "term": "busy",
+      "hi": "vyast",
+      "collocation": "a busy day",
+      "example_en": "It was a busy day.",
+      "example_hi": "Din vyast tha.",
+      "tags": ["work"]
+    },
+    {
+      "id": "w02_book",
+      "term": "book",
+      "hi": "kitab",
+      "collocation": "read a book",
+      "example_en": "I'm reading a book about design.",
+      "example_hi": "Main design par ek kitab padh raha hoon.",
+      "tags": ["free time"]
+    },
+    {
+      "id": "w02_cook",
+      "term": "cook",
+      "hi": "khana banana",
+      "collocation": "cook dinner",
+      "example_en": "I cook dinner on Sunday.",
+      "example_hi": "Main Sunday ko dinner banata hoon.",
+      "tags": ["food"]
+    }
+  ],
+  "dialogue": {
+    "title": "At the work event",
+    "context_hi": "Work event me naye bande se milna. Har answer ke baad sawal wapas poochho.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Hi, I'm Meera. I don't think we've met.",
+        "hi": "Hi, main Meera. Lagta hai hum mile nahi."
+      },
+      {
+        "speaker": "B",
+        "en": "Hi Meera, I'm Azim. I'm a developer. What about you?",
+        "hi": "Hi Meera, main Azim. Main developer hoon. Tum?"
+      },
+      {
+        "speaker": "A",
+        "en": "I'm a designer. Do you work at the Edone office?",
+        "hi": "Main designer hoon. Tum Edone office me kaam karte ho?"
+      },
+      {
+        "speaker": "B",
+        "en": "Yes, I'm usually there three days a week. What about you?",
+        "hi": "Haan, main aam taur par hafte me teen din wahan hota hoon. Tum?"
+      },
+      {
+        "speaker": "A",
+        "en": "I'm mostly remote. It's a busy office, right?",
+        "hi": "Main zyadatar remote hoon. Office busy hai, na?"
+      },
+      {
+        "speaker": "B",
+        "en": "It is. Are you staying for the talk?",
+        "hi": "Hai. Tum talk ke liye ruk rahi ho?"
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "Question intonation: 'What about YOU?' me you par awaaz upar. Har follow-up sawal ke end me pitch badhao.",
+      "pairs": ["you / your", "about / a boat"]
+    }
+  },
+  "scenario": {
+    "id": "s_w02_asking_them",
+    "title_hi": "Asking about them",
+    "setting_hi": "Work event me naye colleague se milna. Har jawab ke baad sawal wapas.",
+    "turns": [
+      {
+        "prompt_en": "Hi, I don't think we've met. What do you do?",
+        "hint_hi": "Developer ho — aur unse bhi poochho.",
+        "keywords": ["developer", "what about you"],
+        "model_en": "I'm a developer. What about you?"
+      },
+      {
+        "prompt_en": "I'm a designer. Do you work at the Edone office?",
+        "hint_hi": "Haan, teen din office me — unse bhi poochho.",
+        "keywords": ["office", "three days", "what about you"],
+        "model_en": "Yes, I'm usually at the office three days a week. What about you?"
+      },
+      {
+        "prompt_en": "I'm mostly remote. Is your day busy?",
+        "hint_hi": "Busy hai, par pasand hai. Unse poochho kya woh talk ke liye ruk rahe hain.",
+        "keywords": ["busy", "like", "talk"],
+        "model_en": "It's busy, but I like it. Are you staying for the talk?"
+      },
+      {
+        "prompt_en": "Yes, I am. Do you want to sit together?",
+        "hint_hi": "Haan, aage baithte hain — aur unse poochho.",
+        "keywords": ["sure", "front", "what about you"],
+        "model_en": "Sure. Let's sit near the front. What about you?"
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I'm a developer. What ___ you?",
+      "answer": "about"
+    },
+    {
+      "type": "fill",
+      "prompt": "I'm not very busy today. What about ___?",
+      "answer": "you"
+    },
+    {
+      "type": "choice",
+      "prompt": "Tumhara kya?",
+      "answer": "What about you?",
+      "options": ["What about you?", "What about your?", "What you about?"]
+    }
+  ],
+  "mission": null
+}

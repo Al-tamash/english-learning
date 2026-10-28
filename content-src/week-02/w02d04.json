@@ -1,0 +1,182 @@
+{
+  "id": "w02d04",
+  "week": 2,
+  "day": 4,
+  "type": "learning",
+  "theme": "Last weekend stories",
+  "title": "I went to ___ / I stayed ___.",
+  "goal_hi": "Pichle weekend kya kiya, past simple me batana.",
+  "pattern": {
+    "id": "p_w02_past_actions",
+    "frame": "I went to ___ / I stayed ___.",
+    "forms": {
+      "positive": "I went to my cousin's place and stayed there for two hours.",
+      "negative": "I didn't go out on Sunday.",
+      "question": "Where did you go on Sunday?"
+    },
+    "note_hi": "went = go ka past; stayed = ghar ya kisi jagah ruka.",
+    "examples": [
+      {
+        "en": "I went to my cousin's place and stayed there for two hours.",
+        "hi": "Main cousin ke ghar gaya aur do ghante wahan raha."
+      },
+      {
+        "en": "I went to the market in the morning.",
+        "hi": "Main subah market gaya."
+      },
+      {
+        "en": "We stayed home and watched a movie.",
+        "hi": "Hum ghar par ruke aur movie dekhi."
+      },
+      {
+        "en": "I didn't go out on Sunday.",
+        "hi": "Main Sunday ko bahar nahi gaya."
+      },
+      {
+        "en": "She went to the theatre with her friends.",
+        "hi": "Woh apne doston ke saath theatre gayi."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w02_cousin",
+      "term": "cousin",
+      "hi": "cousin",
+      "collocation": "my cousin's place",
+      "example_en": "I went to my cousin's place.",
+      "example_hi": "Main cousin ke ghar gaya.",
+      "tags": ["family"]
+    },
+    {
+      "id": "w02_theatre",
+      "term": "theatre",
+      "hi": "cinema ghar",
+      "collocation": "go to the theatre",
+      "example_en": "We went to the theatre on Saturday.",
+      "example_hi": "Hum Saturday ko theatre gaye.",
+      "tags": ["free time"]
+    },
+    {
+      "id": "w02_plan",
+      "term": "plan",
+      "hi": "plan",
+      "collocation": "make a plan",
+      "example_en": "We made a plan for Sunday.",
+      "example_hi": "Humne Sunday ka plan banaya.",
+      "tags": ["routine"]
+    },
+    {
+      "id": "w02_food",
+      "term": "food",
+      "hi": "khana",
+      "collocation": "home-cooked food",
+      "example_en": "I prefer home-cooked food.",
+      "example_hi": "Mujhe ghar ka khana pasand hai.",
+      "tags": ["food"]
+    },
+    {
+      "id": "w02_sleep",
+      "term": "sleep",
+      "hi": "neend",
+      "collocation": "get enough sleep",
+      "example_en": "I didn't get enough sleep.",
+      "example_hi": "Mujhe poori neend nahi mili.",
+      "tags": ["health"]
+    }
+  ],
+  "dialogue": {
+    "title": "Friend catch-up",
+    "context_hi": "Sunday shaam, friend se phone par weekend ki baat.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Hey! How was your weekend?",
+        "hi": "Hey! Weekend kaisa tha?"
+      },
+      {
+        "speaker": "B",
+        "en": "It was good. I went to my cousin's place.",
+        "hi": "Achha tha. Main cousin ke ghar gaya."
+      },
+      {
+        "speaker": "A",
+        "en": "Nice. Did you stay there long?",
+        "hi": "Badhiya. Wahan zyada der rahe?"
+      },
+      {
+        "speaker": "B",
+        "en": "About two hours. Then we went to the theatre.",
+        "hi": "Lagbhag do ghante. Phir hum theatre gaye."
+      },
+      {
+        "speaker": "A",
+        "en": "Sounds fun. I stayed home and slept.",
+        "hi": "Maza aaya hoga. Main ghar par raha aur soya."
+      },
+      {
+        "speaker": "B",
+        "en": "That's a good plan too. I didn't sleep enough.",
+        "hi": "Wo bhi achha plan hai. Mujhe poori neend nahi mili."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "went ka final /t/ clear bolo. 'I wen home' nahi — 'I went home'.",
+      "pairs": ["went / want", "stayed / stay"]
+    }
+  },
+  "scenario": {
+    "id": "s_w02_friend_catchup",
+    "title_hi": "Phone catch-up",
+    "setting_hi": "Sunday shaam friend phone par weekend poochta hai.",
+    "turns": [
+      {
+        "prompt_en": "Hey! How was your weekend?",
+        "hint_hi": "Achha tha, cousin ke ghar gaye the.",
+        "keywords": ["went", "cousin", "weekend"],
+        "model_en": "It was good. I went to my cousin's place."
+      },
+      {
+        "prompt_en": "Did you stay there long?",
+        "hint_hi": "Do ghante, phir theatre gaye.",
+        "keywords": ["two hours", "theatre", "went"],
+        "model_en": "About two hours. Then we went to the theatre."
+      },
+      {
+        "prompt_en": "Did you go out on Sunday?",
+        "hint_hi": "Nahi, Sunday ko bahar nahi gaye, ghar par rahe.",
+        "keywords": ["didn't", "go out", "stayed"],
+        "model_en": "No, I didn't go out on Sunday. I stayed home."
+      },
+      {
+        "prompt_en": "What did you do at home?",
+        "hint_hi": "Movie dekhi aur neend poori ki.",
+        "keywords": ["movie", "sleep", "home"],
+        "model_en": "I watched a movie and got some sleep."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "I ___ to my cousin's place.",
+      "answer": "went"
+    },
+    {
+      "type": "fill",
+      "prompt": "I stayed ___ home.",
+      "answer": "at"
+    },
+    {
+      "type": "choice",
+      "prompt": "Main Sunday ko market gaya.",
+      "answer": "I went to the market on Sunday.",
+      "options": [
+        "I went to the market on Sunday.",
+        "I go to the market on Sunday.",
+        "I went to market in Sunday."
+      ]
+    }
+  ],
+  "mission": null
+}

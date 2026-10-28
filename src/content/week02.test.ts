@@ -3,8 +3,12 @@ import { parseDay } from './validate';
 import d01 from '../../content-src/week-02/w02d01.json';
 import d02 from '../../content-src/week-02/w02d02.json';
 import d03 from '../../content-src/week-02/w02d03.json';
+import d04 from '../../content-src/week-02/w02d04.json';
+import d05 from '../../content-src/week-02/w02d05.json';
+import d06 from '../../content-src/week-02/w02d06.json';
 
 const days = [d01, d02, d03].map((day) => parseDay(day));
+const allLearningDays = [d01, d02, d03, d04, d05, d06].map((day) => parseDay(day));
 
 describe('Week 2 days 1–3', () => {
   it('has the expected ids, days and pattern frames', () => {
@@ -42,4 +46,31 @@ describe('Week 2 days 1–3', () => {
       's_w02_weekend_plans',
     ]);
   });
+});
+
+it('has six learning days with 30 unique words', () => {
+  expect(allLearningDays.map((d) => d.id)).toEqual([
+    'w02d01',
+    'w02d02',
+    'w02d03',
+    'w02d04',
+    'w02d05',
+    'w02d06',
+  ]);
+  const terms = allLearningDays.flatMap((d) => d.words.map((w) => w.term));
+  const ids = allLearningDays.flatMap((d) => d.words.map((w) => w.id));
+  expect(terms).toHaveLength(30);
+  expect(new Set(terms).size).toBe(30);
+  expect(new Set(ids).size).toBe(30);
+});
+
+it('keeps the last three patterns in weekly order', () => {
+  expect(allLearningDays.map((d) => d.pattern?.frame)).toEqual([
+    'I usually ___ at ___.',
+    "I don't ___ very often.",
+    'How was your weekend?',
+    'I went to ___ / I stayed ___.',
+    'Do you like ___?',
+    'What about you?',
+  ]);
 });

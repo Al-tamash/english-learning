@@ -1,0 +1,182 @@
+{
+  "id": "w02d05",
+  "week": 2,
+  "day": 5,
+  "type": "learning",
+  "theme": "Likes and preferences",
+  "title": "Do you like ___?",
+  "goal_hi": "Apni pasand aur na-pasand ke baare me sawal aur jawab dena.",
+  "pattern": {
+    "id": "p_w02_likes",
+    "frame": "Do you like ___?",
+    "forms": {
+      "positive": "I like working from home.",
+      "negative": "I don't like waking up early.",
+      "question": "Do you like working from home?"
+    },
+    "note_hi": "Like ke baad noun ya verb+ing.",
+    "examples": [
+      {
+        "en": "Do you like working from home?",
+        "hi": "Aapko ghar se kaam karna pasand hai?"
+      },
+      {
+        "en": "Do you like tea or coffee?",
+        "hi": "Aapko chai pasand hai ya coffee?"
+      },
+      {
+        "en": "I like watching movies on Sunday.",
+        "hi": "Mujhe Sunday ko movie dekhna pasand hai."
+      },
+      {
+        "en": "I like working from home, but I miss the office.",
+        "hi": "Mujhe ghar se kaam karna pasand hai, par office ki yaad aati hai."
+      },
+      {
+        "en": "I don't like waking up early.",
+        "hi": "Mujhe jaldi uthna pasand nahi hai."
+      }
+    ]
+  },
+  "words": [
+    {
+      "id": "w02_colleague",
+      "term": "colleague",
+      "hi": "saath kaam karne wala",
+      "collocation": "a new colleague",
+      "example_en": "My colleague is on leave.",
+      "example_hi": "Mera colleague chhutti par hai.",
+      "tags": ["work"]
+    },
+    {
+      "id": "w02_chat",
+      "term": "chat",
+      "hi": "halki baat-cheet",
+      "collocation": "have a chat",
+      "example_en": "We had a quick chat before the call.",
+      "example_hi": "Call se pehle humne short chat ki.",
+      "tags": ["communication"]
+    },
+    {
+      "id": "w02_break",
+      "term": "break",
+      "hi": "kaam se chhota break",
+      "collocation": "take a break",
+      "example_en": "Let's take a five-minute break.",
+      "example_hi": "Paanch minute ka break lete hain.",
+      "tags": ["work"]
+    },
+    {
+      "id": "w02_lunch",
+      "term": "lunch",
+      "hi": "dopahar ka khana",
+      "collocation": "have lunch",
+      "example_en": "I have lunch at one.",
+      "example_hi": "Main ek baje lunch karta hoon.",
+      "tags": ["food"]
+    },
+    {
+      "id": "w02_office",
+      "term": "office",
+      "hi": "daftar",
+      "collocation": "at the office",
+      "example_en": "I'm at the office today.",
+      "example_hi": "Main aaj office me hoon.",
+      "tags": ["work"]
+    }
+  ],
+  "dialogue": {
+    "title": "Before the call starts",
+    "context_hi": "Video call do minute pehle shuru hui. Colleague se pre-call small talk.",
+    "lines": [
+      {
+        "speaker": "A",
+        "en": "Hi! You're early today.",
+        "hi": "Hi! Aaj tum jaldi aa gaye."
+      },
+      {
+        "speaker": "B",
+        "en": "Yes, I joined early to check my audio.",
+        "hi": "Haan, audio check karne ke liye jaldi join kiya."
+      },
+      {
+        "speaker": "A",
+        "en": "Good idea. Do you like working from home?",
+        "hi": "Achha idea. Tumhe ghar se kaam karna pasand hai?"
+      },
+      {
+        "speaker": "B",
+        "en": "I like it, but I miss the office.",
+        "hi": "Pasand hai, par office ki yaad aati hai."
+      },
+      {
+        "speaker": "A",
+        "en": "Same here. I like the quiet, but I need a break from my desk.",
+        "hi": "Mere saath bhi wahi. Shanti pasand hai, par desk se break chahiye."
+      },
+      {
+        "speaker": "B",
+        "en": "Let's chat for a minute before the client joins.",
+        "hi": "Client aane se pehle ek minute baat kar lete hain."
+      }
+    ],
+    "sound_focus": {
+      "tip_hi": "like + verb-ing ko jodo: 'working', 'watching'. Beech me pause mat do.",
+      "pairs": ["like / light", "working / walk in"]
+    }
+  },
+  "scenario": {
+    "id": "s_w02_precall",
+    "title_hi": "Pre-call small talk",
+    "setting_hi": "Client call se do minute pehle video call par colleague se baat.",
+    "turns": [
+      {
+        "prompt_en": "You're early. Do you like working from home?",
+        "hint_hi": "Ghar se kaam pasand hai, par office miss karte ho.",
+        "keywords": ["like", "working", "office"],
+        "model_en": "I like working from home, but I miss the office."
+      },
+      {
+        "prompt_en": "Do you like the quiet?",
+        "hint_hi": "Haan, shanti pasand hai, par desk se break chahiye.",
+        "keywords": ["like", "quiet", "break"],
+        "model_en": "Yes, I like the quiet, but I need a break from my desk."
+      },
+      {
+        "prompt_en": "What do you usually do before a client call?",
+        "hint_hi": "Lunch karte ho aur short break lete ho.",
+        "keywords": ["lunch", "break", "before"],
+        "model_en": "I usually have lunch and take a short break."
+      },
+      {
+        "prompt_en": "Is your office far from here?",
+        "hint_hi": "Office paas hai, call se pehle colleague se chat karte ho.",
+        "keywords": ["office", "close", "chat"],
+        "model_en": "No, my office is close. I usually chat with a colleague before the call."
+      }
+    ]
+  },
+  "quiz": [
+    {
+      "type": "fill",
+      "prompt": "Do you like ___ from home?",
+      "answer": "working"
+    },
+    {
+      "type": "fill",
+      "prompt": "___ she like tea?",
+      "answer": "Does"
+    },
+    {
+      "type": "choice",
+      "prompt": "Tumhe ghar se kaam karna pasand hai?",
+      "answer": "Do you like working from home?",
+      "options": [
+        "Do you like working from home?",
+        "Do you like work from home?",
+        "You like working from home?"
+      ]
+    }
+  ],
+  "mission": null
+}
